@@ -301,6 +301,11 @@ Why parked: the paper's headline verification compares TORAX to RAPTOR (NRMSD). 
   on 2026-09-26.)
 Gate to reopen: RAPTOR reference profiles for the paper's ITER-like L-mode case (from the
   authors or a data supplement).
+Current fact (2026-09-26): in google-deepmind/torax discussion #2141 a maintainer states that
+  "there are currently no other publicly available configs and output files" besides the
+  sim_test suite in tests/test_data. So the E003/E004 sweeps cover every public TORAX reference
+  output, and no public RAPTOR output exists. The same thread gives a config that reproduces the
+  paper's Figure 6 more closely (TORAX side only).
 Exact next action: check the arXiv 2406.06718 ancillary files and the TORAX docs for
   published benchmark data; if none, the authors could be asked (external contact,
   needs the author's OK).
