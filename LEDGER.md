@@ -6,6 +6,8 @@ A control that misbehaves makes an entry INVALID, not PASS.
 
 Operator: Claude Code (Opus 5.5) agent, run for the author, Adem Vessell. Every number below comes from
 files under `evidence/`.
+Review: Codex reviewed the ledger and the maintainer note before publication, without rerunning
+the experiments.
 
 | Entry | Question | Verdict |
 |---|---|---|

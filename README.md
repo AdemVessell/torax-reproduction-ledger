@@ -74,7 +74,8 @@ The pre-registration files are byte-identical to what was sealed. The E004 seal 
 ## Provenance
 
 Author: Adem Vessell. The runs were executed by Claude Code, an AI coding agent, under the
-author's direction. Every number in the ledger comes from files in `evidence/`.
+author's direction. Codex reviewed the ledger and the maintainer note before publication,
+without rerunning the experiments. Every number in the ledger comes from files in `evidence/`.
 
 This is an independent check, not affiliated with or reviewed by Google DeepMind or the TORAX
 maintainers. TORAX is Apache-2.0 and is not included here. This repository's own scripts and
