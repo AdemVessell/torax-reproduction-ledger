@@ -10,9 +10,10 @@ files under `evidence/`.
 | Entry | Question | Verdict |
 |---|---|---|
 | E001 | Does TORAX v1.4.3 reproduce the maintainers' reference output on independent hardware? | **REPRODUCED** (flagship case, all 201 output variables within rtol 1e-9). Upstream suite: 62/64 pass. |
-| E002 | Why do 2 upstream restart tests fail here? | **Test-tolerance sensitivity exposed by the arm64 run; addressed on main.** The failures come from 1–2 ulp round-off in dW/dt of heat-off cases, with the test atol (1e-8) below that round-off. They reproduce on arm64 (macOS and Linux, old and new deps). **Not an arm64 defect:** E004 finds the same artifact on the reference platform in another case. x86_64 leg BLOCKED. Main raised atol to 1e-6 (`9274e5c2`, unreleased), so no issue was filed. |
+| E002 | Why do 2 upstream restart tests fail here? | **Test-tolerance sensitivity exposed by the arm64 run; addressed on main.** The failures come from 1–2 ulp round-off in dW/dt of heat-off cases, with the test atol (1e-8) below that round-off. They reproduce on arm64 (macOS and Linux, old and new deps) and **not** on x86_64 (E005: 64/64 on a GitHub AMD EPYC 7763 runner). **Not an arm64 defect:** E004 finds the same artifact on the reference platform in another case. Main raised atol to 1e-6 (`9274e5c2`, unreleased), so no issue was filed. |
 | E003 | Does the full output of every referenced case reproduce? | **REPRODUCED, with one expectation miss.** All 52 upstream-tested cases: 5 main profiles within 1e-9. Full output: no deviation beyond round-off or upstream's own tolerance. 2 QuaLiKiz cases BLOCKED. 2 non-maintained references explained. |
 | E004 | Same sweep on unreleased main (`17cc32fb`) | **REPRODUCED on shared variables, within upstream's own tolerances; 2 of 6 pre-registered expectations missed (3 cases), all explained.** Upstream suite 63/63. 49/51 cases have their 5 profiles within 1e-9; the 2 TGLF-NN cases are within upstream's 5e-6. **Not validated:** the new per-model transport outputs. 46/53 references predate that schema, so no reference exists for them. |
+| E005 | Do the x86_64 legs match? (GitHub runner, AMD EPYC 7763) | **All 6 pre-registered expectations held** (after one runner termination, repaired and rerun). Flagship x86 vs reference and vs arm64 within 1e-9 (worst 2.5e-11 / 1.4e-11), not bitwise. Controls six OK. Heat-off dW/dt exactly 0 on x86. Upstream suite 64/64 on v1.4.3 with release-era deps. |
 | P-RAPTOR | The paper's RAPTOR benchmark (NRMSD vs RAPTOR, ITER-like L-mode 11.5 MA / 50 MW / 10 s) | **NOT EVALUATED**: no RAPTOR reference output was available locally (none in the TORAX repo). RAPTOR's availability was not checked. |
 
 ---
@@ -103,8 +104,8 @@ restart-test tolerance sensitivity that this arm64 run exposed and current main 
 It does **not** establish an arm64 defect. "Follows arm64" above holds only for these two
 cases in these environments.
 
-**Reopen gate for M3.** A native x86_64 host with AVX, for example a GitHub Actions run on a
-fork (external action, needs the author's OK) or any Linux x86 cloud VM.
+**M3 closed by E005 (2026-09-26).** On a GitHub-hosted x86_64 runner (AMD EPYC 7763), restart0-3
+all pass with release-era deps, and the heat-off dW/dt is exactly 0. See E005.
 
 ### E002 follow-up (2026-09-25): duplicate gate before filing — killed the filing
 
@@ -254,6 +255,39 @@ like this ledger.
 for every upstream-tested case within upstream's own per-case tolerances, and the upstream
 suite passes 63/63. Not supported: x86, physics validity, per-model transport output
 correctness (no valid reference exists for it), and anything about v1.4.3 vs main outputs.
+
+---
+
+## E005 — x86_64 legs on a GitHub-hosted runner
+
+**Object.** v1.4.3 @ 4aea237 on GitHub Actions `ubuntu-24.04`, x86_64, **AMD EPYC 7763**
+(AVX, AVX2, FMA; no AVX-512), 4 vCPU, 16 GB. Workflow `.github/workflows/x86-reproduction.yml`
+runs `harness/ci_x86.sh` in the public repo. Pre-registration `evidence/E005/PREREGISTRATION.md`
+was sealed 02:46:02 UTC and committed in `8ebd7fa`, the commit that triggered the first run.
+
+**Instrument repair.** The first run (36212744690) was terminated (exit 143) about 19 minutes
+into X2 and uploaded nothing. No result was seen. `PREREG_ADDENDUM_1.md` was sealed before the
+rerun and changed only the instrument: two jobs with separate uploads, `-n 2`, a memory log,
+and `ubuntu-24.04` pinned. The rerun (36214030775, commit `bf64cb1`) completed. Its X2 memory log
+peaks at 15.6 of 16 GB with 2 workers, which fits memory exhaustion at `-n 4` (not proven).
+
+| ID | Expected | Observed (`evidence/E005/ci/`) | Verdict |
+|---|---|---|---|
+| X1a x86 vs maintainer reference (E001 deps) | all 201 within 1e-9, not all bitwise | 99 BITWISE, 102 within 1e-9; worst `ei_exchange` 2.5e-11; solver iteration counts bitwise | held |
+| X1b x86 vs arm64 E001 P1 | within 1e-9, **not** bitwise | 82 BITWISE, 119 within 1e-9; worst `FFprime` 1.4e-11 | held |
+| X1c x86 repeat | bitwise | 201/201 BITWISE | held |
+| X1-ctrl E001 controls via `reproduce_E001.sh` | six OK | six OK | held |
+| X3 heat-off `dW_thermal_dt` | exactly 0, matching reference | all 0; the 4 dW/dt scalars BITWISE vs reference; vs arm64 they differ by exactly E002's 2.514e-7 W | held |
+| X2 upstream `sim_test.py`, release-era deps (jax 0.10.2, Py 3.11) | 64/64 incl. restart1/2 | **64 passed**, 0 failed | held |
+
+**What this settles.** For v1.4.3, the E002 restart failures and the heat-off dW/dt flip appear
+on arm64 and not on this x86 CPU. Together with E004 (the reverse artifact in a reference file
+written on the maintainers' platform), the picture is platform-dependent last-bit round-off in
+a quantity that should be exactly zero. The tests' old atol could not absorb it; main's can.
+Cross-architecture, the flagship case differs by at most 1.4e-11 relative.
+
+**Claim boundary.** One x86 CPU model (AMD EPYC 7763, no AVX-512). XLA compiles for the host
+CPU, so other x86 CPUs may differ in the last bits. No physics claim.
 
 ---
 

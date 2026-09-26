@@ -1,0 +1,7 @@
+{"candidate": "evidence/E005/ci/x1x3/X1_P1.nc", "reference": "upstream-torax/torax/tests/test_data/test_iterhybrid_rampup.nc", "candidate_torax_version": "1.4.3", "reference_torax_version": "1.4.0", "embedded_config_equal": false, "n_common": 201, "tier_counts": {"BITWISE": 99, "RTOL_1e-9": 102, "RTOL_1e-6": 0, "RTOL_1e-3": 0, "DIFFERENT": 0, "SHAPE": 0}, "worst_tier": "RTOL_1e-9", "require": "RTOL_1e-9", "meets_require": true}
+only_in_candidate: 0 only_in_reference: 0
+  /profiles/D_turb_e: tier=RTOL_1e-9 nrmsd=3.211e-13 max_rel=4.2200094011721165e-12
+  /profiles/v_loop: tier=RTOL_1e-9 nrmsd=1.478e-13 max_rel=8.881491428830815e-13
+  /scalars/dW_thermal_e_dt_smoothed: tier=RTOL_1e-9 nrmsd=1.423e-13 max_rel=1.2748104860395021e-12
+  /profiles/p_ohmic_e: tier=RTOL_1e-9 nrmsd=1.386e-13 max_rel=1.394890855231643e-12
+  /scalars/dW_thermal_dt: tier=RTOL_1e-9 nrmsd=6.356e-14 max_rel=2.2363728756136514e-12

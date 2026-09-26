@@ -1,0 +1,7 @@
+{"candidate": "evidence/E005/ci/x1x3/X1_C1.nc", "reference": "evidence/E005/ci/x1x3/X1_P1.nc", "candidate_torax_version": "1.4.3", "reference_torax_version": "1.4.3", "embedded_config_equal": true, "n_common": 201, "tier_counts": {"BITWISE": 201, "RTOL_1e-9": 0, "RTOL_1e-6": 0, "RTOL_1e-3": 0, "DIFFERENT": 0, "SHAPE": 0}, "worst_tier": "BITWISE", "require": "RTOL_1e-9", "meets_require": true}
+only_in_candidate: 0 only_in_reference: 0
+  /numerics/inner_solver_iterations: tier=BITWISE nrmsd=0.000e+00 max_rel=0.0
+  /numerics/outer_solver_iterations: tier=BITWISE nrmsd=0.000e+00 max_rel=0.0
+  /profiles/D_turb_e: tier=BITWISE nrmsd=0.000e+00 max_rel=0.0
+  /profiles/F: tier=BITWISE nrmsd=0.000e+00 max_rel=0.0
+  /profiles/FFprime: tier=BITWISE nrmsd=0.000e+00 max_rel=0.0

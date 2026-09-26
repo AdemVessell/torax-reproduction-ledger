@@ -1,0 +1,7 @@
+{"candidate": "evidence/E005/ci/x1x3/X3_jtot.nc", "reference": "evidence/E001/runs/N_test_psichease_prescribed_jtot.nc", "candidate_torax_version": "1.4.3", "reference_torax_version": "1.4.3", "embedded_config_equal": true, "n_common": 195, "tier_counts": {"BITWISE": 119, "RTOL_1e-9": 72, "RTOL_1e-6": 0, "RTOL_1e-3": 0, "DIFFERENT": 4, "SHAPE": 0}, "worst_tier": "DIFFERENT", "require": "RTOL_1e-9", "meets_require": false}
+only_in_candidate: 0 only_in_reference: 0
+  /scalars/dW_thermal_dt: tier=DIFFERENT nrmsd=1.000e+00 max_rel=1.0
+  /scalars/dW_thermal_dt_smoothed: tier=DIFFERENT nrmsd=1.000e+00 max_rel=1.0
+  /scalars/dW_thermal_e_dt_smoothed: tier=DIFFERENT nrmsd=1.000e+00 max_rel=1.0
+  /scalars/dW_thermal_i_dt_smoothed: tier=DIFFERENT nrmsd=1.000e+00 max_rel=1.0
+  /profiles/v_loop: tier=RTOL_1e-9 nrmsd=2.874e-13 max_rel=1.936349848015032e-12

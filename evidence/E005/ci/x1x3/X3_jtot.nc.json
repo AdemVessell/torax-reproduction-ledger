@@ -1,0 +1,20 @@
+{
+  "label": "X3_jtot",
+  "config": "upstream-torax/torax/tests/test_data/test_psichease_prescribed_jtot.py",
+  "config_sha256": "d6f73239bba55b8f4fcb69152acca52e32634ccde480d24508ab5a293bbbbb7a",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 18,
+  "t_final": 3.0,
+  "wall_s_including_compile": 10.171,
+  "out": "evidence/E005/ci/x1x3/X3_jtot.nc",
+  "out_sha256": "340fdce973289a5cdb5aa1658cf618d4064eac9df3df08cec4c7bb9cb61945fb",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "x86_64",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39"
+}

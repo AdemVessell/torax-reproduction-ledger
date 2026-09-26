@@ -1,0 +1,7 @@
+{"candidate": "evidence/E005/ci/x1x3/X3_jtot.nc", "reference": "upstream-torax/torax/tests/test_data/test_psichease_prescribed_jtot.nc", "candidate_torax_version": "1.4.3", "reference_torax_version": "1.3.0", "embedded_config_equal": false, "n_common": 195, "tier_counts": {"BITWISE": 136, "RTOL_1e-9": 59, "RTOL_1e-6": 0, "RTOL_1e-3": 0, "DIFFERENT": 0, "SHAPE": 0}, "worst_tier": "RTOL_1e-9", "require": "RTOL_1e-9", "meets_require": true}
+only_in_candidate: 0 only_in_reference: 0
+  /profiles/v_loop: tier=RTOL_1e-9 nrmsd=3.206e-13 max_rel=2.1738381543060992e-12
+  /scalars/v_loop_lcfs: tier=RTOL_1e-9 nrmsd=1.044e-13 max_rel=2.1162943270384922e-13
+  /profiles/j_parallel_ohmic: tier=RTOL_1e-9 nrmsd=3.897e-14 max_rel=1.721774052897452e-12
+  /profiles/magnetic_shear: tier=RTOL_1e-9 nrmsd=3.849e-14 max_rel=1.5830275997567633e-13
+  /profiles/j_ohmic: tier=RTOL_1e-9 nrmsd=3.635e-14 max_rel=1.6368366865006328e-12

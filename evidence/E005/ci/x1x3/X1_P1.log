@@ -1,0 +1,8 @@
+2026-09-26 03:12:23,224 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-09-26 03:12:24,467 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-26 03:12:24,832 [    INFO] Loading QLKNNModel from /home/runner/work/torax-reproduction-ledger/torax-reproduction-ledger/.venv/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-26 03:12:29,424 [    INFO] Precision is set at float64
+2026-09-26 03:12:29,424 [    INFO] Starting simulation.
+2026-09-26 03:12:53,796 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 22.18s of wall clock time.
+2026-09-26 03:12:53,822 [    INFO] Simulated 80.00s of physics in 2.20s of wall clock time.
+{"label": "X1_P1", "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_rampup.py", "config_sha256": "a94da3f3a102df5a4a86d3c7d3f9d70b8a8f0f96e68226ac44fe79b797e8ebff", "overrides": {}, "sim_error": "NO_ERROR", "n_times": 41, "t_final": 80.0, "wall_s_including_compile": 30.562, "out": "evidence/E005/ci/x1x3/X1_P1.nc", "out_sha256": "170229b5d01476076abd38edb3ab740c473c9b94d50a5df9e49fb3fa7335c914", "torax_version": "1.4.3", "jax_version": "0.11.2", "jax_x64": true, "devices": ["cpu:0"], "machine": "x86_64", "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39"}
