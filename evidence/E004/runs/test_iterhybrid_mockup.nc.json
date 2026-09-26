@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_mockup",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_mockup.py",
+  "config_sha256": "717faa53e838d6358a01823448e69e61e976675e4790cff8ba22828841c9e00f",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 29,
+  "t_final": 5.0,
+  "wall_s_including_compile": 7.698,
+  "out": "evidence/E004/runs/test_iterhybrid_mockup.nc",
+  "out_sha256": "0097e4a63ddafd40a9623a7fc51b22954bf07b1d69cc71d072a14f2fa21d234d",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

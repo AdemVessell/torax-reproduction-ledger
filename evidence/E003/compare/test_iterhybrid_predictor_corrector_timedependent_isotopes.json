@@ -1,0 +1,1556 @@
+{
+  "candidate": "evidence/E003/runs/test_iterhybrid_predictor_corrector_timedependent_isotopes.nc",
+  "reference": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_timedependent_isotopes.nc",
+  "candidate_torax_version": "1.4.3",
+  "reference_torax_version": "1.3.0",
+  "embedded_config_equal": false,
+  "n_common": 209,
+  "only_in_candidate": [],
+  "only_in_reference": [],
+  "tier_counts": {
+    "BITWISE": 75,
+    "RTOL_1e-9": 132,
+    "RTOL_1e-6": 0,
+    "RTOL_1e-3": 0,
+    "DIFFERENT": 2,
+    "SHAPE": 0
+  },
+  "worst_tier": "DIFFERENT",
+  "upstream_five_profiles": {
+    "/profiles/T_e": "RTOL_1e-9",
+    "/profiles/T_i": "RTOL_1e-9",
+    "/profiles/n_e": "RTOL_1e-9",
+    "/profiles/psi": "RTOL_1e-9",
+    "/profiles/q": "RTOL_1e-9"
+  },
+  "top10_by_nrmsd": [
+    {
+      "var": "/profiles/chi_itg_i",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.605272133228482e-11,
+      "max_rel_diff": 4.235182393038641e-10,
+      "nrmsd": 4.502836687814349e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_turb_i",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.59747281648049e-11,
+      "max_rel_diff": 3.3252772190088753e-10,
+      "nrmsd": 4.215159803291138e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_itg_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.2610780475430516e-11,
+      "max_rel_diff": 3.8850405966113905e-10,
+      "nrmsd": 4.090585612104949e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_tem_i",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.2437828544875629e-12,
+      "max_rel_diff": 1.6159669506983358e-11,
+      "nrmsd": 2.272808305535708e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_tem_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.6018852910804071e-12,
+      "max_rel_diff": 1.5741545044900603e-11,
+      "nrmsd": 1.9593618693698736e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/V_tem_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.0615553575066272e-13,
+      "max_rel_diff": 1.6080335574636417e-11,
+      "nrmsd": 1.795601305245472e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_etg_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.180067320585067e-12,
+      "max_rel_diff": 2.2410015932044576e-11,
+      "nrmsd": 1.6718068312190818e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/chi_turb_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4382162127901665e-11,
+      "max_rel_diff": 5.188959685320992e-11,
+      "nrmsd": 1.671036164749988e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/D_itg_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.3348736099003684e-13,
+      "max_rel_diff": 5.946892383369655e-10,
+      "nrmsd": 1.4393530154701134e-12,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/profiles/D_tem_e",
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.1328438187518941e-13,
+      "max_rel_diff": 1.1191706872610217e-12,
+      "nrmsd": 8.302388489176109e-13,
+      "nan_pattern_equal": true
+    }
+  ],
+  "variables": {
+    "/numerics/inner_solver_iterations": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/numerics/outer_solver_iterations": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/numerics/sawtooth_crash": {
+      "tier": "BITWISE"
+    },
+    "/numerics/sim_error": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/numerics/sim_status": {
+      "tier": "BITWISE"
+    },
+    "/profiles/D_itg_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.3348736099003684e-13,
+      "max_rel_diff": 5.946892383369655e-10,
+      "nrmsd": 1.4393530154701134e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/D_neo_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/D_tem_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.1328438187518941e-13,
+      "max_rel_diff": 1.1191706872610217e-12,
+      "nrmsd": 8.302388489176109e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/D_turb_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.0659862709493382e-13,
+      "max_rel_diff": 3.2890772294552715e-12,
+      "nrmsd": 1.4955229712583317e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/F": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/FFprime": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.1889378370710801e-12,
+      "max_rel_diff": 1.9970342981879303e-10,
+      "nrmsd": 1.8405406965926563e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Ip_profile": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.955777406692505e-07,
+      "max_rel_diff": 1.027438214118476e-13,
+      "nrmsd": 6.3085829309554036e-15,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Ip_profile_from_geo": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Phi": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.938893903907228e-18,
+      "max_rel_diff": 1.3784434056152598e-16,
+      "nrmsd": 2.2559653047067874e-20,
+      "nan_pattern_equal": true
+    },
+    "/profiles/R_in": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/R_major_profile": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/R_out": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/T_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.781952611665474e-12,
+      "max_rel_diff": 1.4956399445121352e-13,
+      "nrmsd": 6.577358664242044e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/T_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.66320340517268e-12,
+      "max_rel_diff": 3.660821833392765e-13,
+      "nrmsd": 1.0945124889028389e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/V_itg_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.755069180264801e-12,
+      "max_rel_diff": 3.3010461979866127e-10,
+      "nrmsd": 7.284991262930058e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/V_neo_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/V_neo_ware_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/V_tem_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.0615553575066272e-13,
+      "max_rel_diff": 1.6080335574636417e-11,
+      "nrmsd": 1.795601305245472e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/V_turb_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.7608002729485595e-12,
+      "max_rel_diff": 5.023404685409753e-10,
+      "nrmsd": 7.406220838521679e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Z_eff": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.220446049250313e-15,
+      "max_rel_diff": 1.387778780781447e-15,
+      "nrmsd": 1.1166767604425413e-16,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Z_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Z_impurity": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.881784197001252e-15,
+      "max_rel_diff": 8.932540390517278e-16,
+      "nrmsd": 3.7464907070252874e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/Z_impurity_species": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.881784197001252e-15,
+      "max_rel_diff": 8.932540390517278e-16,
+      "nrmsd": 3.868411785212334e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/area": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_etg_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.180067320585067e-12,
+      "max_rel_diff": 2.2410015932044576e-11,
+      "nrmsd": 1.6718068312190818e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_itg_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.2610780475430516e-11,
+      "max_rel_diff": 3.8850405966113905e-10,
+      "nrmsd": 4.090585612104949e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_itg_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.605272133228482e-11,
+      "max_rel_diff": 4.235182393038641e-10,
+      "nrmsd": 4.502836687814349e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_neo_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_neo_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_tem_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.6018852910804071e-12,
+      "max_rel_diff": 1.5741545044900603e-11,
+      "nrmsd": 1.9593618693698736e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_tem_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.2437828544875629e-12,
+      "max_rel_diff": 1.6159669506983358e-11,
+      "nrmsd": 2.272808305535708e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_turb_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4382162127901665e-11,
+      "max_rel_diff": 5.188959685320992e-11,
+      "nrmsd": 1.671036164749988e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/chi_turb_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.59747281648049e-11,
+      "max_rel_diff": 3.3252772190088753e-10,
+      "nrmsd": 4.215159803291138e-12,
+      "nan_pattern_equal": true
+    },
+    "/profiles/delta": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/delta_lower": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/delta_upper": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/ei_exchange": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.489265847951174e-08,
+      "max_rel_diff": 4.612631763393349e-11,
+      "nrmsd": 2.4286168443175436e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/elongation": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/epsilon": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g0": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4210854715202004e-14,
+      "max_rel_diff": 1.9722880318774912e-16,
+      "nrmsd": 7.468438235308353e-18,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g0_over_vpr": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g1": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.821210263296962e-13,
+      "max_rel_diff": 3.5560806775643903e-16,
+      "nrmsd": 4.657208325989864e-19,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g1_over_vpr": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.105427357601002e-15,
+      "max_rel_diff": 4.294184087862137e-16,
+      "nrmsd": 6.262839228219736e-18,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g1_over_vpr2": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.551115123125783e-17,
+      "max_rel_diff": 3.88911669597121e-16,
+      "nrmsd": 6.174408728358634e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g2": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.842170943040401e-14,
+      "max_rel_diff": 2.199157850367324e-16,
+      "nrmsd": 7.9960946861560275e-19,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g2g3_over_rhon": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.105427357601002e-15,
+      "max_rel_diff": 2.7950210056143184e-16,
+      "nrmsd": 5.9285755770601724e-18,
+      "nan_pattern_equal": true
+    },
+    "/profiles/g3": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/gm4": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/gm5": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/gm9": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.7755575615628914e-17,
+      "max_rel_diff": 1.7752093192815636e-16,
+      "nrmsd": 3.2596708674240976e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/impurity_symbol": {
+      "tier": "BITWISE"
+    },
+    "/profiles/j_bootstrap": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.416192390024662e-07,
+      "max_rel_diff": 3.4263634960701454e-13,
+      "nrmsd": 1.0654583130026373e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_ecrh": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_external": {
+      "tier": "DIFFERENT",
+      "max_abs_diff": 9.89530235528946e-10,
+      "max_rel_diff": 0.24999999999999992,
+      "nrmsd": 8.308962675104038e-16,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_generic_current": {
+      "tier": "DIFFERENT",
+      "max_abs_diff": 9.89530235528946e-10,
+      "max_rel_diff": 0.24999999999999992,
+      "nrmsd": 8.308962675104038e-16,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_non_inductive": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4156103134155273e-07,
+      "max_rel_diff": 3.027199926342092e-13,
+      "nrmsd": 3.637693872530854e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_ohmic": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.9823346519842744e-07,
+      "max_rel_diff": 1.8028157638240147e-11,
+      "nrmsd": 1.6972391458946466e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_bootstrap": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.3969838619232178e-07,
+      "max_rel_diff": 3.414174276769582e-13,
+      "nrmsd": 1.0400489859183549e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_external": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.656612873077393e-10,
+      "max_rel_diff": 1.0341782358397615e-15,
+      "nrmsd": 1.728981389561763e-16,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_generic_current": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.656612873077393e-10,
+      "max_rel_diff": 1.0341782358397615e-15,
+      "nrmsd": 1.728981389561763e-16,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_non_inductive": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.3969838619232178e-07,
+      "max_rel_diff": 3.026453640447182e-13,
+      "nrmsd": 3.632304236540281e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_ohmic": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.12297891266644e-07,
+      "max_rel_diff": 2.273996879955136e-11,
+      "nrmsd": 1.7514191507332985e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_parallel_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.0983861759305e-07,
+      "max_rel_diff": 1.5241672965331942e-12,
+      "nrmsd": 3.967932908460103e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/j_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.9633444026112556e-07,
+      "max_rel_diff": 1.5322649888611136e-12,
+      "nrmsd": 3.8724920216787795e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/magnetic_shear": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.1522341120980855e-13,
+      "max_rel_diff": 1.272214923241729e-11,
+      "nrmsd": 3.730846395285359e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/n_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4702208.0,
+      "max_rel_diff": 5.532353877117392e-14,
+      "nrmsd": 2.0642725235587335e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/n_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4390912.0,
+      "max_rel_diff": 5.5351076620238713e-14,
+      "nrmsd": 2.0646491812464857e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/n_impurity": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 30720.0,
+      "max_rel_diff": 5.421514034631597e-14,
+      "nrmsd": 2.0569983127463603e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/n_impurity_species": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 30720.0,
+      "max_rel_diff": 5.421514034631597e-14,
+      "nrmsd": 2.0274810312448213e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/p_alpha_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.4893961381167173e-07,
+      "max_rel_diff": 2.181232576500298e-11,
+      "nrmsd": 6.095256253233997e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/p_alpha_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.2092717699706554e-07,
+      "max_rel_diff": 2.1822293422565866e-11,
+      "nrmsd": 7.040607127523583e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/p_generic_heat_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.820766091346741e-11,
+      "max_rel_diff": 7.131685678868895e-15,
+      "nrmsd": 5.2004762939920073e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/p_generic_heat_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.9103830456733704e-11,
+      "max_rel_diff": 7.247963162763498e-15,
+      "nrmsd": 5.0439251234366643e-17,
+      "nan_pattern_equal": true
+    },
+    "/profiles/poloidal_velocity": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.2641764846630394e-09,
+      "max_rel_diff": 1.6223485510084857e-12,
+      "nrmsd": 1.0597643124787236e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pprime": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.2904714569449425e-08,
+      "max_rel_diff": 6.18152323269784e-13,
+      "nrmsd": 1.306768044569932e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_fast_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_thermal_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.8673322200775146e-08,
+      "max_rel_diff": 1.4582405740054305e-13,
+      "nrmsd": 7.011645775883476e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_thermal_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.451752364635468e-08,
+      "max_rel_diff": 3.289875742695343e-13,
+      "nrmsd": 1.058189168914868e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_thermal_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.310836523771286e-07,
+      "max_rel_diff": 1.9609914881053037e-13,
+      "nrmsd": 7.494510112668974e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.310836523771286e-07,
+      "max_rel_diff": 1.9609914881053037e-13,
+      "nrmsd": 7.494510112668974e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/pressure_total_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.451752364635468e-08,
+      "max_rel_diff": 3.289875742695343e-13,
+      "nrmsd": 1.058189168914868e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/psi": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.7498003873915877e-12,
+      "max_rel_diff": 3.102652862430513e-13,
+      "nrmsd": 4.06374582468941e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/psi_from_Ip": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.220446049250313e-16,
+      "max_rel_diff": 4.823178925367861e-16,
+      "nrmsd": 1.6382932976925994e-18,
+      "nan_pattern_equal": true
+    },
+    "/profiles/psi_from_geo": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/psi_norm": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.496403249731884e-15,
+      "max_rel_diff": 9.59332361683426e-14,
+      "nrmsd": 2.2600211189212585e-15,
+      "nan_pattern_equal": true
+    },
+    "/profiles/q": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.9806378759312793e-13,
+      "max_rel_diff": 1.025185339603381e-13,
+      "nrmsd": 1.2395797977572742e-14,
+      "nan_pattern_equal": true
+    },
+    "/profiles/r_mid": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/radial_electric_field": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.272725734859705e-08,
+      "max_rel_diff": 1.3671718053032271e-12,
+      "nrmsd": 2.0046336243259898e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/radiation_impurity_species": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/s_gas_puff": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/s_generic_particle": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/profiles/s_pellet": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/sigma_parallel": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 0.0008778572082519531,
+      "max_rel_diff": 2.0922547200057824e-13,
+      "nrmsd": 1.0106450184933674e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/spr": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.881784197001252e-16,
+      "max_rel_diff": 1.8475382415477086e-16,
+      "nrmsd": 6.683061774194442e-18,
+      "nan_pattern_equal": true
+    },
+    "/profiles/toroidal_angular_velocity": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/profiles/v_loop": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.509992214072554e-11,
+      "max_rel_diff": 3.351321907347374e-11,
+      "nrmsd": 1.4782602175544742e-13,
+      "nan_pattern_equal": true
+    },
+    "/profiles/volume": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.7763568394002505e-15,
+      "max_rel_diff": 1.8359264240492348e-16,
+      "nrmsd": 8.248306563252743e-19,
+      "nan_pattern_equal": true
+    },
+    "/profiles/vpr": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/rho_cell_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/rho_face_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/rho_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/A_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.859135233597044e-13,
+      "max_rel_diff": 1.333720235033045e-13,
+      "nrmsd": 7.04460627780248e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/A_impurity": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/B_0": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/E_aux_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.894899368286133e-05,
+      "max_rel_diff": 2.989221736689776e-13,
+      "nrmsd": 1.7256315338710498e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/E_external_injected": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.894899368286133e-05,
+      "max_rel_diff": 2.989221736689776e-13,
+      "nrmsd": 1.7256315338710498e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/E_external_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.894899368286133e-05,
+      "max_rel_diff": 2.989221736689776e-13,
+      "nrmsd": 1.7256315338710498e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/E_fusion": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 0.00028514862060546875,
+      "max_rel_diff": 3.348950115523551e-13,
+      "nrmsd": 2.336990130889751e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/E_ohmic_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/H20": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.059597268404104e-13,
+      "max_rel_diff": 3.214133462020388e-13,
+      "nrmsd": 1.1755205788302511e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/H89P": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.6053824936079764e-12,
+      "max_rel_diff": 4.625030172713752e-13,
+      "nrmsd": 1.699014089768202e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/H97L": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.50794998288984e-13,
+      "max_rel_diff": 2.6264899620249184e-13,
+      "nrmsd": 9.33583569094831e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/H98": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.944933351680447e-13,
+      "max_rel_diff": 3.015013309074317e-13,
+      "nrmsd": 1.0891987596738277e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/I_aux_generic": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.862645149230957e-09,
+      "max_rel_diff": 3.8564081764616073e-16,
+      "nrmsd": 3.8564081764616073e-16,
+      "nan_pattern_equal": true
+    },
+    "/scalars/I_bootstrap": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.6228448152542114e-07,
+      "max_rel_diff": 9.186771417008582e-14,
+      "nrmsd": 5.190789791279115e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/I_ecrh": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/I_external": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.862645149230957e-09,
+      "max_rel_diff": 3.8564081764616073e-16,
+      "nrmsd": 3.8564081764616073e-16,
+      "nan_pattern_equal": true
+    },
+    "/scalars/I_non_inductive": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.632158041000366e-07,
+      "max_rel_diff": 4.1398978018302324e-14,
+      "nrmsd": 2.2894320301729936e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/Ip": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.2659382820129395e-06,
+      "max_rel_diff": 1.3382157523313094e-13,
+      "nrmsd": 6.595319216675587e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_delabie": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.976987838745117e-06,
+      "max_rel_diff": 1.3069913330728325e-13,
+      "nrmsd": 6.441331909807843e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_delabie_high_density": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.976987838745117e-06,
+      "max_rel_diff": 1.3069913330728325e-13,
+      "nrmsd": 6.441331909807843e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_delabie_low_density": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.636845111846924e-07,
+      "max_rel_diff": 1.5309645247688457e-13,
+      "nrmsd": 7.728646384630425e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_delabie_min": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.376735210418701e-06,
+      "max_rel_diff": 1.298229107702385e-13,
+      "nrmsd": 6.553361643243202e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_high_density": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.2659382820129395e-06,
+      "max_rel_diff": 1.3382157523313094e-13,
+      "nrmsd": 6.595319216675587e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_low_density": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.2284144759178162e-06,
+      "max_rel_diff": 1.5607218990250834e-13,
+      "nrmsd": 7.87257410160583e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_LH_min": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.8370490074157715e-06,
+      "max_rel_diff": 1.3325907715005633e-13,
+      "nrmsd": 6.721134987797794e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_SOL_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.201514482498169e-05,
+      "max_rel_diff": 2.7858384564419478e-12,
+      "nrmsd": 5.318432938019105e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_SOL_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.8042664527893066e-05,
+      "max_rel_diff": 7.297277421656577e-13,
+      "nrmsd": 2.734637718173103e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_SOL_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.888938903808594e-05,
+      "max_rel_diff": 9.476406844409706e-13,
+      "nrmsd": 3.313383776676026e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_alpha_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.035102367401123e-05,
+      "max_rel_diff": 2.1774287767430632e-11,
+      "nrmsd": 6.093665795722762e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_alpha_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.5181099772453308e-05,
+      "max_rel_diff": 2.173310085759811e-11,
+      "nrmsd": 6.82248718694163e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_alpha_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.553398609161377e-05,
+      "max_rel_diff": 2.1760899459266702e-11,
+      "nrmsd": 6.340019081492565e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_generic_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_generic_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_generic_total": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_aux_total": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_bremsstrahlung_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_cyclotron_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_ecrh_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_ei_exchange_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.329508662223816e-06,
+      "max_rel_diff": 4.557233321301194e-13,
+      "nrmsd": 1.9811631697335712e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_ei_exchange_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.329508662223816e-06,
+      "max_rel_diff": 4.557233321301194e-13,
+      "nrmsd": 1.9811631697335712e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_external_injected": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_external_total": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_fusion": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 0.0003776848316192627,
+      "max_rel_diff": 2.176085588037944e-11,
+      "nrmsd": 6.34025298016672e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_heat_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.591047763824463e-05,
+      "max_rel_diff": 1.7520920746680413e-12,
+      "nrmsd": 3.8065195235512307e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_heat_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.962350845336914e-05,
+      "max_rel_diff": 6.508569825300706e-13,
+      "nrmsd": 2.4318399438417976e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_heat_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.553398609161377e-05,
+      "max_rel_diff": 9.643554307287134e-13,
+      "nrmsd": 2.9969328725790915e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_icrh_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_icrh_i": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_icrh_total": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_ohmic_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/P_radiation_e": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/Phi_b": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/Phi_b_dot": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/Q_fusion": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.405631663459644e-12,
+      "max_rel_diff": 2.1760761990206826e-11,
+      "nrmsd": 6.340166137256394e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/R_major": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/S_gas_puff": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/S_generic_particle": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/S_pellet": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": null,
+      "nrmsd": null,
+      "nan_pattern_equal": true
+    },
+    "/scalars/S_total": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/T_e_volume_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.544276397515205e-13,
+      "max_rel_diff": 7.897045536157839e-14,
+      "nrmsd": 4.237809412881885e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/T_i_volume_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 7.318590178329032e-13,
+      "max_rel_diff": 8.341280741175477e-14,
+      "nrmsd": 3.2404385744918916e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/W_pol": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.0994415283203125e-06,
+      "max_rel_diff": 1.5949779024346895e-14,
+      "nrmsd": 7.507826280166512e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/W_thermal_e": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4275312423706055e-05,
+      "max_rel_diff": 9.615537043012597e-14,
+      "nrmsd": 4.945183099260559e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/W_thermal_i": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.179115295410156e-06,
+      "max_rel_diff": 7.673360692513914e-14,
+      "nrmsd": 3.3677260924441794e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/W_thermal_total": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.9550323486328125e-05,
+      "max_rel_diff": 7.024067017864152e-14,
+      "nrmsd": 3.948734300442849e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/a_minor": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/beta_N": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.3988810110276972e-13,
+      "max_rel_diff": 7.041985706690886e-14,
+      "nrmsd": 3.9515047079965966e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/beta_pol": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.88418203051333e-14,
+      "max_rel_diff": 7.038184373426155e-14,
+      "nrmsd": 3.949998732135555e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/beta_tor": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.384309333829492e-15,
+      "max_rel_diff": 7.034999609759575e-14,
+      "nrmsd": 3.952266564682936e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/dW_thermal_dt": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 8.783861994743347e-05,
+      "max_rel_diff": 5.236082924156377e-12,
+      "nrmsd": 1.6583792938030448e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/dW_thermal_dt_smoothed": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.1931867599487305e-05,
+      "max_rel_diff": 2.3583963308112177e-12,
+      "nrmsd": 4.1524035481560587e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/dW_thermal_e_dt_smoothed": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.3305416107177734e-05,
+      "max_rel_diff": 1.608741216068727e-12,
+      "nrmsd": 4.439254629599922e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/dW_thermal_i_dt_smoothed": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.862877979874611e-05,
+      "max_rel_diff": 6.1601950161859074e-12,
+      "nrmsd": 5.917493351388109e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/drho": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/drho_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/f_bootstrap": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.447242491461111e-14,
+      "max_rel_diff": 9.178554954229259e-14,
+      "nrmsd": 5.1899266681709516e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/f_non_inductive": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.4638958368304884e-14,
+      "max_rel_diff": 4.1455199164598334e-14,
+      "nrmsd": 2.2897317545171847e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/fgw_n_e_line_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.086420008457935e-14,
+      "max_rel_diff": 3.5365680933924354e-14,
+      "nrmsd": 1.715925163692037e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/fgw_n_e_volume_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2.2537527399890678e-14,
+      "max_rel_diff": 2.762299604183712e-14,
+      "nrmsd": 1.3180153710981585e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/li3": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.4432899320127035e-14,
+      "max_rel_diff": 1.602722465740365e-14,
+      "nrmsd": 7.51313288291795e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/main_ion": {
+      "tier": "BITWISE"
+    },
+    "/scalars/main_ion_fractions": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.850253449400043e-13,
+      "max_rel_diff": 2.1983030261103007e-11,
+      "nrmsd": 3.4287157970115876e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/n_e_line_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2580480.0,
+      "max_rel_diff": 3.5387351597144644e-14,
+      "nrmsd": 1.71637565799043e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/n_e_min_P_LH": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/n_e_volume_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1892352.0,
+      "max_rel_diff": 2.7757925252313028e-14,
+      "nrmsd": 1.3186910051715062e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/n_i_line_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 2416640.0,
+      "max_rel_diff": 3.5507827484696396e-14,
+      "nrmsd": 1.7221476240859758e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/n_i_volume_avg": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1761280.0,
+      "max_rel_diff": 2.768082663733726e-14,
+      "nrmsd": 1.3184938806483917e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/q95": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.707345624410664e-14,
+      "max_rel_diff": 9.648241295969705e-15,
+      "nrmsd": 4.27538133759817e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/q_min": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.5987211554602254e-14,
+      "max_rel_diff": 1.220242519422564e-14,
+      "nrmsd": 5.634176892258332e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_b": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_2_1_first": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.3861802251067274e-15,
+      "max_rel_diff": 1.507606278073494e-14,
+      "nrmsd": 1.507606278073494e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_2_1_second": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 4.9960036108132044e-15,
+      "max_rel_diff": 8.447970297757932e-15,
+      "nrmsd": 2.944448744648386e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_3_1_first": {
+      "tier": "BITWISE",
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_3_1_second": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.6637359812630166e-15,
+      "max_rel_diff": 4.732011506780615e-15,
+      "nrmsd": 2.4804400253940105e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_3_2_first": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 9.603429163007604e-15,
+      "max_rel_diff": 3.1162353376183395e-14,
+      "nrmsd": 1.0334278503316434e-14,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_3_2_second": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 5.995204332975845e-15,
+      "max_rel_diff": 1.2178647233201286e-14,
+      "nrmsd": 3.438648068785272e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/rho_q_min": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.83026943495679e-15,
+      "max_rel_diff": 9.481411346733893e-15,
+      "nrmsd": 2.5988472945900764e-15,
+      "nan_pattern_equal": true
+    },
+    "/scalars/tau_E": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 6.3646865555710974e-12,
+      "max_rel_diff": 9.669821504672191e-13,
+      "nrmsd": 3.3371276654572193e-13,
+      "nan_pattern_equal": true
+    },
+    "/scalars/v_loop_lcfs": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 3.471334331095477e-12,
+      "max_rel_diff": 5.323364502652358e-12,
+      "nrmsd": 1.2311705816216514e-13,
+      "nan_pattern_equal": true
+    },
+    "/time": {
+      "tier": "RTOL_1e-9",
+      "max_abs_diff": 1.1550760348200129e-12,
+      "max_rel_diff": 2.9871875146645764e-13,
+      "nrmsd": 1.7227622543223304e-13,
+      "nan_pattern_equal": true
+    }
+  },
+  "require": "RTOL_1e-9",
+  "meets_require": false
+}

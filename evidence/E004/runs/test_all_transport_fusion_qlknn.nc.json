@@ -1,0 +1,20 @@
+{
+  "label": "test_all_transport_fusion_qlknn",
+  "config": "upstream-torax-main/torax/tests/test_data/test_all_transport_fusion_qlknn.py",
+  "config_sha256": "39f3c552d1317d55808da208875894e943f1d56998a8fd75848939b683f8fd03",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 18,
+  "t_final": 2.0,
+  "wall_s_including_compile": 8.053,
+  "out": "evidence/E004/runs/test_all_transport_fusion_qlknn.nc",
+  "out_sha256": "ed9223c81b096091009cddbaa715cd804eb0a772c4e560ea16a911f8e5712495",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

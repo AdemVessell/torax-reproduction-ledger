@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_tglfnn_ukaea",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea.py",
+  "config_sha256": "dea221ee65e9c657f820d0299d12cb38d80b00dc156dc71f837a3d8e37d5577d",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 51,
+  "t_final": 5.0,
+  "wall_s_including_compile": 11.183,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_tglfnn_ukaea.nc",
+  "out_sha256": "16c2e8b6d342050053fa4b61e1a68e4ea1e4642a0d3ca89546b103dd5d066447",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

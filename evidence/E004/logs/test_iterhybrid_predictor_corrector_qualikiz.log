@@ -1,0 +1,17 @@
+2026-09-25 19:42:30,103 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+Traceback (most recent call last):
+  File "harness/run_case.py", line 89, in <module>
+    main()
+  File "harness/run_case.py", line 57, in main
+    torax_config = model_config.ToraxConfig.from_dict(cfg)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "upstream-torax-main/torax/_src/torax_pydantic/model_base.py", line 129, in from_dict
+    return cls.model_validate(cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv-main/lib/python3.12/site-packages/pydantic/main.py", line 732, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ToraxConfig
+transport.core_transport_models.qualikiz
+  Input tag 'qualikiz' found using 'model_name' does not match any of the expected tags: 'qlknn', 'tglfnn-ukaea', 'prescribed', 'CGM', 'bohm-gyrobohm', 'tglf' [type=union_tag_invalid, input_value={'model_name': 'qualikiz'...: 0.15, 'rho_max': 0.95}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/union_tag_invalid

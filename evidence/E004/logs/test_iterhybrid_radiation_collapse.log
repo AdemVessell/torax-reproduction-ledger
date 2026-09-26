@@ -1,0 +1,100 @@
+2026-09-25 19:42:48,639 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:42:49,222 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:42:51,275 [    INFO] Precision is set at float64
+2026-09-25 19:42:51,275 [    INFO] Starting simulation.
+2026-09-25 19:42:58,740 [   ERROR] 
+          Simulation stopped because ion or electron temperature fell below the
+          configured minimum threshold. This is usually caused by radiative
+          collapse. Output file contains all profiles up to the last valid step.
+          
+2026-09-25 19:42:58,741 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.69s of wall clock time.
+2026-09-25 19:42:58,756 [    INFO] Simulated 1.22s of physics in 0.77s of wall clock time.
+Iteration: 1. Residual: 0.0407132224928067. tau = 1.000000
+Iteration: 2. Residual: 0.0002324929692162. tau = 1.000000
+Iteration: 3. Residual: 0.0000000028753089. tau = 1.000000
+Iteration: 1. Residual: 0.0010538260129578. tau = 1.000000
+Iteration: 2. Residual: 0.0000000660910601. tau = 1.000000
+Iteration: 1. Residual: 0.0006152830151855. tau = 1.000000
+Iteration: 2. Residual: 0.0000000334240525. tau = 1.000000
+Iteration: 1. Residual: 0.0002484692099801. tau = 1.000000
+Iteration: 2. Residual: 0.0000000074701472. tau = 1.000000
+Iteration: 1. Residual: 0.0003488961896978. tau = 1.000000
+Iteration: 2. Residual: 0.0000001159248620. tau = 1.000000
+Iteration: 1. Residual: 0.0003717387808411. tau = 1.000000
+Iteration: 2. Residual: 0.0000001306731288. tau = 1.000000
+Iteration: 1. Residual: 0.0005631339494275. tau = 1.000000
+Iteration: 2. Residual: 0.0000005182127451. tau = 1.000000
+Iteration: 1. Residual: 0.0016163228144704. tau = 1.000000
+Iteration: 2. Residual: 0.0000081701208928. tau = 1.000000
+Iteration: 1. Residual: 0.0106049277995189. tau = 1.000000
+Iteration: 2. Residual: 0.0002124936933182. tau = 1.000000
+Iteration: 3. Residual: 0.0000000448420340. tau = 1.000000
+Iteration: 1. Residual: 0.0661041008226405. tau = 1.000000
+Iteration: 2. Residual: 0.0083990208712982. tau = 1.000000
+Iteration: 3. Residual: 0.0000601434285017. tau = 1.000000
+Iteration: 4. Residual: 0.0000000055583742. tau = 1.000000
+Iteration: 1. Residual: 0.0396071919096272. tau = 1.000000
+Iteration: 2. Residual: 0.0013008592259779. tau = 1.000000
+Iteration: 3. Residual: 0.0000006219009363. tau = 1.000000
+Iteration: 1. Residual: 0.2306021817418153. tau = 0.500000
+Iteration: 2. Residual: 0.0398078226999048. tau = 1.000000
+Iteration: 3. Residual: 0.0361507366028203. tau = 0.500000
+Iteration: 4. Residual: 0.0129421581978947. tau = 1.000000
+Iteration: 5. Residual: 0.0125592821755096. tau = 0.062500
+Iteration: 6. Residual: 0.0121387447320629. tau = 0.062500
+Iteration: 7. Residual: 0.0095601879779391. tau = 0.500000
+Iteration: 8. Residual: 0.0088603916906974. tau = 0.250000
+Iteration: 9. Residual: 0.0086684583915420. tau = 0.125000
+Iteration: 10. Residual: 0.0084203811067385. tau = 0.062500
+Iteration: 11. Residual: 0.0084133332495926. tau = 0.001953
+Iteration: 1. Residual: 0.0386621712135496. tau = 1.000000
+Iteration: 2. Residual: 0.0342776950188787. tau = 0.250000
+Iteration: 3. Residual: 0.0341236751900220. tau = 0.015625
+Iteration: 4. Residual: 0.0306392273101142. tau = 0.500000
+Iteration: 5. Residual: 0.0301209930963015. tau = 0.062500
+Iteration: 6. Residual: 0.0296811063133155. tau = 0.031250
+Iteration: 7. Residual: 0.0296311921949433. tau = 0.003906
+Iteration: 1. Residual: 0.0224671006520544. tau = 0.007812
+Iteration: 1. Residual: 0.0004500052163672. tau = 1.000000
+Iteration: 2. Residual: 0.0004486202662277. tau = 0.125000
+Iteration: 3. Residual: 0.0004034420311525. tau = 0.500000
+Iteration: 4. Residual: 0.0002583463047222. tau = 1.000000
+Iteration: 5. Residual: 0.0002352917064496. tau = 0.250000
+Iteration: 6. Residual: 0.0002339350274879. tau = 0.015625
+Iteration: 7. Residual: 0.0002338361904103. tau = 0.000977
+Iteration: 1. Residual: 0.0667616782110796. tau = 0.125000
+Iteration: 2. Residual: 0.0090117536181142. tau = 1.000000
+Iteration: 3. Residual: 0.0051594375285959. tau = 1.000000
+Iteration: 4. Residual: 0.0051570214680678. tau = 0.001953
+Iteration: 1. Residual: 0.0002645033276201. tau = 1.000000
+Iteration: 2. Residual: 0.0000003473507899. tau = 1.000000
+Iteration: 1. Residual: 0.0001549709580139. tau = 1.000000
+Iteration: 2. Residual: 0.0000005831146460. tau = 1.000000
+Iteration: 1. Residual: 0.0000897930562823. tau = 1.000000
+Iteration: 2. Residual: 0.0000004606075498. tau = 1.000000
+Iteration: 1. Residual: 0.3541627690876905. tau = 1.000000
+Iteration: 2. Residual: 0.1625467729423351. tau = 1.000000
+Iteration: 3. Residual: 0.0738330820966269. tau = 1.000000
+Iteration: 4. Residual: 0.0325878185796601. tau = 1.000000
+Iteration: 5. Residual: 0.0133296936987720. tau = 1.000000
+Iteration: 6. Residual: 0.0039571262553090. tau = 1.000000
+Iteration: 7. Residual: 0.0003341172933202. tau = 1.000000
+Iteration: 8. Residual: 0.0000019357674790. tau = 1.000000
+Iteration: 1. Residual: 0.0142765540333372. tau = 0.250000
+Iteration: 2. Residual: 0.0085581627830225. tau = 1.000000
+Iteration: 3. Residual: 0.0024756096633217. tau = 1.000000
+Iteration: 4. Residual: 0.0007195224302253. tau = 1.000000
+Iteration: 5. Residual: 0.0000151657046985. tau = 1.000000
+Iteration: 6. Residual: 0.0000000065866140. tau = 1.000000
+Iteration: 1. Residual: 0.0014610126815917. tau = 0.250000
+Iteration: 2. Residual: 0.0002025522972487. tau = 1.000000
+Iteration: 3. Residual: 0.0000125986621241. tau = 1.000000
+Iteration: 4. Residual: 0.0000001351533587. tau = 1.000000
+Iteration: 1. Residual: 0.0002671114606631. tau = 1.000000
+Iteration: 2. Residual: 0.0000353307227043. tau = 1.000000
+Iteration: 3. Residual: 0.0000003770821338. tau = 1.000000
+Iteration: 1. Residual: 0.0000906290239760. tau = 1.000000
+Iteration: 2. Residual: 0.0000028331026814. tau = 1.000000
+Iteration: 1. Residual: 0.0000372650641080. tau = 1.000000
+Iteration: 2. Residual: 0.0000010397404870. tau = 1.000000
+{"label": "test_iterhybrid_radiation_collapse", "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_radiation_collapse.py", "config_sha256": "aa566d3bd59351b1b1d14b1da6477eb8a21a6f6e37e68a1caef5dbc2081caa05", "overrides": {}, "sim_error": "LOW_TEMPERATURE_COLLAPSE", "n_times": 23, "t_final": 1.2162780064014638, "wall_s_including_compile": 10.362, "out": "evidence/E004/runs/test_iterhybrid_radiation_collapse.nc", "out_sha256": "40afa764a7de676e418bfb706731f3e80d9d023b5768e618ef60648dfba4a77b", "torax_version": "1.4.3", "jax_version": "0.11.2", "jax_x64": true, "devices": ["cpu:0"], "machine": "arm64", "platform": "macOS-27.0-arm64-arm-64bit"}

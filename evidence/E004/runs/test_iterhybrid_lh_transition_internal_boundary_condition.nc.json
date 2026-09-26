@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_lh_transition_internal_boundary_condition",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_lh_transition_internal_boundary_condition.py",
+  "config_sha256": "23ab45cf63106c97383e73b1b417470e74ffe5bd9a477693114a7e4e7efe86c5",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 63,
+  "t_final": 60.0,
+  "wall_s_including_compile": 13.79,
+  "out": "evidence/E004/runs/test_iterhybrid_lh_transition_internal_boundary_condition.nc",
+  "out_sha256": "d619aa57ef7dd332a1be410e260ea80331ce2f9493ec4025f8cdd4666a1a9023",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

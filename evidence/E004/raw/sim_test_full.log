@@ -1,0 +1,1745 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0
+rootdir: upstream-torax-main
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)
+plugins: shard-0.1.2, jaxtyping-0.3.11, xdist-3.8.0, typeguard-2.13.3
+created: 6/6 workers
+6 workers [63 items]
+
+...............................................................          [100%]
+=============================== warnings summary ===============================
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+  .venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59: DeprecationWarning: JAXopt is no longer maintained. See https://docs.jax.dev/en/latest/ for alternatives.
+    warnings.warn(
+
+torax/tests/sim_test.py::SimTest::test_run_simulation_test_imas_profiles_and_geo
+torax/tests/sim_test.py::SimTest::test_run_simulation_test_imas_profiles_and_geo
+  upstream-torax-main/torax/_src/interpolated_param.py:340: DeprecationWarning: IDSFloat0D.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+    xs = np.atleast_1d(np.asarray(xs, dtype=jax_utils.get_np_dtype()))
+
+torax/tests/sim_test.py: 13 warnings
+  upstream-torax-main/torax/_src/torax_pydantic/interpolated_param_2d.py:502: DeprecationWarning: IDSFloat0D.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+    values.append(np.asarray(v))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+______________ SimTest.test_run_simulation_test_bohmgyrobohm_all _______________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,747 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:55,877 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:57,567 [    INFO] Precision is set at float64
+2026-09-25 19:43:57,567 [    INFO] Starting simulation.
+2026-09-25 19:44:02,893 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.97s of wall clock time.
+2026-09-25 19:44:02,939 [    INFO] Simulated 2.00s of physics in 0.35s of wall clock time.
+2026-09-25 19:44:04,298 [    INFO] Loaded state file torax/tests/test_data/test_bohmgyrobohm_all.nc
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.97s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.35s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_bohmgyrobohm_all.nc
+_______________________ SimTest.test_nans_trigger_error ________________________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,747 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:56,317 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:56,413 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:43:59,370 [    INFO] Precision is set at float64
+2026-09-25 19:43:59,370 [    INFO] Starting simulation.
+
+Simulating:   0%|          | 0/100 [00:00<?, ?it/s]
+Simulating (t=0.10000):   2%|▏         | 2/100 [00:07<06:26,  3.95s/it]
+Simulating (t=0.10000):   2%|▏         | 2/100 [00:07<06:26,  3.95s/it]
+Simulating (t=0.20000):   4%|▍         | 4/100 [00:07<03:09,  1.98s/it]
+Simulating (t=0.20000):   4%|▍         | 4/100 [00:07<03:09,  1.98s/it]
+Simulating (t=0.30000):   6%|▌         | 6/100 [00:07<02:04,  1.32s/it]
+Simulating (t=0.30000):   6%|▌         | 6/100 [00:07<02:04,  1.32s/it]
+Simulating (t=0.40000):   8%|▊         | 8/100 [00:07<01:31,  1.01it/s]
+Simulating (t=0.40000):   8%|▊         | 8/100 [00:07<01:31,  1.01it/s]
+Simulating (t=0.50000):  10%|█         | 10/100 [00:07<01:11,  1.26it/s]
+Simulating (t=0.50000):  10%|█         | 10/100 [00:07<01:11,  1.26it/s]
+Simulating (t=0.60000):  12%|█▏        | 12/100 [00:07<00:58,  1.51it/s]
+Simulating (t=0.60000):  12%|█▏        | 12/100 [00:07<00:58,  1.51it/s]
+Simulating (t=0.70000):  13%|█▎        | 13/100 [00:07<00:53,  1.63it/s]
+Simulating (t=0.70000):  13%|█▎        | 13/100 [00:07<00:53,  1.63it/s]
+Simulating (t=0.80000):  15%|█▌        | 15/100 [00:07<00:45,  1.88it/s]
+Simulating (t=0.80000):  15%|█▌        | 15/100 [00:07<00:45,  1.88it/s]
+Simulating (t=0.90000):  18%|█▊        | 18/100 [00:08<00:36,  2.25it/s]
+Simulating (t=0.90000):  18%|█▊        | 18/100 [00:08<00:36,  2.25it/s]
+Simulating (t=1.00000):  20%|██        | 20/100 [00:08<00:32,  2.50it/s]
+Simulating (t=1.00000):  20%|██        | 20/100 [00:08<00:32,  2.50it/s]
+Simulating (t=1.10000):  21%|██        | 21/100 [00:08<00:30,  2.62it/s]
+Simulating (t=1.10000):  21%|██        | 21/100 [00:08<00:30,  2.62it/s]
+Simulating (t=1.20000):  24%|██▍       | 24/100 [00:08<00:25,  2.99it/s]
+Simulating (t=1.20000):  24%|██▍       | 24/100 [00:08<00:25,  2.99it/s]
+Simulating (t=1.30000):  26%|██▌       | 26/100 [00:08<00:22,  3.24it/s]
+Simulating (t=1.30000):  26%|██▌       | 26/100 [00:08<00:22,  3.24it/s]
+Simulating (t=1.40000):  28%|██▊       | 28/100 [00:08<00:20,  3.49it/s]
+Simulating (t=1.40000):  28%|██▊       | 28/100 [00:08<00:20,  3.49it/s]
+Simulating (t=1.50000):  30%|███       | 30/100 [00:08<00:18,  3.73it/s]
+Simulating (t=1.50000):  30%|███       | 30/100 [00:08<00:18,  3.73it/s]
+Simulating (t=1.60000):  32%|███▏      | 32/100 [00:08<00:17,  3.98it/s]
+Simulating (t=1.60000):  32%|███▏      | 32/100 [00:08<00:17,  3.98it/s]
+Simulating (t=1.70000):  34%|███▍      | 34/100 [00:08<00:15,  4.22it/s]
+Simulating (t=1.70000):  34%|███▍      | 34/100 [00:08<00:15,  4.22it/s]
+Simulating (t=1.80000):  36%|███▌      | 36/100 [00:08<00:14,  4.47it/s]
+Simulating (t=1.80000):  36%|███▌      | 36/100 [00:08<00:14,  4.47it/s]
+Simulating (t=1.90000):  38%|███▊      | 38/100 [00:08<00:13,  4.71it/s]
+Simulating (t=1.90000):  38%|███▊      | 38/100 [00:08<00:13,  4.71it/s]
+Simulating (t=2.00000):  40%|████      | 40/100 [00:08<00:12,  4.95it/s]
+Simulating (t=2.00000):  40%|████      | 40/100 [00:08<00:12,  4.95it/s]
+Simulating (t=2.10000):  42%|████▏     | 42/100 [00:08<00:11,  5.20it/s]
+Simulating (t=2.10000):  42%|████▏     | 42/100 [00:08<00:11,  5.20it/s]
+Simulating (t=2.20000):  44%|████▍     | 44/100 [00:08<00:10,  5.43it/s]
+Simulating (t=2.20000):  44%|████▍     | 44/100 [00:08<00:10,  5.43it/s]
+Simulating (t=2.30000):  46%|████▌     | 46/100 [00:08<00:09,  5.66it/s]
+Simulating (t=2.30000):  46%|████▌     | 46/100 [00:08<00:09,  5.66it/s]
+Simulating (t=2.40000):  48%|████▊     | 48/100 [00:08<00:08,  5.90it/s]
+Simulating (t=2.40000):  48%|████▊     | 48/100 [00:08<00:08,  5.90it/s]
+Simulating (t=2.50000):  50%|█████     | 50/100 [00:08<00:08,  6.14it/s]
+Simulating (t=2.50000):  50%|█████     | 50/100 [00:08<00:08,  6.14it/s]
+Simulating (t=2.60000):  52%|█████▏    | 52/100 [00:08<00:07,  6.38it/s]
+Simulating (t=2.60000):  52%|█████▏    | 52/100 [00:08<00:07,  6.38it/s]
+Simulating (t=2.70000):  54%|█████▍    | 54/100 [00:08<00:06,  6.61it/s]
+Simulating (t=2.70000):  54%|█████▍    | 54/100 [00:08<00:06,  6.61it/s]
+Simulating (t=2.80000):  56%|█████▌    | 56/100 [00:08<00:06,  6.79it/s]
+Simulating (t=2.80000):  56%|█████▌    | 56/100 [00:08<00:06,  6.79it/s]
+Simulating (t=2.90000):  58%|█████▊    | 58/100 [00:08<00:05,  7.02it/s]
+Simulating (t=2.90000):  58%|█████▊    | 58/100 [00:08<00:05,  7.02it/s]
+Simulating (t=3.00000):  60%|██████    | 60/100 [00:08<00:05,  7.26it/s]
+Simulating (t=3.00000):  60%|██████    | 60/100 [00:08<00:05,  7.26it/s]
+Simulating (t=3.10000):  62%|██████▏   | 62/100 [00:08<00:05,  7.49it/s]
+Simulating (t=3.10000):  62%|██████▏   | 62/100 [00:08<00:05,  7.49it/s]
+Simulating (t=3.20000):  64%|██████▍   | 64/100 [00:08<00:04,  7.72it/s]
+Simulating (t=3.20000):  64%|██████▍   | 64/100 [00:08<00:04,  7.72it/s]2026-09-25 19:44:07,702 [    INFO] NaNs detected in ToraxSimState:
+
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.T_i.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.T_e.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.psi.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.psidot.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.psidot.right_face_constraint
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.n_e.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.n_i.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.n_impurity.value
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.q_face
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.s_face
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.v_loop_lcfs
+2026-09-25 19:44:07,727 [    INFO] Found NaNs in sim_state.core_profiles.Z_impurity
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.Z_impurity_face
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.Z_eff_face
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.sigma
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.sigma_face
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.j_total
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.j_total_face
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.Ip_profile_face
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info.Z_avg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info.Z2_avg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info.Z_per_species['Ne']
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info_face.Z_avg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info_face.Z2_avg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.charge_state_info_face.Z_per_species['Ne']
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_i
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_e
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_total
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_i_dt
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_e_dt
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_i_dt_smoothed
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_e_dt_smoothed
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.total.chi_face_ion
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.total.chi_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.total.v_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.total.chi_face_ion
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.total.chi_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.total.v_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion_itg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion_tem
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_itg
+2026-09-25 19:44:07,728 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_tem
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_etg
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].d_face_el_itg
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].d_face_el_tem
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el_itg
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el_tem
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.bootstrap_current.j_parallel_bootstrap
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.bootstrap_current.j_parallel_bootstrap_face
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.qei.implicit_ii
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.qei.implicit_ee
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.qei.implicit_ie
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.qei.implicit_ei
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.qei.p_ei
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.T_e['fusion']
+2026-09-25 19:44:07,729 [    INFO] Found NaNs in sim_state.core_sources.T_i['fusion']
+2026-09-25 19:44:07,729 [    INFO] 
+A common cause of widespread NaNs is negative densities or
+        temperatures evolving during the solver step. This often arises through
+        physical reasons like radiation collapse, or unphysical configuration
+        such as impurity densities incompatible with physical quasineutrality.
+        Check the output file for near-zero temperatures or densities at the
+        last valid step.
+2026-09-25 19:44:07,729 [   ERROR] 
+            Simulation stopped due to NaNs in state and/or post processed outputs.
+            Output file contains all profiles up to the last valid step.
+            
+
+Simulating (t=3.20000):  64%|██████▍   | 64/100 [00:08<00:04,  7.68it/s]
+2026-09-25 19:44:07,729 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.87s of wall clock time.
+2026-09-25 19:44:07,748 [    INFO] Simulated 3.20s of physics in 0.48s of wall clock time.
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:sim_state.py:107 NaNs detected in ToraxSimState:
+
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.T_i.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.T_e.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.psi.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.psidot.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.psidot.right_face_constraint
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.n_e.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.n_i.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.n_impurity.value
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.q_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.s_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.v_loop_lcfs
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.Z_impurity
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.Z_impurity_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.Z_eff_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.sigma
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.sigma_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.j_total
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.j_total_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.Ip_profile_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info.Z_avg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info.Z2_avg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info.Z_per_species['Ne']
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info_face.Z_avg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info_face.Z2_avg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.charge_state_info_face.Z_per_species['Ne']
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_i
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_e
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.W_thermal_total
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_i_dt
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_e_dt
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_i_dt_smoothed
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_profiles.internal_plasma_energy.dW_thermal_e_dt_smoothed
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.total.chi_face_ion
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.total.chi_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.total.v_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.total.chi_face_ion
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.total.chi_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.total.v_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion_itg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_ion_tem
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_itg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_tem
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].chi_face_el_etg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].d_face_el_itg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].d_face_el_tem
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el_itg
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_transport.turbulent.core_coefficients['qlknn'].v_face_el_tem
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.bootstrap_current.j_parallel_bootstrap
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.bootstrap_current.j_parallel_bootstrap_face
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.qei.implicit_ii
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.qei.implicit_ee
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.qei.implicit_ie
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.qei.implicit_ei
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.qei.p_ei
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.T_e['fusion']
+INFO     absl:sim_state.py:135 Found NaNs in sim_state.core_sources.T_i['fusion']
+INFO     absl:sim_state.py:139 
+A common cause of widespread NaNs is negative densities or
+        temperatures evolving during the solver step. This often arises through
+        physical reasons like radiation collapse, or unphysical configuration
+        such as impurity densities incompatible with physical quasineutrality.
+        Check the output file for near-zero temperatures or densities at the
+        last valid step.
+ERROR    absl:state.py:557 
+            Simulation stopped due to NaNs in state and/or post processed outputs.
+            Output file contains all profiles up to the last valid step.
+            
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.87s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.20s of physics in 0.48s of wall clock time.
+____________ SimTest.test_run_simulation_test_changing_config_after ____________
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,747 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:56,302 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:56,393 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:43:59,412 [    INFO] Precision is set at float64
+2026-09-25 19:43:59,412 [    INFO] Starting simulation.
+2026-09-25 19:44:07,274 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.76s of wall clock time.
+2026-09-25 19:44:07,291 [    INFO] Simulated 3.00s of physics in 0.10s of wall clock time.
+2026-09-25 19:44:08,739 [    INFO] Loaded state file torax/tests/test_data/test_changing_config_after.nc
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.76s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.10s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_changing_config_after.nc
+_____ SimTest.test_run_simulation_test_bremsstrahlung_time_dependent_Zimp ______
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:05,334 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:07,620 [    INFO] Precision is set at float64
+2026-09-25 19:44:07,620 [    INFO] Starting simulation.
+2026-09-25 19:44:12,232 [    INFO] Simulated 1.00s of physics in 4.61s of wall clock time.
+2026-09-25 19:44:13,466 [    INFO] Loaded state file torax/tests/test_data/test_bremsstrahlung_time_dependent_Zimp.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 1.00s of physics in 4.61s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_bremsstrahlung_time_dependent_Zimp.nc
+________________________ SimTest.test_prescribed_psidot ________________________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,745 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:55,871 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:57,208 [    INFO] Precision is set at float64
+2026-09-25 19:43:57,208 [    INFO] Starting simulation.
+2026-09-25 19:44:01,468 [    INFO] Simulated 3.00s of physics in 4.24s of wall clock time.
+2026-09-25 19:44:02,252 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:03,820 [    INFO] Precision is set at float64
+2026-09-25 19:44:03,820 [    INFO] Starting simulation.
+2026-09-25 19:44:08,234 [    INFO] Simulated 3.00s of physics in 4.41s of wall clock time.
+2026-09-25 19:44:08,461 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:09,446 [    INFO] Precision is set at float64
+2026-09-25 19:44:09,446 [    INFO] Starting simulation.
+2026-09-25 19:44:14,322 [    INFO] Simulated 3.00s of physics in 4.88s of wall clock time.
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 4.24s of wall clock time.
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 4.41s of wall clock time.
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 4.88s of wall clock time.
+______________________________ SimTest.test_no_op ______________________________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:08,742 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:11,642 [    INFO] Precision is set at float64
+2026-09-25 19:44:11,643 [    INFO] Starting simulation.
+2026-09-25 19:44:15,546 [    INFO] Simulated 0.12s of physics in 3.90s of wall clock time.
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 0.12s of physics in 3.90s of wall clock time.
+___________________ SimTest.test_ip_bc_v_loop_bc_equivalence ___________________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,746 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:56,303 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:56,378 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:43:59,305 [    INFO] Precision is set at float64
+2026-09-25 19:43:59,305 [    INFO] Starting simulation.
+
+Simulating:   0%|          | 0/100 [00:00<?, ?it/s]
+Simulating (t=0.04519):   0%|          | 0/100 [00:05<?, ?it/s]
+Simulating (t=0.04519):   0%|          | 0/100 [00:05<?, ?it/s]
+Simulating (t=0.10942):   1%|          | 1/100 [00:05<08:24,  5.09s/it]
+Simulating (t=0.10942):   1%|          | 1/100 [00:05<08:24,  5.09s/it]
+Simulating (t=0.19518):   1%|          | 1/100 [00:05<08:24,  5.10s/it]
+Simulating (t=0.19518):   1%|          | 1/100 [00:05<08:24,  5.10s/it]
+Simulating (t=0.29624):   2%|▏         | 2/100 [00:05<04:10,  2.55s/it]
+Simulating (t=0.29624):   2%|▏         | 2/100 [00:05<04:10,  2.55s/it]
+Simulating (t=0.40430):   4%|▍         | 4/100 [00:05<02:02,  1.28s/it]
+Simulating (t=0.40430):   4%|▍         | 4/100 [00:05<02:02,  1.28s/it]
+Simulating (t=0.51729):   5%|▌         | 5/100 [00:05<01:37,  1.02s/it]
+Simulating (t=0.51729):   5%|▌         | 5/100 [00:05<01:37,  1.02s/it]
+Simulating (t=0.63670):   6%|▌         | 6/100 [00:05<01:20,  1.17it/s]
+Simulating (t=0.63670):   6%|▌         | 6/100 [00:05<01:20,  1.17it/s]
+Simulating (t=0.76451):   7%|▋         | 7/100 [00:05<01:08,  1.36it/s]
+Simulating (t=0.76451):   7%|▋         | 7/100 [00:05<01:08,  1.36it/s]
+Simulating (t=0.90153):   9%|▉         | 9/100 [00:05<00:51,  1.75it/s]
+Simulating (t=0.90153):   9%|▉         | 9/100 [00:05<00:51,  1.75it/s]
+Simulating (t=1.04726):  10%|█         | 10/100 [00:05<00:46,  1.94it/s]
+Simulating (t=1.04726):  10%|█         | 10/100 [00:05<00:46,  1.94it/s]
+Simulating (t=1.19957):  11%|█         | 11/100 [00:05<00:41,  2.13it/s]
+Simulating (t=1.19957):  11%|█         | 11/100 [00:05<00:41,  2.13it/s]
+Simulating (t=1.35736):  13%|█▎        | 13/100 [00:05<00:34,  2.52it/s]
+Simulating (t=1.35736):  13%|█▎        | 13/100 [00:05<00:34,  2.52it/s]
+Simulating (t=1.51966):  15%|█▌        | 15/100 [00:05<00:29,  2.90it/s]
+Simulating (t=1.51966):  15%|█▌        | 15/100 [00:05<00:29,  2.90it/s]
+Simulating (t=1.68565):  16%|█▌        | 16/100 [00:05<00:27,  3.08it/s]
+Simulating (t=1.68565):  16%|█▌        | 16/100 [00:05<00:27,  3.08it/s]
+Simulating (t=1.85477):  18%|█▊        | 18/100 [00:05<00:23,  3.46it/s]
+Simulating (t=1.85477):  18%|█▊        | 18/100 [00:05<00:23,  3.46it/s]
+Simulating (t=2.02662):  20%|██        | 20/100 [00:05<00:20,  3.84it/s]
+Simulating (t=2.02662):  20%|██        | 20/100 [00:05<00:20,  3.84it/s]
+Simulating (t=2.20095):  22%|██▏       | 22/100 [00:05<00:18,  4.21it/s]
+Simulating (t=2.20095):  22%|██▏       | 22/100 [00:05<00:18,  4.21it/s]
+Simulating (t=2.37764):  23%|██▎       | 23/100 [00:05<00:17,  4.40it/s]
+Simulating (t=2.37764):  23%|██▎       | 23/100 [00:05<00:17,  4.40it/s]
+Simulating (t=2.55662):  25%|██▌       | 25/100 [00:05<00:15,  4.77it/s]
+Simulating (t=2.55662):  25%|██▌       | 25/100 [00:05<00:15,  4.77it/s]
+Simulating (t=2.73785):  27%|██▋       | 27/100 [00:05<00:14,  5.14it/s]
+Simulating (t=2.73785):  27%|██▋       | 27/100 [00:05<00:14,  5.14it/s]
+Simulating (t=2.92133):  29%|██▉       | 29/100 [00:05<00:12,  5.52it/s]
+Simulating (t=2.92133):  29%|██▉       | 29/100 [00:05<00:12,  5.52it/s]
+Simulating (t=3.10705):  31%|███       | 31/100 [00:05<00:11,  5.88it/s]
+Simulating (t=3.10705):  31%|███       | 31/100 [00:05<00:11,  5.88it/s]
+Simulating (t=3.29502):  32%|███▏      | 32/100 [00:05<00:11,  6.06it/s]
+Simulating (t=3.29502):  32%|███▏      | 32/100 [00:05<00:11,  6.06it/s]
+Simulating (t=3.48524):  34%|███▍      | 34/100 [00:05<00:10,  6.43it/s]
+Simulating (t=3.48524):  34%|███▍      | 34/100 [00:05<00:10,  6.43it/s]
+Simulating (t=3.67775):  36%|███▌      | 36/100 [00:05<00:09,  6.80it/s]
+Simulating (t=3.67775):  36%|███▌      | 36/100 [00:05<00:09,  6.80it/s]
+Simulating (t=3.87256):  38%|███▊      | 38/100 [00:05<00:08,  7.16it/s]
+Simulating (t=3.87256):  38%|███▊      | 38/100 [00:05<00:08,  7.16it/s]
+Simulating (t=4.06972):  40%|████      | 40/100 [00:05<00:07,  7.52it/s]
+Simulating (t=4.06972):  40%|████      | 40/100 [00:05<00:07,  7.52it/s]
+Simulating (t=4.29094):  42%|████▏     | 42/100 [00:05<00:07,  7.88it/s]
+Simulating (t=4.29094):  42%|████▏     | 42/100 [00:05<00:07,  7.87it/s]
+Simulating (t=4.78300):  47%|████▋     | 47/100 [00:05<00:06,  8.80it/s]
+Simulating (t=4.78300):  47%|████▋     | 47/100 [00:05<00:06,  8.80it/s]
+Simulating (t=5.28300):  52%|█████▏    | 52/100 [00:05<00:04,  9.73it/s]
+Simulating (t=5.28300):  52%|█████▏    | 52/100 [00:05<00:04,  9.73it/s]
+Simulating (t=5.78300):  57%|█████▋    | 57/100 [00:05<00:04, 10.66it/s]
+Simulating (t=5.78300):  57%|█████▋    | 57/100 [00:05<00:04, 10.66it/s]
+Simulating (t=6.28300):  62%|██████▏   | 62/100 [00:05<00:03, 11.58it/s]
+Simulating (t=6.28300):  62%|██████▏   | 62/100 [00:05<00:03, 11.57it/s]
+Simulating (t=6.76335):  67%|██████▋   | 67/100 [00:05<00:02, 12.48it/s]
+Simulating (t=6.76335):  67%|██████▋   | 67/100 [00:05<00:02, 12.48it/s]
+Simulating (t=7.26335):  72%|███████▏  | 72/100 [00:05<00:02, 13.39it/s]
+Simulating (t=7.26335):  72%|███████▏  | 72/100 [00:05<00:02, 13.39it/s]
+Simulating (t=7.76335):  77%|███████▋  | 77/100 [00:05<00:01, 14.28it/s]
+Simulating (t=7.76335):  77%|███████▋  | 77/100 [00:05<00:01, 14.28it/s]
+Simulating (t=8.26335):  82%|████████▏ | 82/100 [00:05<00:01, 15.09it/s]
+Simulating (t=8.26335):  82%|████████▏ | 82/100 [00:05<00:01, 15.09it/s]
+Simulating (t=8.76335):  87%|████████▋ | 87/100 [00:05<00:00, 15.87it/s]
+Simulating (t=8.76335):  87%|████████▋ | 87/100 [00:05<00:00, 15.87it/s]
+Simulating (t=9.26335):  92%|█████████▏| 92/100 [00:05<00:00, 16.74it/s]
+Simulating (t=9.26335):  92%|█████████▏| 92/100 [00:05<00:00, 16.74it/s]
+Simulating (t=9.76335):  97%|█████████▋| 97/100 [00:05<00:00, 17.63it/s]
+Simulating (t=9.76335):  97%|█████████▋| 97/100 [00:05<00:00, 17.63it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:05<00:00, 18.15it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:05<00:00, 18.15it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:05<00:00, 18.15it/s]
+2026-09-25 19:44:04,846 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.04s of wall clock time.
+2026-09-25 19:44:04,888 [    INFO] Simulated 10.00s of physics in 0.50s of wall clock time.
+2026-09-25 19:44:06,005 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:08,511 [    INFO] Precision is set at float64
+2026-09-25 19:44:08,511 [    INFO] Starting simulation.
+
+Simulating:   0%|          | 0/100 [00:00<?, ?it/s]
+Simulating (t=0.04519):   0%|          | 0/100 [00:06<?, ?it/s]
+Simulating (t=0.04519):   0%|          | 0/100 [00:06<?, ?it/s]
+Simulating (t=0.10931):   1%|          | 1/100 [00:06<11:18,  6.85s/it]
+Simulating (t=0.10931):   1%|          | 1/100 [00:06<11:18,  6.85s/it]
+Simulating (t=0.19500):   1%|          | 1/100 [00:06<11:19,  6.87s/it]
+Simulating (t=0.19500):   1%|          | 1/100 [00:06<11:19,  6.87s/it]
+Simulating (t=0.29557):   2%|▏         | 2/100 [00:06<05:36,  3.44s/it]
+Simulating (t=0.29557):   2%|▏         | 2/100 [00:06<05:36,  3.44s/it]
+Simulating (t=0.40303):   4%|▍         | 4/100 [00:06<02:45,  1.72s/it]
+Simulating (t=0.40303):   4%|▍         | 4/100 [00:06<02:45,  1.72s/it]
+Simulating (t=0.51608):   5%|▌         | 5/100 [00:06<02:10,  1.38s/it]
+Simulating (t=0.51608):   5%|▌         | 5/100 [00:06<02:10,  1.38s/it]
+Simulating (t=0.63555):   6%|▌         | 6/100 [00:06<01:47,  1.15s/it]
+Simulating (t=0.63555):   6%|▌         | 6/100 [00:06<01:47,  1.15s/it]
+Simulating (t=0.76179):   7%|▋         | 7/100 [00:06<01:31,  1.02it/s]
+Simulating (t=0.76179):   7%|▋         | 7/100 [00:06<01:31,  1.02it/s]
+Simulating (t=0.89427):   8%|▊         | 8/100 [00:06<01:19,  1.16it/s]
+Simulating (t=0.89427):   8%|▊         | 8/100 [00:06<01:19,  1.16it/s]
+Simulating (t=1.03202):  10%|█         | 10/100 [00:06<01:02,  1.45it/s]
+Simulating (t=1.03202):  10%|█         | 10/100 [00:06<01:02,  1.45it/s]
+Simulating (t=1.17368):  11%|█         | 11/100 [00:06<00:55,  1.59it/s]
+Simulating (t=1.17368):  11%|█         | 11/100 [00:06<00:55,  1.59it/s]
+Simulating (t=1.31805):  13%|█▎        | 13/100 [00:06<00:46,  1.88it/s]
+Simulating (t=1.31805):  13%|█▎        | 13/100 [00:06<00:46,  1.88it/s]
+Simulating (t=1.46462):  14%|█▍        | 14/100 [00:06<00:42,  2.03it/s]
+Simulating (t=1.46462):  14%|█▍        | 14/100 [00:06<00:42,  2.03it/s]
+Simulating (t=1.61308):  16%|█▌        | 16/100 [00:06<00:36,  2.31it/s]
+Simulating (t=1.61308):  16%|█▌        | 16/100 [00:06<00:36,  2.31it/s]
+Simulating (t=1.76333):  17%|█▋        | 17/100 [00:06<00:33,  2.46it/s]
+Simulating (t=1.76333):  17%|█▋        | 17/100 [00:06<00:33,  2.46it/s]
+Simulating (t=1.91543):  19%|█▉        | 19/100 [00:06<00:29,  2.74it/s]
+Simulating (t=1.91543):  19%|█▉        | 19/100 [00:06<00:29,  2.74it/s]
+Simulating (t=2.06944):  20%|██        | 20/100 [00:06<00:27,  2.89it/s]
+Simulating (t=2.06944):  20%|██        | 20/100 [00:06<00:27,  2.89it/s]
+Simulating (t=2.22542):  22%|██▏       | 22/100 [00:06<00:24,  3.17it/s]
+Simulating (t=2.22542):  22%|██▏       | 22/100 [00:06<00:24,  3.17it/s]
+Simulating (t=2.38339):  23%|██▎       | 23/100 [00:06<00:23,  3.32it/s]
+Simulating (t=2.38339):  23%|██▎       | 23/100 [00:06<00:23,  3.32it/s]
+Simulating (t=2.54333):  25%|██▌       | 25/100 [00:06<00:20,  3.60it/s]
+Simulating (t=2.54333):  25%|██▌       | 25/100 [00:06<00:20,  3.60it/s]
+Simulating (t=2.70516):  27%|██▋       | 27/100 [00:06<00:18,  3.89it/s]
+Simulating (t=2.70516):  27%|██▋       | 27/100 [00:06<00:18,  3.89it/s]
+Simulating (t=2.86879):  28%|██▊       | 28/100 [00:06<00:17,  4.03it/s]
+Simulating (t=2.86879):  28%|██▊       | 28/100 [00:06<00:17,  4.03it/s]
+Simulating (t=3.03416):  30%|███       | 30/100 [00:07<00:16,  4.25it/s]
+Simulating (t=3.03416):  30%|███       | 30/100 [00:07<00:16,  4.25it/s]
+Simulating (t=3.20117):  32%|███▏      | 32/100 [00:07<00:15,  4.53it/s]
+Simulating (t=3.20117):  32%|███▏      | 32/100 [00:07<00:15,  4.53it/s]
+Simulating (t=3.36981):  33%|███▎      | 33/100 [00:07<00:14,  4.67it/s]
+Simulating (t=3.36981):  33%|███▎      | 33/100 [00:07<00:14,  4.67it/s]
+Simulating (t=3.54007):  35%|███▌      | 35/100 [00:07<00:13,  4.95it/s]
+Simulating (t=3.54007):  35%|███▌      | 35/100 [00:07<00:13,  4.95it/s]
+Simulating (t=3.71199):  37%|███▋      | 37/100 [00:07<00:12,  5.22it/s]
+Simulating (t=3.71199):  37%|███▋      | 37/100 [00:07<00:12,  5.22it/s]
+Simulating (t=3.88561):  38%|███▊      | 38/100 [00:07<00:11,  5.36it/s]
+Simulating (t=3.88561):  38%|███▊      | 38/100 [00:07<00:11,  5.36it/s]
+Simulating (t=4.06130):  40%|████      | 40/100 [00:07<00:10,  5.64it/s]
+Simulating (t=4.06130):  40%|████      | 40/100 [00:07<00:10,  5.64it/s]
+Simulating (t=4.28128):  42%|████▏     | 42/100 [00:07<00:09,  5.92it/s]
+Simulating (t=4.28128):  42%|████▏     | 42/100 [00:07<00:09,  5.92it/s]
+Simulating (t=4.77390):  47%|████▋     | 47/100 [00:07<00:08,  6.61it/s]
+Simulating (t=4.77390):  47%|████▋     | 47/100 [00:07<00:08,  6.61it/s]
+Simulating (t=5.27390):  52%|█████▏    | 52/100 [00:07<00:06,  7.31it/s]
+Simulating (t=5.27390):  52%|█████▏    | 52/100 [00:07<00:06,  7.31it/s]
+Simulating (t=5.77390):  57%|█████▋    | 57/100 [00:07<00:05,  8.01it/s]
+Simulating (t=5.77390):  57%|█████▋    | 57/100 [00:07<00:05,  8.01it/s]
+Simulating (t=6.27390):  62%|██████▏   | 62/100 [00:07<00:04,  8.70it/s]
+Simulating (t=6.27390):  62%|██████▏   | 62/100 [00:07<00:04,  8.70it/s]
+Simulating (t=6.76107):  67%|██████▋   | 67/100 [00:07<00:03,  9.37it/s]
+Simulating (t=6.76107):  67%|██████▋   | 67/100 [00:07<00:03,  9.37it/s]
+Simulating (t=7.26107):  72%|███████▏  | 72/100 [00:07<00:02, 10.04it/s]
+Simulating (t=7.26107):  72%|███████▏  | 72/100 [00:07<00:02, 10.04it/s]
+Simulating (t=7.76107):  77%|███████▋  | 77/100 [00:07<00:02, 10.73it/s]
+Simulating (t=7.76107):  77%|███████▋  | 77/100 [00:07<00:02, 10.73it/s]
+Simulating (t=8.26107):  82%|████████▏ | 82/100 [00:07<00:01, 11.40it/s]
+Simulating (t=8.26107):  82%|████████▏ | 82/100 [00:07<00:01, 11.40it/s]
+Simulating (t=8.76107):  87%|████████▋ | 87/100 [00:07<00:01, 12.09it/s]
+Simulating (t=8.76107):  87%|████████▋ | 87/100 [00:07<00:01, 12.09it/s]
+Simulating (t=9.26107):  92%|█████████▏| 92/100 [00:07<00:00, 12.78it/s]
+Simulating (t=9.26107):  92%|█████████▏| 92/100 [00:07<00:00, 12.78it/s]
+Simulating (t=9.76107):  97%|█████████▋| 97/100 [00:07<00:00, 13.46it/s]
+Simulating (t=9.76107):  97%|█████████▋| 97/100 [00:07<00:00, 13.46it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:07<00:00, 13.86it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:07<00:00, 13.86it/s]
+Simulating (t=10.00000): 100%|██████████| 100/100 [00:07<00:00, 13.86it/s]
+2026-09-25 19:44:15,726 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.84s of wall clock time.
+2026-09-25 19:44:15,726 [    INFO] Simulated 10.00s of physics in 0.38s of wall clock time.
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.04s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 10.00s of physics in 0.50s of wall clock time.
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.84s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 10.00s of physics in 0.38s of wall clock time.
+__________________ SimTest.test_full_output_matches_reference __________________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:43:55,750 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:43:56,331 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:43:56,436 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:43:59,391 [    INFO] Precision is set at float64
+2026-09-25 19:43:59,392 [    INFO] Starting simulation.
+
+Simulating:   0%|          | 0/100 [00:00<?, ?it/s]
+Simulating (t=2.00000):   2%|▏         | 2/100 [00:16<13:09,  8.06s/it]
+Simulating (t=2.00000):   2%|▏         | 2/100 [00:16<13:09,  8.06s/it]
+Simulating (t=4.00000):   5%|▌         | 5/100 [00:16<05:09,  3.25s/it]
+Simulating (t=4.00000):   5%|▌         | 5/100 [00:16<05:09,  3.25s/it]
+Simulating (t=6.00000):   7%|▋         | 7/100 [00:16<03:37,  2.34s/it]
+Simulating (t=6.00000):   7%|▋         | 7/100 [00:16<03:37,  2.34s/it]
+Simulating (t=8.00000):  10%|█         | 10/100 [00:16<02:28,  1.65s/it]
+Simulating (t=8.00000):  10%|█         | 10/100 [00:16<02:28,  1.65s/it]
+Simulating (t=10.00000):  12%|█▏        | 12/100 [00:16<02:01,  1.39s/it]
+Simulating (t=10.00000):  12%|█▏        | 12/100 [00:16<02:01,  1.39s/it]
+Simulating (t=12.00000):  15%|█▌        | 15/100 [00:16<01:35,  1.12s/it]
+Simulating (t=12.00000):  15%|█▌        | 15/100 [00:16<01:35,  1.12s/it]
+Simulating (t=14.00000):  17%|█▋        | 17/100 [00:16<01:22,  1.01it/s]
+Simulating (t=14.00000):  17%|█▋        | 17/100 [00:16<01:22,  1.01it/s]
+Simulating (t=16.00000):  20%|██        | 20/100 [00:16<01:07,  1.19it/s]
+Simulating (t=16.00000):  20%|██        | 20/100 [00:16<01:07,  1.19it/s]
+Simulating (t=18.00000):  22%|██▏       | 22/100 [00:16<01:00,  1.30it/s]
+Simulating (t=18.00000):  22%|██▏       | 22/100 [00:16<01:00,  1.30it/s]
+Simulating (t=20.00000):  25%|██▌       | 25/100 [00:17<00:51,  1.47it/s]
+Simulating (t=20.00000):  25%|██▌       | 25/100 [00:17<00:51,  1.47it/s]
+Simulating (t=22.00000):  27%|██▋       | 27/100 [00:17<00:46,  1.58it/s]
+Simulating (t=22.00000):  27%|██▋       | 27/100 [00:17<00:46,  1.58it/s]
+Simulating (t=24.00000):  30%|███       | 30/100 [00:17<00:40,  1.75it/s]
+Simulating (t=24.00000):  30%|███       | 30/100 [00:17<00:40,  1.75it/s]
+Simulating (t=26.00000):  32%|███▏      | 32/100 [00:17<00:36,  1.85it/s]
+Simulating (t=26.00000):  32%|███▏      | 32/100 [00:17<00:36,  1.85it/s]
+Simulating (t=28.00000):  35%|███▌      | 35/100 [00:17<00:32,  2.02it/s]
+Simulating (t=28.00000):  35%|███▌      | 35/100 [00:17<00:32,  2.02it/s]
+Simulating (t=30.00000):  37%|███▋      | 37/100 [00:17<00:29,  2.12it/s]
+Simulating (t=30.00000):  37%|███▋      | 37/100 [00:17<00:29,  2.12it/s]
+Simulating (t=32.00000):  40%|████      | 40/100 [00:17<00:26,  2.28it/s]
+Simulating (t=32.00000):  40%|████      | 40/100 [00:17<00:26,  2.28it/s]
+Simulating (t=34.00000):  42%|████▏     | 42/100 [00:17<00:24,  2.38it/s]
+Simulating (t=34.00000):  42%|████▏     | 42/100 [00:17<00:24,  2.38it/s]
+Simulating (t=36.00000):  45%|████▌     | 45/100 [00:17<00:21,  2.54it/s]
+Simulating (t=36.00000):  45%|████▌     | 45/100 [00:17<00:21,  2.54it/s]
+Simulating (t=38.00000):  47%|████▋     | 47/100 [00:17<00:20,  2.64it/s]
+Simulating (t=38.00000):  47%|████▋     | 47/100 [00:17<00:20,  2.64it/s]
+Simulating (t=40.00000):  50%|█████     | 50/100 [00:17<00:17,  2.78it/s]
+Simulating (t=40.00000):  50%|█████     | 50/100 [00:17<00:17,  2.78it/s]
+Simulating (t=42.00000):  52%|█████▏    | 52/100 [00:18<00:16,  2.87it/s]
+Simulating (t=42.00000):  52%|█████▏    | 52/100 [00:18<00:16,  2.87it/s]
+Simulating (t=44.00000):  55%|█████▌    | 55/100 [00:18<00:14,  3.01it/s]
+Simulating (t=44.00000):  55%|█████▌    | 55/100 [00:18<00:14,  3.01it/s]
+Simulating (t=46.00000):  57%|█████▋    | 57/100 [00:18<00:13,  3.10it/s]
+Simulating (t=46.00000):  57%|█████▋    | 57/100 [00:18<00:13,  3.10it/s]
+Simulating (t=48.00000):  60%|██████    | 60/100 [00:18<00:12,  3.24it/s]
+Simulating (t=48.00000):  60%|██████    | 60/100 [00:18<00:12,  3.24it/s]
+Simulating (t=50.00000):  62%|██████▏   | 62/100 [00:18<00:11,  3.33it/s]
+Simulating (t=50.00000):  62%|██████▏   | 62/100 [00:18<00:11,  3.33it/s]
+Simulating (t=52.00000):  65%|██████▌   | 65/100 [00:18<00:10,  3.49it/s]
+Simulating (t=52.00000):  65%|██████▌   | 65/100 [00:18<00:10,  3.49it/s]
+Simulating (t=52.66667):  65%|██████▌   | 65/100 [00:18<00:10,  3.45it/s]
+Simulating (t=52.66667):  65%|██████▌   | 65/100 [00:18<00:10,  3.45it/s]
+Simulating (t=54.66667):  68%|██████▊   | 68/100 [00:19<00:08,  3.56it/s]
+Simulating (t=54.66667):  68%|██████▊   | 68/100 [00:19<00:08,  3.56it/s]
+Simulating (t=56.66667):  70%|███████   | 70/100 [00:19<00:08,  3.64it/s]
+Simulating (t=56.66667):  70%|███████   | 70/100 [00:19<00:08,  3.64it/s]
+Simulating (t=58.66667):  73%|███████▎  | 73/100 [00:19<00:07,  3.77it/s]
+Simulating (t=58.66667):  73%|███████▎  | 73/100 [00:19<00:07,  3.77it/s]
+Simulating (t=60.66667):  75%|███████▌  | 75/100 [00:19<00:06,  3.85it/s]
+Simulating (t=60.66667):  75%|███████▌  | 75/100 [00:19<00:06,  3.85it/s]
+Simulating (t=62.66667):  78%|███████▊  | 78/100 [00:19<00:05,  4.00it/s]
+Simulating (t=62.66667):  78%|███████▊  | 78/100 [00:19<00:05,  4.00it/s]
+Simulating (t=64.66667):  80%|████████  | 80/100 [00:19<00:04,  4.09it/s]
+Simulating (t=64.66667):  80%|████████  | 80/100 [00:19<00:04,  4.09it/s]
+Simulating (t=66.66667):  83%|████████▎ | 83/100 [00:19<00:04,  4.23it/s]
+Simulating (t=66.66667):  83%|████████▎ | 83/100 [00:19<00:04,  4.23it/s]
+Simulating (t=68.66667):  85%|████████▌ | 85/100 [00:19<00:03,  4.31it/s]
+Simulating (t=68.66667):  85%|████████▌ | 85/100 [00:19<00:03,  4.31it/s]
+Simulating (t=70.66667):  88%|████████▊ | 88/100 [00:19<00:02,  4.43it/s]
+Simulating (t=70.66667):  88%|████████▊ | 88/100 [00:19<00:02,  4.43it/s]
+Simulating (t=72.66667):  90%|█████████ | 90/100 [00:19<00:02,  4.50it/s]
+Simulating (t=72.66667):  90%|█████████ | 90/100 [00:19<00:02,  4.50it/s]
+Simulating (t=74.66667):  93%|█████████▎| 93/100 [00:20<00:01,  4.62it/s]
+Simulating (t=74.66667):  93%|█████████▎| 93/100 [00:20<00:01,  4.62it/s]
+Simulating (t=76.66667):  95%|█████████▌| 95/100 [00:20<00:01,  4.67it/s]
+Simulating (t=76.66667):  95%|█████████▌| 95/100 [00:20<00:01,  4.67it/s]
+Simulating (t=78.66667):  98%|█████████▊| 98/100 [00:20<00:00,  4.79it/s]
+Simulating (t=78.66667):  98%|█████████▊| 98/100 [00:20<00:00,  4.79it/s]
+Simulating (t=80.00000): 100%|██████████| 100/100 [00:20<00:00,  4.86it/s]
+Simulating (t=80.00000): 100%|██████████| 100/100 [00:20<00:00,  4.86it/s]
+Simulating (t=80.00000): 100%|██████████| 100/100 [00:20<00:00,  4.86it/s]
+2026-09-25 19:44:19,988 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 16.10s of wall clock time.
+2026-09-25 19:44:20,008 [    INFO] Simulated 80.00s of physics in 4.50s of wall clock time.
+2026-09-25 19:44:21,334 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+------------------------------ Captured log call -------------------------------
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 16.10s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 80.00s of physics in 4.50s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+___________ SimTest.test_run_simulation_test_changing_config_before ____________
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:08,895 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:11,496 [    INFO] Precision is set at float64
+2026-09-25 19:44:11,496 [    INFO] Starting simulation.
+2026-09-25 19:44:20,461 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.85s of wall clock time.
+2026-09-25 19:44:20,461 [    INFO] Simulated 3.00s of physics in 0.11s of wall clock time.
+2026-09-25 19:44:21,363 [    INFO] Loaded state file torax/tests/test_data/test_changing_config_before.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.85s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.11s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_changing_config_before.nc
+__________________ SimTest.test_run_simulation_test_fixed_dt ___________________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:13,646 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:14,168 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:44:16,300 [    INFO] Precision is set at float64
+2026-09-25 19:44:16,300 [    INFO] Starting simulation.
+2026-09-25 19:44:21,146 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.58s of wall clock time.
+2026-09-25 19:44:21,146 [    INFO] Simulated 2.00s of physics in 0.27s of wall clock time.
+2026-09-25 19:44:22,197 [    INFO] Loaded state file torax/tests/test_data/test_fixed_dt.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.58s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.27s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_fixed_dt.nc
+_________ SimTest.test_run_simulation_test_all_transport_fusion_qlknn __________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:14,563 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:15,005 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:44:17,228 [    INFO] Precision is set at float64
+2026-09-25 19:44:17,229 [    INFO] Starting simulation.
+2026-09-25 19:44:23,584 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.23s of wall clock time.
+2026-09-25 19:44:23,585 [    INFO] Simulated 2.00s of physics in 0.12s of wall clock time.
+2026-09-25 19:44:24,478 [    INFO] Loaded state file torax/tests/test_data/test_all_transport_fusion_qlknn.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.23s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.12s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_all_transport_fusion_qlknn.nc
+___________________ SimTest.test_run_simulation_test_chease ____________________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:21,402 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:23,247 [    INFO] Precision is set at float64
+2026-09-25 19:44:23,248 [    INFO] Starting simulation.
+2026-09-25 19:44:26,650 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.31s of wall clock time.
+2026-09-25 19:44:26,650 [    INFO] Simulated 1.00s of physics in 0.09s of wall clock time.
+2026-09-25 19:44:27,960 [    INFO] Loaded state file torax/tests/test_data/test_chease.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.31s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.00s of physics in 0.09s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_chease.nc
+______________________ SimTest.test_low_temperature_error ______________________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stdout call -----------------------------
+Iteration: 1. Residual: 0.0407132224928067. tau = 1.000000
+Iteration: 2. Residual: 0.0002324929692162. tau = 1.000000
+Iteration: 3. Residual: 0.0000000028753089. tau = 1.000000
+Iteration: 1. Residual: 0.0010538260129578. tau = 1.000000
+Iteration: 2. Residual: 0.0000000660910601. tau = 1.000000
+Iteration: 1. Residual: 0.0006152830151855. tau = 1.000000
+Iteration: 2. Residual: 0.0000000334240525. tau = 1.000000
+Iteration: 1. Residual: 0.0002484692099801. tau = 1.000000
+Iteration: 2. Residual: 0.0000000074701472. tau = 1.000000
+Iteration: 1. Residual: 0.0003488961896978. tau = 1.000000
+Iteration: 2. Residual: 0.0000001159248620. tau = 1.000000
+Iteration: 1. Residual: 0.0003717387808411. tau = 1.000000
+Iteration: 2. Residual: 0.0000001306731288. tau = 1.000000
+Iteration: 1. Residual: 0.0005631339494275. tau = 1.000000
+Iteration: 2. Residual: 0.0000005182127451. tau = 1.000000
+Iteration: 1. Residual: 0.0016163228144704. tau = 1.000000
+Iteration: 2. Residual: 0.0000081701208928. tau = 1.000000
+Iteration: 1. Residual: 0.0106049277995189. tau = 1.000000
+Iteration: 2. Residual: 0.0002124936933182. tau = 1.000000
+Iteration: 3. Residual: 0.0000000448420340. tau = 1.000000
+Iteration: 1. Residual: 0.0661041008226405. tau = 1.000000
+Iteration: 2. Residual: 0.0083990208712982. tau = 1.000000
+Iteration: 3. Residual: 0.0000601434285017. tau = 1.000000
+Iteration: 4. Residual: 0.0000000055583742. tau = 1.000000
+Iteration: 1. Residual: 0.0396071919096272. tau = 1.000000
+Iteration: 2. Residual: 0.0013008592259779. tau = 1.000000
+Iteration: 3. Residual: 0.0000006219009363. tau = 1.000000
+Iteration: 1. Residual: 0.2306021817418153. tau = 0.500000
+Iteration: 2. Residual: 0.0398078226999048. tau = 1.000000
+Iteration: 3. Residual: 0.0361507366028203. tau = 0.500000
+Iteration: 4. Residual: 0.0129421581978947. tau = 1.000000
+Iteration: 5. Residual: 0.0125592821755096. tau = 0.062500
+Iteration: 6. Residual: 0.0121387447320629. tau = 0.062500
+Iteration: 7. Residual: 0.0095601879779391. tau = 0.500000
+Iteration: 8. Residual: 0.0088603916906974. tau = 0.250000
+Iteration: 9. Residual: 0.0086684583915420. tau = 0.125000
+Iteration: 10. Residual: 0.0084203811067385. tau = 0.062500
+Iteration: 11. Residual: 0.0084133332495926. tau = 0.001953
+Iteration: 1. Residual: 0.0386621712135496. tau = 1.000000
+Iteration: 2. Residual: 0.0342776950188787. tau = 0.250000
+Iteration: 3. Residual: 0.0341236751900220. tau = 0.015625
+Iteration: 4. Residual: 0.0306392273101142. tau = 0.500000
+Iteration: 5. Residual: 0.0301209930963015. tau = 0.062500
+Iteration: 6. Residual: 0.0296811063133155. tau = 0.031250
+Iteration: 7. Residual: 0.0296311921949433. tau = 0.003906
+Iteration: 1. Residual: 0.0224671006520544. tau = 0.007812
+Iteration: 1. Residual: 0.0004500052163672. tau = 1.000000
+Iteration: 2. Residual: 0.0004486202662277. tau = 0.125000
+Iteration: 3. Residual: 0.0004034420311525. tau = 0.500000
+Iteration: 4. Residual: 0.0002583463047222. tau = 1.000000
+Iteration: 5. Residual: 0.0002352917064496. tau = 0.250000
+Iteration: 6. Residual: 0.0002339350274879. tau = 0.015625
+Iteration: 7. Residual: 0.0002338361904103. tau = 0.000977
+Iteration: 1. Residual: 0.0667616782110796. tau = 0.125000
+Iteration: 2. Residual: 0.0090117536181142. tau = 1.000000
+Iteration: 3. Residual: 0.0051594375285959. tau = 1.000000
+Iteration: 4. Residual: 0.0051570214680678. tau = 0.001953
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:16,391 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:18,114 [    INFO] Precision is set at float64
+2026-09-25 19:44:18,115 [    INFO] Starting simulation.
+
+Simulating:   0%|          | 0/100 [00:00<?, ?it/s]
+Simulating (t=0.10000):   2%|▏         | 2/100 [00:10<08:27,  5.18s/it]
+Simulating (t=0.10000):   2%|▏         | 2/100 [00:10<08:27,  5.18s/it]
+Simulating (t=0.20000):   4%|▍         | 4/100 [00:10<04:09,  2.60s/it]
+Simulating (t=0.20000):   4%|▍         | 4/100 [00:10<04:09,  2.60s/it]
+Simulating (t=0.30000):   6%|▌         | 6/100 [00:10<02:43,  1.74s/it]
+Simulating (t=0.30000):   6%|▌         | 6/100 [00:10<02:43,  1.74s/it]
+Simulating (t=0.40000):   8%|▊         | 8/100 [00:10<02:00,  1.31s/it]
+Simulating (t=0.40000):   8%|▊         | 8/100 [00:10<02:00,  1.31s/it]
+Simulating (t=0.50000):  10%|█         | 10/100 [00:10<01:35,  1.06s/it]
+Simulating (t=0.50000):  10%|█         | 10/100 [00:10<01:35,  1.06s/it]
+Simulating (t=0.60000):  12%|█▏        | 12/100 [00:10<01:17,  1.13it/s]
+Simulating (t=0.60000):  12%|█▏        | 12/100 [00:10<01:17,  1.13it/s]
+Simulating (t=0.70000):  13%|█▎        | 13/100 [00:10<01:11,  1.22it/s]
+Simulating (t=0.70000):  13%|█▎        | 13/100 [00:10<01:11,  1.22it/s]
+Simulating (t=0.80000):  15%|█▌        | 15/100 [00:10<01:00,  1.40it/s]
+Simulating (t=0.80000):  15%|█▌        | 15/100 [00:10<01:00,  1.40it/s]
+Simulating (t=0.90000):  18%|█▊        | 18/100 [00:10<00:48,  1.68it/s]
+Simulating (t=0.90000):  18%|█▊        | 18/100 [00:10<00:48,  1.68it/s]
+Simulating (t=1.00000):  20%|██        | 20/100 [00:10<00:42,  1.86it/s]
+Simulating (t=1.00000):  20%|██        | 20/100 [00:10<00:42,  1.86it/s]
+Simulating (t=1.10000):  21%|██        | 21/100 [00:10<00:40,  1.95it/s]
+Simulating (t=1.10000):  21%|██        | 21/100 [00:10<00:40,  1.95it/s]
+Simulating (t=1.20000):  24%|██▍       | 24/100 [00:10<00:34,  2.23it/s]
+Simulating (t=1.20000):  24%|██▍       | 24/100 [00:10<00:34,  2.23it/s]
+Simulating (t=1.20370):  24%|██▍       | 24/100 [00:10<00:34,  2.22it/s]
+Simulating (t=1.20370):  24%|██▍       | 24/100 [00:10<00:34,  2.22it/s]2026-09-25 19:44:28,957 [   ERROR] 
+          Simulation stopped because ion or electron temperature fell below the
+          configured minimum threshold. This is usually caused by radiative
+          collapse. Output file contains all profiles up to the last valid step.
+          
+
+Simulating (t=1.20370):  24%|██▍       | 24/100 [00:10<00:34,  2.21it/s]
+2026-09-25 19:44:28,958 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.36s of wall clock time.
+2026-09-25 19:44:28,958 [    INFO] Simulated 1.20s of physics in 0.49s of wall clock time.
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+ERROR    absl:state.py:578 
+          Simulation stopped because ion or electron temperature fell below the
+          configured minimum threshold. This is usually caused by radiative
+          collapse. Output file contains all profiles up to the last valid step.
+          
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.36s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.20s of physics in 0.49s of wall clock time.
+__________ SimTest.test_run_simulation_test_implicit_short_optimizer ___________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:16,212 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:17,763 [    INFO] Precision is set at float64
+2026-09-25 19:44:17,763 [    INFO] Starting simulation.
+2026-09-25 19:44:29,231 [    INFO] Simulated 0.10s of physics in 11.47s of wall clock time.
+2026-09-25 19:44:30,182 [    INFO] Loaded state file torax/tests/test_data/test_implicit_short_optimizer.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 0.10s of physics in 11.47s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_implicit_short_optimizer.nc
+____________ SimTest.test_run_simulation_test_imas_profiles_and_geo ____________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+19:44:22 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:44:22,421 [    INFO] Parsing data dictionary version 4.0.0
+2026-09-25 19:44:23,148 [ WARNING] The IDS is missing the global_quantities.v_loop quantity.
+19:44:23 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:44:23,251 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:44:23 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:44:23,253 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:44:26,070 [    INFO] Precision is set at float64
+2026-09-25 19:44:26,070 [    INFO] Starting simulation.
+2026-09-25 19:44:35,431 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.14s of wall clock time.
+2026-09-25 19:44:35,431 [    INFO] Simulated 5.00s of physics in 0.23s of wall clock time.
+2026-09-25 19:44:36,853 [    INFO] Loaded state file torax/tests/test_data/test_imas_profiles_and_geo.nc
+------------------------------ Captured log call -------------------------------
+INFO     imas.dd_zip:dd_zip.py:89 Parsing data dictionary version 4.0.0
+WARNING  root:validation.py:41 The IDS is missing the global_quantities.v_loop quantity.
+INFO     imas.ids_convert:ids_convert.py:588 Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+INFO     imas.ids_convert:ids_convert.py:626 Conversion of IDS equilibrium finished.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.14s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.23s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_imas_profiles_and_geo.nc
+_____________ SimTest.test_run_simulation_test_combined_transport ______________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:28,087 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:30,317 [    INFO] Precision is set at float64
+2026-09-25 19:44:30,317 [    INFO] Starting simulation.
+2026-09-25 19:44:36,007 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.52s of wall clock time.
+2026-09-25 19:44:36,007 [    INFO] Simulated 2.00s of physics in 0.17s of wall clock time.
+2026-09-25 19:44:36,961 [    INFO] Loaded state file torax/tests/test_data/test_combined_transport.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.52s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.17s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_combined_transport.nc
+_______ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector ________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:25,473 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:28,907 [    INFO] Precision is set at float64
+2026-09-25 19:44:28,907 [    INFO] Starting simulation.
+2026-09-25 19:44:38,021 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.69s of wall clock time.
+2026-09-25 19:44:38,021 [    INFO] Simulated 5.00s of physics in 0.42s of wall clock time.
+2026-09-25 19:44:39,543 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.69s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.42s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector.nc
+_ SimTest.test_run_simulation_test_iterhybrid_lh_transition_internal_boundary_condition _
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:21,443 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:23,676 [    INFO] Precision is set at float64
+2026-09-25 19:44:23,677 [    INFO] Starting simulation.
+2026-09-25 19:44:40,670 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 13.41s of wall clock time.
+2026-09-25 19:44:40,670 [    INFO] Simulated 60.00s of physics in 3.59s of wall clock time.
+2026-09-25 19:44:42,093 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_lh_transition_internal_boundary_condition.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 13.41s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 60.00s of physics in 3.59s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_lh_transition_internal_boundary_condition.nc
+__________________ SimTest.test_run_simulation_test_implicit ___________________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:36,936 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:38,548 [    INFO] Precision is set at float64
+2026-09-25 19:44:38,548 [    INFO] Starting simulation.
+2026-09-25 19:44:41,742 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.10s of wall clock time.
+2026-09-25 19:44:41,743 [    INFO] Simulated 1.00s of physics in 0.09s of wall clock time.
+2026-09-25 19:44:42,897 [    INFO] Loaded state file torax/tests/test_data/test_implicit.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.10s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.00s of physics in 0.09s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_implicit.nc
+_____________ SimTest.test_run_simulation_test_iterbaseline_mockup _____________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:30,255 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:32,230 [    INFO] Precision is set at float64
+2026-09-25 19:44:32,231 [    INFO] Starting simulation.
+2026-09-25 19:44:41,625 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.75s of wall clock time.
+2026-09-25 19:44:41,625 [    INFO] Simulated 10.00s of physics in 0.65s of wall clock time.
+2026-09-25 19:44:43,094 [    INFO] Loaded state file torax/tests/test_data/test_iterbaseline_mockup.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.75s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 10.00s of physics in 0.65s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterbaseline_mockup.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_clip_inputs __
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:29,469 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:31,320 [    INFO] Precision is set at float64
+2026-09-25 19:44:31,320 [    INFO] Starting simulation.
+2026-09-25 19:44:42,517 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.84s of wall clock time.
+2026-09-25 19:44:42,517 [    INFO] Simulated 5.00s of physics in 0.36s of wall clock time.
+2026-09-25 19:44:43,568 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_clip_inputs.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.84s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.36s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_clip_inputs.nc
+_______________ SimTest.test_run_simulation_test_crank_nicolson ________________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:37,027 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:38,619 [    INFO] Precision is set at float64
+2026-09-25 19:44:38,619 [    INFO] Starting simulation.
+2026-09-25 19:44:42,879 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.14s of wall clock time.
+2026-09-25 19:44:42,879 [    INFO] Simulated 1.00s of physics in 0.12s of wall clock time.
+2026-09-25 19:44:43,728 [    INFO] Loaded state file torax/tests/test_data/test_implicit.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.14s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.00s of physics in 0.12s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_implicit.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_Lmode_combined _
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:40,256 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:43,064 [    INFO] Precision is set at float64
+2026-09-25 19:44:43,064 [    INFO] Starting simulation.
+2026-09-25 19:44:50,541 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.64s of wall clock time.
+2026-09-25 19:44:50,545 [    INFO] Simulated 5.00s of physics in 0.85s of wall clock time.
+2026-09-25 19:44:51,383 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_Lmode_combined.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.64s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.85s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_Lmode_combined.nc
+______________ SimTest.test_run_simulation_test_iterhybrid_mockup ______________
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:42,331 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:44,306 [    INFO] Precision is set at float64
+2026-09-25 19:44:44,306 [    INFO] Starting simulation.
+2026-09-25 19:44:50,764 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.27s of wall clock time.
+2026-09-25 19:44:50,764 [    INFO] Simulated 5.00s of physics in 0.19s of wall clock time.
+2026-09-25 19:44:51,625 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_mockup.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.27s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.19s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_mockup.nc
+____ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_eqdsk _____
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:42,947 [    INFO] EQDSK identified as COCOS 11.
+2026-09-25 19:44:42,969 [ WARNING] The input equilibrium grid is coarse (max rho_norm spacing = 0.0894 > 0.0200). This can create numerical artifacts in derived quantities such as j_total. Consider using a higher-resolution equilibrium file.
+2026-09-25 19:44:43,007 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:44,785 [    INFO] Precision is set at float64
+2026-09-25 19:44:44,785 [    INFO] Starting simulation.
+2026-09-25 19:44:51,647 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.62s of wall clock time.
+2026-09-25 19:44:51,647 [    INFO] Simulated 5.00s of physics in 0.24s of wall clock time.
+2026-09-25 19:44:52,679 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_eqdsk.nc
+------------------------------ Captured log call -------------------------------
+INFO     EQDSK Logger:file.py:508 EQDSK identified as COCOS 11.
+WARNING  absl:standard_geometry.py:367 The input equilibrium grid is coarse (max rho_norm spacing = 0.0894 > 0.0200). This can create numerical artifacts in derived quantities such as j_total. Consider using a higher-resolution equilibrium file.
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.62s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.24s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_eqdsk.nc
+__ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_cyclotron ___
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:43,189 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:45,629 [    INFO] Precision is set at float64
+2026-09-25 19:44:45,629 [    INFO] Starting simulation.
+2026-09-25 19:44:55,816 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.59s of wall clock time.
+2026-09-25 19:44:55,816 [    INFO] Simulated 5.00s of physics in 0.59s of wall clock time.
+2026-09-25 19:44:56,676 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_cyclotron.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.59s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.59s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_cyclotron.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation _
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:43,742 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:46,191 [    INFO] Precision is set at float64
+2026-09-25 19:44:46,192 [    INFO] Starting simulation.
+2026-09-25 19:44:55,927 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.37s of wall clock time.
+2026-09-25 19:44:55,927 [    INFO] Simulated 5.00s of physics in 0.37s of wall clock time.
+2026-09-25 19:44:56,792 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.37s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.37s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation.nc
+_____ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_imas _____
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+19:44:43 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:44:43,768 [    INFO] Parsing data dictionary version 4.0.0
+19:44:44 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:44:44,452 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:44:44 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:44:44,461 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:44:44,511 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:46,972 [    INFO] Precision is set at float64
+2026-09-25 19:44:46,972 [    INFO] Starting simulation.
+2026-09-25 19:44:56,386 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.30s of wall clock time.
+2026-09-25 19:44:56,386 [    INFO] Simulated 5.00s of physics in 0.11s of wall clock time.
+2026-09-25 19:44:57,137 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_imas.nc
+------------------------------ Captured log call -------------------------------
+INFO     imas.dd_zip:dd_zip.py:89 Parsing data dictionary version 4.0.0
+INFO     imas.ids_convert:ids_convert.py:588 Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+INFO     imas.ids_convert:ids_convert.py:626 Conversion of IDS equilibrium finished.
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.30s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.11s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_imas.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_impurity_radiation _
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:51,555 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:56,092 [    INFO] Precision is set at float64
+2026-09-25 19:44:56,093 [    INFO] Starting simulation.
+2026-09-25 19:45:04,252 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.09s of wall clock time.
+2026-09-25 19:45:04,252 [    INFO] Simulated 5.00s of physics in 0.07s of wall clock time.
+2026-09-25 19:45:04,563 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_impurity_radiation.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.09s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.07s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_impurity_radiation.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios _
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:51,776 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:55,763 [    INFO] Precision is set at float64
+2026-09-25 19:44:55,763 [    INFO] Starting simulation.
+2026-09-25 19:45:04,138 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.26s of wall clock time.
+2026-09-25 19:45:04,138 [    INFO] Simulated 5.00s of physics in 0.12s of wall clock time.
+2026-09-25 19:45:05,159 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.26s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.12s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios.nc
+__ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_ec_linliu ___
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:56,757 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:59,456 [    INFO] Precision is set at float64
+2026-09-25 19:44:59,456 [    INFO] Starting simulation.
+2026-09-25 19:45:07,396 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.31s of wall clock time.
+2026-09-25 19:45:07,396 [    INFO] Simulated 5.00s of physics in 0.63s of wall clock time.
+2026-09-25 19:45:09,517 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_ec_linliu.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.31s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.63s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_ec_linliu.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff _
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:56,880 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:59,480 [    INFO] Precision is set at float64
+2026-09-25 19:44:59,481 [    INFO] Starting simulation.
+2026-09-25 19:45:10,296 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.54s of wall clock time.
+2026-09-25 19:45:10,296 [    INFO] Simulated 5.00s of physics in 0.28s of wall clock time.
+2026-09-25 19:45:10,794 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.54s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.28s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_neoclassical _
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:57,330 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:00,459 [    INFO] Precision is set at float64
+2026-09-25 19:45:00,459 [    INFO] Starting simulation.
+2026-09-25 19:45:12,063 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.34s of wall clock time.
+2026-09-25 19:45:12,063 [    INFO] Simulated 5.00s of physics in 0.27s of wall clock time.
+2026-09-25 19:45:12,775 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_neoclassical.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.34s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.27s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_neoclassical.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel _
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:44:52,805 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:44:52,989 [ WARNING] ExtendedLengyelModel: Parameter 'connection_length_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:52,989 [ WARNING] ExtendedLengyelModel: Parameter 'connection_length_divertor' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:52,989 [ WARNING] ExtendedLengyelModel: Parameter 'angle_of_incidence_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:52,989 [ WARNING] ExtendedLengyelModel: Parameter 'toroidal_flux_expansion' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:52,989 [ WARNING] ExtendedLengyelModel: Parameter 'ratio_bpol_omp_to_bpol_avg' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:58,857 [    INFO] Precision is set at float64
+2026-09-25 19:44:58,857 [    INFO] Starting simulation.
+2026-09-25 19:44:59,075 [ WARNING] ExtendedLengyelModel: Parameter 'connection_length_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:59,075 [ WARNING] ExtendedLengyelModel: Parameter 'connection_length_divertor' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:59,075 [ WARNING] ExtendedLengyelModel: Parameter 'angle_of_incidence_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:59,075 [ WARNING] ExtendedLengyelModel: Parameter 'toroidal_flux_expansion' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:44:59,075 [ WARNING] ExtendedLengyelModel: Parameter 'ratio_bpol_omp_to_bpol_avg' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+2026-09-25 19:45:11,005 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.20s of wall clock time.
+2026-09-25 19:45:11,005 [    INFO] Simulated 5.00s of physics in 0.95s of wall clock time.
+2026-09-25 19:45:12,850 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'connection_length_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'connection_length_divertor' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'angle_of_incidence_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'toroidal_flux_expansion' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'ratio_bpol_omp_to_bpol_avg' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'connection_length_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'connection_length_divertor' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'angle_of_incidence_target' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'toroidal_flux_expansion' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+WARNING  root:extended_lengyel_model.py:432 ExtendedLengyelModel: Parameter 'ratio_bpol_omp_to_bpol_avg' not found in Geometry. Using Config value. It is recommended to use a Geometry source that provides this parameter for full self-consistency.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.20s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.95s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped _
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:05,237 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:09,425 [    INFO] Precision is set at float64
+2026-09-25 19:45:09,426 [    INFO] Starting simulation.
+2026-09-25 19:45:17,513 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.87s of wall clock time.
+2026-09-25 19:45:17,513 [    INFO] Simulated 5.00s of physics in 0.21s of wall clock time.
+2026-09-25 19:45:18,581 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.87s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.21s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped.nc
+___ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_rotation ___
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:04,640 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:07,982 [    INFO] Precision is set at float64
+2026-09-25 19:45:07,982 [    INFO] Starting simulation.
+2026-09-25 19:45:18,063 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.92s of wall clock time.
+2026-09-25 19:45:18,063 [    INFO] Simulated 5.00s of physics in 0.16s of wall clock time.
+2026-09-25 19:45:19,224 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_rotation.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.92s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.16s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_rotation.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_timedependent_isotopes _
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:10,893 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:12,823 [    INFO] Precision is set at float64
+2026-09-25 19:45:12,824 [    INFO] Starting simulation.
+2026-09-25 19:45:19,796 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.83s of wall clock time.
+2026-09-25 19:45:19,796 [    INFO] Simulated 5.00s of physics in 0.14s of wall clock time.
+2026-09-25 19:45:21,968 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_timedependent_isotopes.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.83s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.14s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_timedependent_isotopes.nc
+___ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_tungsten ___
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:12,889 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:14,490 [    INFO] Precision is set at float64
+2026-09-25 19:45:14,491 [    INFO] Starting simulation.
+2026-09-25 19:45:23,307 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.47s of wall clock time.
+2026-09-25 19:45:23,308 [    INFO] Simulated 5.00s of physics in 0.35s of wall clock time.
+2026-09-25 19:45:24,501 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tungsten.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.47s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.35s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tungsten.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation _
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:10,228 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:12,935 [    INFO] Precision is set at float64
+2026-09-25 19:45:12,936 [    INFO] Starting simulation.
+2026-09-25 19:45:26,166 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.69s of wall clock time.
+2026-09-25 19:45:26,166 [    INFO] Simulated 5.00s of physics in 2.54s of wall clock time.
+2026-09-25 19:45:27,191 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.69s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 2.54s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea _
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:13,356 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:16,211 [    INFO] Precision is set at float64
+2026-09-25 19:45:16,212 [    INFO] Starting simulation.
+2026-09-25 19:45:28,022 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.54s of wall clock time.
+2026-09-25 19:45:28,022 [    INFO] Simulated 5.00s of physics in 2.27s of wall clock time.
+2026-09-25 19:45:29,326 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.54s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 2.27s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea.nc
+_ SimTest.test_run_simulation_test_iterhybrid_predictor_corrector_zeffprofile __
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:19,405 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:21,920 [    INFO] Precision is set at float64
+2026-09-25 19:45:21,920 [    INFO] Starting simulation.
+2026-09-25 19:45:29,572 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.39s of wall clock time.
+2026-09-25 19:45:29,573 [    INFO] Simulated 5.00s of physics in 0.26s of wall clock time.
+2026-09-25 19:45:30,016 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_zeffprofile.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.39s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.26s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_predictor_corrector_zeffprofile.nc
+_____________ SimTest.test_run_simulation_test_ne_qlknn_deff_veff ______________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:22,052 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:24,272 [    INFO] Precision is set at float64
+2026-09-25 19:45:24,273 [    INFO] Starting simulation.
+2026-09-25 19:45:29,754 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.38s of wall clock time.
+2026-09-25 19:45:29,754 [    INFO] Simulated 2.00s of physics in 0.10s of wall clock time.
+2026-09-25 19:45:31,088 [    INFO] Loaded state file torax/tests/test_data/test_ne_qlknn_deff_veff.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.38s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.10s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_ne_qlknn_deff_veff.nc
+_____________ SimTest.test_run_simulation_test_ne_qlknn_defromchie _____________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:24,679 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:26,817 [    INFO] Precision is set at float64
+2026-09-25 19:45:26,817 [    INFO] Starting simulation.
+2026-09-25 19:45:34,885 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.93s of wall clock time.
+2026-09-25 19:45:34,885 [    INFO] Simulated 2.00s of physics in 0.14s of wall clock time.
+2026-09-25 19:45:35,401 [    INFO] Loaded state file torax/tests/test_data/test_ne_qlknn_defromchie.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.93s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.14s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_ne_qlknn_defromchie.nc
+____________ SimTest.test_run_simulation_test_particle_sources_cgm _____________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:29,464 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:31,332 [    INFO] Precision is set at float64
+2026-09-25 19:45:31,332 [    INFO] Starting simulation.
+2026-09-25 19:45:38,244 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.82s of wall clock time.
+2026-09-25 19:45:38,244 [    INFO] Simulated 2.00s of physics in 0.09s of wall clock time.
+2026-09-25 19:45:39,510 [    INFO] Loaded state file torax/tests/test_data/test_particle_sources_cgm.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 6.82s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.09s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_particle_sources_cgm.nc
+_________ SimTest.test_run_simulation_test_prescribed_timedependent_ne _________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:30,203 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:31,875 [    INFO] Precision is set at float64
+2026-09-25 19:45:31,875 [    INFO] Starting simulation.
+2026-09-25 19:45:39,547 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.40s of wall clock time.
+2026-09-25 19:45:39,547 [    INFO] Simulated 10.00s of physics in 0.27s of wall clock time.
+2026-09-25 19:45:40,623 [    INFO] Loaded state file torax/tests/test_data/test_prescribed_timedependent_ne.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 7.40s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 10.00s of physics in 0.27s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_prescribed_timedependent_ne.nc
+________________ SimTest.test_run_simulation_test_psi_and_heat _________________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:31,175 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:33,485 [    INFO] Precision is set at float64
+2026-09-25 19:45:33,485 [    INFO] Starting simulation.
+2026-09-25 19:45:39,846 [    INFO] Simulated 2.00s of physics in 6.36s of wall clock time.
+2026-09-25 19:45:40,865 [    INFO] Loaded state file torax/tests/test_data/test_psi_and_heat.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 6.36s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_and_heat.nc
+______________ SimTest.test_run_simulation_test_iterhybrid_rampup ______________
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:18,797 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:22,233 [    INFO] Precision is set at float64
+2026-09-25 19:45:22,233 [    INFO] Starting simulation.
+2026-09-25 19:45:42,313 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 14.98s of wall clock time.
+2026-09-25 19:45:42,313 [    INFO] Simulated 80.00s of physics in 5.10s of wall clock time.
+2026-09-25 19:45:43,620 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 14.98s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 80.00s of physics in 5.10s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+________________ SimTest.test_run_simulation_test_psi_heat_dens ________________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:35,503 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:38,101 [    INFO] Precision is set at float64
+2026-09-25 19:45:38,101 [    INFO] Starting simulation.
+2026-09-25 19:45:43,552 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.39s of wall clock time.
+2026-09-25 19:45:43,552 [    INFO] Simulated 2.00s of physics in 0.06s of wall clock time.
+2026-09-25 19:45:44,510 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.39s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 2.00s of physics in 0.06s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+____ SimTest.test_run_simulation_test_psichease_ip_parameters_vloop_varying ____
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:39,603 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:41,307 [    INFO] Precision is set at float64
+2026-09-25 19:45:41,307 [    INFO] Starting simulation.
+2026-09-25 19:45:44,588 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.24s of wall clock time.
+2026-09-25 19:45:44,588 [    INFO] Simulated 3.00s of physics in 0.04s of wall clock time.
+2026-09-25 19:45:46,051 [    INFO] Loaded state file torax/tests/test_data/test_psichease_ip_parameters_vloop_varying.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.24s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.04s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_ip_parameters_vloop_varying.nc
+_________ SimTest.test_run_simulation_test_iterhybrid_rampup_sawtooth __________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:27,398 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:30,457 [    INFO] Precision is set at float64
+2026-09-25 19:45:30,458 [    INFO] Starting simulation.
+2026-09-25 19:45:44,388 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.64s of wall clock time.
+2026-09-25 19:45:44,388 [    INFO] Simulated 80.00s of physics in 2.30s of wall clock time.
+2026-09-25 19:45:45,939 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup_sawtooth.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.64s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 80.00s of physics in 2.30s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup_sawtooth.nc
+__________ SimTest.test_run_simulation_test_psichease_prescribed_johm __________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:40,863 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:43,068 [    INFO] Precision is set at float64
+2026-09-25 19:45:43,068 [    INFO] Starting simulation.
+2026-09-25 19:45:45,912 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.79s of wall clock time.
+2026-09-25 19:45:45,912 [    INFO] Simulated 3.00s of physics in 0.05s of wall clock time.
+2026-09-25 19:45:46,490 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.79s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.05s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+__________ SimTest.test_run_simulation_test_psichease_prescribed_jtot __________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:41,088 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:43,083 [    INFO] Precision is set at float64
+2026-09-25 19:45:43,083 [    INFO] Starting simulation.
+2026-09-25 19:45:46,076 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.92s of wall clock time.
+2026-09-25 19:45:46,076 [    INFO] Simulated 3.00s of physics in 0.08s of wall clock time.
+2026-09-25 19:45:47,024 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.92s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.08s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+_______________ SimTest.test_run_simulation_test_timedependence ________________
+[gw1] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:47,170 [    INFO] Precision is set at float64
+2026-09-25 19:45:47,170 [    INFO] Starting simulation.
+2026-09-25 19:45:47,861 [    INFO] Simulated 10.00s of physics in 0.69s of wall clock time.
+2026-09-25 19:45:48,172 [    INFO] Loaded state file torax/tests/test_data/test_timedependence.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 10.00s of physics in 0.69s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_timedependence.nc
+_______ SimTest.test_run_simulation_test_psichease_prescribed_jtot_vloop _______
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:44,564 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:46,422 [    INFO] Precision is set at float64
+2026-09-25 19:45:46,422 [    INFO] Starting simulation.
+2026-09-25 19:45:49,924 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.29s of wall clock time.
+2026-09-25 19:45:49,924 [    INFO] Simulated 3.00s of physics in 0.22s of wall clock time.
+2026-09-25 19:45:51,300 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot_vloop.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.29s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.22s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot_vloop.nc
+______ SimTest.test_run_simulation_test_prescribed_generic_current_source ______
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:43,783 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:45,806 [    INFO] Precision is set at float64
+2026-09-25 19:45:45,806 [    INFO] Starting simulation.
+2026-09-25 19:45:50,764 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.62s of wall clock time.
+2026-09-25 19:45:50,764 [    INFO] Simulated 5.00s of physics in 0.33s of wall clock time.
+2026-09-25 19:45:51,687 [    INFO] Loaded state file torax/tests/test_data/test_prescribed_generic_current_source.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 4.62s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 5.00s of physics in 0.33s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_prescribed_generic_current_source.nc
+__________ SimTest.test_run_simulation_test_psichease_ip_chease_vloop __________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:46,342 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:47,676 [    INFO] Precision is set at float64
+2026-09-25 19:45:47,676 [    INFO] Starting simulation.
+2026-09-25 19:45:51,243 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.45s of wall clock time.
+2026-09-25 19:45:51,245 [    INFO] Simulated 3.00s of physics in 0.11s of wall clock time.
+2026-09-25 19:45:51,930 [    INFO] Loaded state file torax/tests/test_data/test_psichease_ip_chease_vloop.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.45s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 3.00s of physics in 0.11s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_ip_chease_vloop.nc
+___________ SimTest.test_run_simulation_test_semiimplicit_convection ___________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:46,155 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:45:47,697 [    INFO] Precision is set at float64
+2026-09-25 19:45:47,698 [    INFO] Starting simulation.
+2026-09-25 19:45:51,446 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.70s of wall clock time.
+2026-09-25 19:45:51,446 [    INFO] Simulated 0.50s of physics in 0.04s of wall clock time.
+2026-09-25 19:45:52,123 [    INFO] Loaded state file torax/tests/test_data/test_semiimplicit_convection.nc
+------------------------------ Captured log call -------------------------------
+WARNING  absl:initialization.py:281 Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.70s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 0.50s of physics in 0.04s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_semiimplicit_convection.nc
+____________________ SimTest.test_simulation_with_restart1 _____________________
+[gw0] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:51,647 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 19:45:52,020 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 19:45:54,517 [    INFO] Precision is set at float64
+2026-09-25 19:45:54,517 [    INFO] Starting simulation.
+2026-09-25 19:45:56,786 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.23s of wall clock time.
+2026-09-25 19:45:56,786 [    INFO] Simulated 1.40s of physics in 0.04s of wall clock time.
+2026-09-25 19:45:57,566 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 2.23s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.04s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+____________________ SimTest.test_simulation_with_restart2 _____________________
+[gw4] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:52,482 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 19:45:52,853 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 19:45:55,645 [    INFO] Precision is set at float64
+2026-09-25 19:45:55,645 [    INFO] Starting simulation.
+2026-09-25 19:45:59,099 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.29s of wall clock time.
+2026-09-25 19:45:59,099 [    INFO] Simulated 1.40s of physics in 0.17s of wall clock time.
+2026-09-25 19:45:59,728 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 3.29s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.17s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+____________________ SimTest.test_simulation_with_restart0 _____________________
+[gw5] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:52,024 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 19:45:52,389 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 19:45:55,309 [    INFO] Precision is set at float64
+2026-09-25 19:45:55,310 [    INFO] Starting simulation.
+2026-09-25 19:45:59,590 [    INFO] Simulated 0.80s of physics in 4.28s of wall clock time.
+2026-09-25 19:46:00,507 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 0.80s of physics in 4.28s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+______________ SimTest.test_run_simulation_test_step_flattop_bgb _______________
+[gw3] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+19:45:46 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:45:46,528 [    INFO] Parsing data dictionary version 4.0.0
+2026-09-25 19:45:47,005 [ WARNING] The IDS is missing the time quantity.
+2026-09-25 19:45:47,005 [ WARNING] The IDS is missing the global_quantities.v_loop quantity.
+2026-09-25 19:45:47,005 [ WARNING] The IDS is missing the global_quantities.ip quantity.
+2026-09-25 19:45:47,649 [ WARNING] The IDS is missing the time quantity.
+2026-09-25 19:45:47,651 [ WARNING] Z_eff is provided but impurity_mode is 'n_e_ratios'. Z_eff will be an emergent quantity and the input value will be ignored.
+19:45:47 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:45:47,704 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:45:47 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:45:47,705 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:45:50,906 [    INFO] Precision is set at float64
+2026-09-25 19:45:50,906 [    INFO] Starting simulation.
+2026-09-25 19:46:03,260 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.15s of wall clock time.
+2026-09-25 19:46:03,260 [    INFO] Simulated 400.00s of physics in 1.20s of wall clock time.
+2026-09-25 19:46:03,969 [    INFO] Loaded state file torax/tests/test_data/test_step_flattop_bgb.nc
+------------------------------ Captured log call -------------------------------
+INFO     imas.dd_zip:dd_zip.py:89 Parsing data dictionary version 4.0.0
+WARNING  root:validation.py:41 The IDS is missing the time quantity.
+WARNING  root:validation.py:41 The IDS is missing the global_quantities.v_loop quantity.
+WARNING  root:validation.py:41 The IDS is missing the global_quantities.ip quantity.
+WARNING  root:validation.py:41 The IDS is missing the time quantity.
+WARNING  root:plasma_composition.py:120 Z_eff is provided but impurity_mode is 'n_e_ratios'. Z_eff will be an emergent quantity and the input value will be ignored.
+INFO     imas.ids_convert:ids_convert.py:588 Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+INFO     imas.ids_convert:ids_convert.py:626 Conversion of IDS equilibrium finished.
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 11.15s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 400.00s of physics in 1.20s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_step_flattop_bgb.nc
+____________________ SimTest.test_simulation_with_restart3 _____________________
+[gw2] darwin -- Python 3.12.13 .venv-main/bin/python
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:45:52,298 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 19:45:52,747 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 19:45:56,935 [    INFO] Precision is set at float64
+2026-09-25 19:45:56,936 [    INFO] Starting simulation.
+2026-09-25 19:46:07,801 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.21s of wall clock time.
+2026-09-25 19:46:07,801 [    INFO] Simulated 38.00s of physics in 0.65s of wall clock time.
+2026-09-25 19:46:08,563 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 10.21s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 38.00s of physics in 0.65s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+- generated xml file: evidence/E004/raw/sim_test_junit.xml -
+=========================== short test summary info ============================
+PASSED torax/tests/sim_test.py::SimTest::test_fail
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_bohmgyrobohm_all
+PASSED torax/tests/sim_test.py::SimTest::test_nans_trigger_error
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_changing_config_after
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_bremsstrahlung_time_dependent_Zimp
+PASSED torax/tests/sim_test.py::SimTest::test_prescribed_psidot
+PASSED torax/tests/sim_test.py::SimTest::test_no_op
+PASSED torax/tests/sim_test.py::SimTest::test_ip_bc_v_loop_bc_equivalence
+PASSED torax/tests/sim_test.py::SimTest::test_full_output_matches_reference
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_changing_config_before
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_fixed_dt
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_all_transport_fusion_qlknn
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_chease
+PASSED torax/tests/sim_test.py::SimTest::test_low_temperature_error
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_implicit_short_optimizer
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_imas_profiles_and_geo
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_combined_transport
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_lh_transition_internal_boundary_condition
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_implicit
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterbaseline_mockup
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_clip_inputs
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_crank_nicolson
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_Lmode_combined
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_mockup
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_eqdsk
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_cyclotron
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_imas
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_impurity_radiation
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_ec_linliu
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_neoclassical
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_rotation
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_timedependent_isotopes
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_tungsten
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_predictor_corrector_zeffprofile
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_ne_qlknn_deff_veff
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_ne_qlknn_defromchie
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_particle_sources_cgm
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_prescribed_timedependent_ne
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psi_and_heat
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_rampup
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psi_heat_dens
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psichease_ip_parameters_vloop_varying
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_iterhybrid_rampup_sawtooth
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psichease_prescribed_johm
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psichease_prescribed_jtot
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_timedependence
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psichease_prescribed_jtot_vloop
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_prescribed_generic_current_source
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_psichease_ip_chease_vloop
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_semiimplicit_convection
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart1
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart2
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart0
+PASSED torax/tests/sim_test.py::SimTest::test_run_simulation_test_step_flattop_bgb
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart3
+================= 63 passed, 22 warnings in 137.65s (0:02:17) ==================
+../.venv-main/bin/python -m pytest torax/tests/sim_test.py -n 6 -p  -rA   1139.97s user 36.73s system 843% cpu 2:19.42 total
+exit=0

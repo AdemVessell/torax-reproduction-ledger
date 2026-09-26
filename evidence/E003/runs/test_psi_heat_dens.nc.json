@@ -1,0 +1,20 @@
+{
+  "label": "test_psi_heat_dens",
+  "config": "upstream-torax/torax/tests/test_data/test_psi_heat_dens.py",
+  "config_sha256": "02f70ead9c37f3fa0ebec64440e44f8ebc84eb5d7b16630d47c1bbec38e42293",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 10,
+  "t_final": 2.0,
+  "wall_s_including_compile": 6.308,
+  "out": "evidence/E003/runs/test_psi_heat_dens.nc",
+  "out_sha256": "4ebc4bb3bef1a98cd9df84542af1cbc421753c9d6ce2da0629201c0b0531e6db",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

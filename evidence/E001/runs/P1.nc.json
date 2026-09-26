@@ -1,0 +1,20 @@
+{
+  "label": "P1",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_rampup.py",
+  "config_sha256": "a94da3f3a102df5a4a86d3c7d3f9d70b8a8f0f96e68226ac44fe79b797e8ebff",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 41,
+  "t_final": 80.0,
+  "wall_s_including_compile": 41.061,
+  "out": "evidence/E001/runs/P1.nc",
+  "out_sha256": "040bd00957f2308917a3996294b4df2b0921715558c9d58b7b41d0be15cc399b",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_iterbaseline_mockup",
+  "config": "upstream-torax/torax/tests/test_data/test_iterbaseline_mockup.py",
+  "config_sha256": "67f18df2450294713ce83b5a81d28f3737829ca7eab963db8352e136ff16d85b",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 41,
+  "t_final": 10.0,
+  "wall_s_including_compile": 8.045,
+  "out": "evidence/E003/runs/test_iterbaseline_mockup.nc",
+  "out_sha256": "416278188033652fc85ca65ea0e40fdee222d0c4adee58821e63715de71dfa7a",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

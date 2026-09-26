@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation.py",
+  "config_sha256": "86c81c0cc286184bd30bbcd2385bafc0b227f67837ea48be6a048a06c0beb5a4",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 31,
+  "t_final": 5.0,
+  "wall_s_including_compile": 9.836,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation.nc",
+  "out_sha256": "082d2cf7884719c7f6105cc03f942daa4298633ae375603a915bd7a876570401",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped.py",
+  "config_sha256": "081154ec3c5768b2d9c7312ecdf01a7f83acc05091d1cd970346ca4c17d0e61a",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 32,
+  "t_final": 5.0,
+  "wall_s_including_compile": 9.435,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped.nc",
+  "out_sha256": "9c7edf16e8d2a53674bda00ebe61bc9554fc90c318dcf004b1e137699b5020c6",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,22 @@
+{
+  "label": "CTRL_rampup_heat_plus1pct",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_rampup.py",
+  "config_sha256": "a708ee0c3225624eca8c1d7deae4f1d2aaa967611fbe8ac596565e80057172f4",
+  "overrides": {
+    "sources.generic_heat.P_total": 20200000.0
+  },
+  "sim_error": "NO_ERROR",
+  "n_times": 41,
+  "t_final": 80.0,
+  "wall_s_including_compile": 12.944,
+  "out": "evidence/E004/runs/CTRL_rampup_heat_plus1pct.nc",
+  "out_sha256": "44c505ab3830ddaadd5e490fb63def90dbf77e292acab08d8b25c1ff03bc83fd",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "harness/run_case.py", line 89, in <module>
+    main()
+  File "harness/run_case.py", line 57, in main
+    torax_config = model_config.ToraxConfig.from_dict(cfg)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "upstream-torax/torax/_src/torax_pydantic/model_base.py", line 127, in from_dict
+    return cls.model_validate(cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/pydantic/main.py", line 732, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ToraxConfig
+transport
+  Input tag 'qualikiz' found using 'model_name' does not match any of the expected tags: 'combined', 'qlknn', 'tglfnn-ukaea', 'constant', 'CGM', 'bohm-gyrobohm', 'tglf' [type=union_tag_invalid, input_value={'model_name': 'qualikiz'...on_mode': 'half_radius'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/union_tag_invalid

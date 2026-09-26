@@ -1,0 +1,20 @@
+{
+  "label": "test_ne_qlknn_deff_veff",
+  "config": "upstream-torax-main/torax/tests/test_data/test_ne_qlknn_deff_veff.py",
+  "config_sha256": "348f8779197654e02f8edd9f552e2410e3cb0caa0b56f2f42539326409b59c86",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 13,
+  "t_final": 2.0,
+  "wall_s_including_compile": 7.022,
+  "out": "evidence/E004/runs/test_ne_qlknn_deff_veff.nc",
+  "out_sha256": "e5deb70eb2b25af28a25bc6dee64a59088d4c6647428e161c07a9e8f35081d52",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

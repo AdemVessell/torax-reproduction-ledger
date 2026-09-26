@@ -1,0 +1,20 @@
+{
+  "label": "test_psichease_prescribed_jtot_vloop",
+  "config": "upstream-torax-main/torax/tests/test_data/test_psichease_prescribed_jtot_vloop.py",
+  "config_sha256": "78ffa84a64af87e94813dc38db5efd987cb2261fbbe333804d1b601bb496e138",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 18,
+  "t_final": 3.0,
+  "wall_s_including_compile": 3.939,
+  "out": "evidence/E004/runs/test_psichease_prescribed_jtot_vloop.nc",
+  "out_sha256": "4dd382b5cbcf7d13629614722f445e790cd24ae82556467d0614864789f1f442",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

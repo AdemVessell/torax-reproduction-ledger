@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_radiation_collapse",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_radiation_collapse.py",
+  "config_sha256": "aa566d3bd59351b1b1d14b1da6477eb8a21a6f6e37e68a1caef5dbc2081caa05",
+  "overrides": {},
+  "sim_error": "LOW_TEMPERATURE_COLLAPSE",
+  "n_times": 23,
+  "t_final": 1.2162780064014638,
+  "wall_s_including_compile": 10.362,
+  "out": "evidence/E004/runs/test_iterhybrid_radiation_collapse.nc",
+  "out_sha256": "40afa764a7de676e418bfb706731f3e80d9d023b5768e618ef60648dfba4a77b",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

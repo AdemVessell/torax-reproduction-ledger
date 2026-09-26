@@ -1,0 +1,86 @@
+Running 4 items in this shard
+....                                                                     [100%]
+=============================== warnings summary ===============================
+../.venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59
+  .venv-main/lib/python3.12/site-packages/jaxopt/__init__.py:59: DeprecationWarning: JAXopt is no longer maintained. See https://docs.jax.dev/en/latest/ for alternatives.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+____________________ SimTest.test_simulation_with_restart0 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:27:47,709 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 19:27:47,724 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+2026-09-25 19:27:48,512 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 19:27:51,073 [    INFO] Precision is set at float64
+2026-09-25 19:27:51,073 [    INFO] Starting simulation.
+2026-09-25 19:27:53,650 [    INFO] Simulated 0.80s of physics in 2.58s of wall clock time.
+2026-09-25 19:27:54,277 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     jax._src.xla_bridge:xla_bridge.py:837 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 0.80s of physics in 2.58s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+____________________ SimTest.test_simulation_with_restart1 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:27:54,770 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 19:27:57,447 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 19:27:58,233 [    INFO] Precision is set at float64
+2026-09-25 19:27:58,233 [    INFO] Starting simulation.
+2026-09-25 19:27:59,877 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 1.62s of wall clock time.
+2026-09-25 19:27:59,878 [    INFO] Simulated 1.40s of physics in 0.02s of wall clock time.
+2026-09-25 19:28:00,516 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 1.62s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.02s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+____________________ SimTest.test_simulation_with_restart2 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:28:00,982 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 19:28:01,324 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 19:28:02,135 [    INFO] Precision is set at float64
+2026-09-25 19:28:02,135 [    INFO] Starting simulation.
+2026-09-25 19:28:03,677 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 1.52s of wall clock time.
+2026-09-25 19:28:03,677 [    INFO] Simulated 1.40s of physics in 0.02s of wall clock time.
+2026-09-25 19:28:04,001 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 1.52s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.02s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+____________________ SimTest.test_simulation_with_restart3 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 19:28:04,378 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 19:28:04,777 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 19:28:05,381 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:28:06,256 [    INFO] Precision is set at float64
+2026-09-25 19:28:06,256 [    INFO] Starting simulation.
+2026-09-25 19:28:14,935 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.00s of wall clock time.
+2026-09-25 19:28:14,935 [    INFO] Simulated 38.00s of physics in 0.68s of wall clock time.
+2026-09-25 19:28:15,710 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.00s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 38.00s of physics in 0.68s of wall clock time.
+INFO     absl:output.py:75 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+=========================== short test summary info ============================
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart0
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart1
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart2
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart3
+4 passed, 59 deselected, 1 warning in 36.38s
+exit=0

@@ -1,0 +1,700 @@
+{
+  "candidate": "evidence/E004/runs/test_iterhybrid_radiation_collapse.nc",
+  "reference": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_radiation_collapse.nc",
+  "candidate_torax_version": "1.4.3",
+  "reference_torax_version": "1.4.3",
+  "embedded_config_equal": false,
+  "n_common": 201,
+  "only_in_candidate": [
+    "/auxiliary/turbulent_transport/core/prescribed/D_turb_e",
+    "/auxiliary/turbulent_transport/core/prescribed/V_turb_e",
+    "/auxiliary/turbulent_transport/core/prescribed/chi_turb_e",
+    "/auxiliary/turbulent_transport/core/prescribed/chi_turb_i"
+  ],
+  "only_in_reference": [],
+  "tier_counts": {
+    "BITWISE": 8,
+    "RTOL_1e-9": 0,
+    "RTOL_1e-6": 0,
+    "RTOL_1e-3": 0,
+    "DIFFERENT": 0,
+    "SHAPE": 193
+  },
+  "worst_tier": "SHAPE",
+  "upstream_five_profiles": {
+    "/profiles/T_e": "SHAPE",
+    "/profiles/T_i": "SHAPE",
+    "/profiles/n_e": "SHAPE",
+    "/profiles/psi": "SHAPE",
+    "/profiles/q": "SHAPE"
+  },
+  "top10_by_nrmsd": [
+    {
+      "var": "/numerics/sim_error",
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/rho_cell_norm",
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/rho_face_norm",
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/rho_norm",
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    {
+      "var": "/scalars/drho_norm",
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    }
+  ],
+  "variables": {
+    "/numerics/inner_solver_iterations": {
+      "tier": "SHAPE"
+    },
+    "/numerics/outer_solver_iterations": {
+      "tier": "SHAPE"
+    },
+    "/numerics/sawtooth_crash": {
+      "tier": "SHAPE"
+    },
+    "/numerics/sim_error": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/numerics/sim_status": {
+      "tier": "BITWISE"
+    },
+    "/profiles/D_neo_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/D_turb_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/F": {
+      "tier": "SHAPE"
+    },
+    "/profiles/FFprime": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Ip_profile": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Ip_profile_from_geo": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Phi": {
+      "tier": "SHAPE"
+    },
+    "/profiles/R_in": {
+      "tier": "SHAPE"
+    },
+    "/profiles/R_major_profile": {
+      "tier": "SHAPE"
+    },
+    "/profiles/R_out": {
+      "tier": "SHAPE"
+    },
+    "/profiles/T_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/T_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/V_neo_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/V_neo_ware_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/V_turb_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Z_eff": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Z_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Z_impurity": {
+      "tier": "SHAPE"
+    },
+    "/profiles/Z_impurity_species": {
+      "tier": "SHAPE"
+    },
+    "/profiles/area": {
+      "tier": "SHAPE"
+    },
+    "/profiles/beta_pol_prime": {
+      "tier": "SHAPE"
+    },
+    "/profiles/beta_pol_profile": {
+      "tier": "SHAPE"
+    },
+    "/profiles/chi_neo_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/chi_neo_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/chi_turb_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/chi_turb_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/delta": {
+      "tier": "SHAPE"
+    },
+    "/profiles/delta_lower": {
+      "tier": "SHAPE"
+    },
+    "/profiles/delta_upper": {
+      "tier": "SHAPE"
+    },
+    "/profiles/ei_exchange": {
+      "tier": "SHAPE"
+    },
+    "/profiles/elongation": {
+      "tier": "SHAPE"
+    },
+    "/profiles/epsilon": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g0": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g0_over_vpr": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g1": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g1_over_vpr": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g1_over_vpr2": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g2": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g2g3_over_rhon": {
+      "tier": "SHAPE"
+    },
+    "/profiles/g3": {
+      "tier": "SHAPE"
+    },
+    "/profiles/gm4": {
+      "tier": "SHAPE"
+    },
+    "/profiles/gm5": {
+      "tier": "SHAPE"
+    },
+    "/profiles/gm9": {
+      "tier": "SHAPE"
+    },
+    "/profiles/impurity_symbol": {
+      "tier": "BITWISE"
+    },
+    "/profiles/j_bootstrap": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_ecrh": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_external": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_generic_current": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_non_inductive": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_ohmic": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_bootstrap": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_external": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_generic_current": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_non_inductive": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_ohmic": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_parallel_total": {
+      "tier": "SHAPE"
+    },
+    "/profiles/j_total": {
+      "tier": "SHAPE"
+    },
+    "/profiles/magnetic_shear": {
+      "tier": "SHAPE"
+    },
+    "/profiles/n_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/n_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/n_impurity": {
+      "tier": "SHAPE"
+    },
+    "/profiles/n_impurity_species": {
+      "tier": "SHAPE"
+    },
+    "/profiles/p_generic_heat_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/p_generic_heat_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/p_impurity_radiation_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/poloidal_velocity": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pprime": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_fast_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_thermal_e": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_thermal_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_thermal_total": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_total": {
+      "tier": "SHAPE"
+    },
+    "/profiles/pressure_total_i": {
+      "tier": "SHAPE"
+    },
+    "/profiles/psi": {
+      "tier": "SHAPE"
+    },
+    "/profiles/psi_from_Ip": {
+      "tier": "SHAPE"
+    },
+    "/profiles/psi_from_geo": {
+      "tier": "SHAPE"
+    },
+    "/profiles/psi_norm": {
+      "tier": "SHAPE"
+    },
+    "/profiles/q": {
+      "tier": "SHAPE"
+    },
+    "/profiles/r_mid": {
+      "tier": "SHAPE"
+    },
+    "/profiles/radial_electric_field": {
+      "tier": "SHAPE"
+    },
+    "/profiles/radiation_impurity_species": {
+      "tier": "SHAPE"
+    },
+    "/profiles/s_gas_puff": {
+      "tier": "SHAPE"
+    },
+    "/profiles/s_generic_particle": {
+      "tier": "SHAPE"
+    },
+    "/profiles/s_pellet": {
+      "tier": "SHAPE"
+    },
+    "/profiles/sigma_parallel": {
+      "tier": "SHAPE"
+    },
+    "/profiles/spr": {
+      "tier": "SHAPE"
+    },
+    "/profiles/toroidal_angular_velocity": {
+      "tier": "SHAPE"
+    },
+    "/profiles/v_loop": {
+      "tier": "SHAPE"
+    },
+    "/profiles/volume": {
+      "tier": "SHAPE"
+    },
+    "/profiles/vpr": {
+      "tier": "SHAPE"
+    },
+    "/rho_cell_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/rho_face_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/rho_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/A_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/A_impurity": {
+      "tier": "SHAPE"
+    },
+    "/scalars/B_0": {
+      "tier": "SHAPE"
+    },
+    "/scalars/E_aux_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/E_external_injected": {
+      "tier": "SHAPE"
+    },
+    "/scalars/E_external_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/E_fusion": {
+      "tier": "SHAPE"
+    },
+    "/scalars/E_ohmic_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/H20": {
+      "tier": "SHAPE"
+    },
+    "/scalars/H89P": {
+      "tier": "SHAPE"
+    },
+    "/scalars/H97L": {
+      "tier": "SHAPE"
+    },
+    "/scalars/H98": {
+      "tier": "SHAPE"
+    },
+    "/scalars/I_aux_generic": {
+      "tier": "SHAPE"
+    },
+    "/scalars/I_bootstrap": {
+      "tier": "SHAPE"
+    },
+    "/scalars/I_ecrh": {
+      "tier": "SHAPE"
+    },
+    "/scalars/I_external": {
+      "tier": "SHAPE"
+    },
+    "/scalars/I_non_inductive": {
+      "tier": "SHAPE"
+    },
+    "/scalars/Ip": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_delabie": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_delabie_high_density": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_delabie_low_density": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_delabie_min": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_high_density": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_low_density": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_LH_min": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_SOL_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_SOL_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_SOL_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_alpha_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_alpha_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_alpha_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_generic_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_generic_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_generic_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_aux_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_bremsstrahlung_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_cyclotron_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_ecrh_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_ei_exchange_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_ei_exchange_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_external_injected": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_external_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_fusion": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_heat_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_heat_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_heat_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_icrh_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_icrh_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_icrh_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_ohmic_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/P_radiation_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/Phi_b": {
+      "tier": "SHAPE"
+    },
+    "/scalars/Phi_b_dot": {
+      "tier": "SHAPE"
+    },
+    "/scalars/Q_fusion": {
+      "tier": "SHAPE"
+    },
+    "/scalars/R_major": {
+      "tier": "SHAPE"
+    },
+    "/scalars/S_gas_puff": {
+      "tier": "SHAPE"
+    },
+    "/scalars/S_generic_particle": {
+      "tier": "SHAPE"
+    },
+    "/scalars/S_pellet": {
+      "tier": "SHAPE"
+    },
+    "/scalars/S_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/T_e_volume_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/T_i_volume_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/W_pol": {
+      "tier": "SHAPE"
+    },
+    "/scalars/W_thermal_e": {
+      "tier": "SHAPE"
+    },
+    "/scalars/W_thermal_i": {
+      "tier": "SHAPE"
+    },
+    "/scalars/W_thermal_total": {
+      "tier": "SHAPE"
+    },
+    "/scalars/a_minor": {
+      "tier": "SHAPE"
+    },
+    "/scalars/beta_N": {
+      "tier": "SHAPE"
+    },
+    "/scalars/beta_pol": {
+      "tier": "SHAPE"
+    },
+    "/scalars/beta_tor": {
+      "tier": "SHAPE"
+    },
+    "/scalars/dW_thermal_dt": {
+      "tier": "SHAPE"
+    },
+    "/scalars/dW_thermal_dt_smoothed": {
+      "tier": "SHAPE"
+    },
+    "/scalars/dW_thermal_e_dt_smoothed": {
+      "tier": "SHAPE"
+    },
+    "/scalars/dW_thermal_i_dt_smoothed": {
+      "tier": "SHAPE"
+    },
+    "/scalars/drho": {
+      "tier": "SHAPE"
+    },
+    "/scalars/drho_norm": {
+      "tier": "BITWISE",
+      "max_abs_diff": 0.0,
+      "max_rel_diff": 0.0,
+      "nrmsd": 0.0,
+      "nan_pattern_equal": true
+    },
+    "/scalars/f_bootstrap": {
+      "tier": "SHAPE"
+    },
+    "/scalars/f_non_inductive": {
+      "tier": "SHAPE"
+    },
+    "/scalars/fgw_n_e_line_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/fgw_n_e_volume_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/li3": {
+      "tier": "SHAPE"
+    },
+    "/scalars/main_ion": {
+      "tier": "BITWISE"
+    },
+    "/scalars/main_ion_fractions": {
+      "tier": "SHAPE"
+    },
+    "/scalars/n_e_line_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/n_e_min_P_LH": {
+      "tier": "SHAPE"
+    },
+    "/scalars/n_e_volume_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/n_i_line_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/n_i_volume_avg": {
+      "tier": "SHAPE"
+    },
+    "/scalars/q95": {
+      "tier": "SHAPE"
+    },
+    "/scalars/q_min": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_b": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_2_1_first": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_2_1_second": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_3_1_first": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_3_1_second": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_3_2_first": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_3_2_second": {
+      "tier": "SHAPE"
+    },
+    "/scalars/rho_q_min": {
+      "tier": "SHAPE"
+    },
+    "/scalars/tau_E": {
+      "tier": "SHAPE"
+    },
+    "/scalars/v_loop_lcfs": {
+      "tier": "SHAPE"
+    },
+    "/time": {
+      "tier": "SHAPE"
+    }
+  },
+  "require": "RTOL_1e-9",
+  "meets_require": false
+}

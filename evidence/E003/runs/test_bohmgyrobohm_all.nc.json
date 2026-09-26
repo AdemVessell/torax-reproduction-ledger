@@ -1,0 +1,20 @@
+{
+  "label": "test_bohmgyrobohm_all",
+  "config": "upstream-torax/torax/tests/test_data/test_bohmgyrobohm_all.py",
+  "config_sha256": "32267000fcdf4f582c612f8f60eff8ed0d6d8825b9bbb3d830dd43e5d6e34dcd",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 32,
+  "t_final": 2.0,
+  "wall_s_including_compile": 7.829,
+  "out": "evidence/E003/runs/test_bohmgyrobohm_all.nc",
+  "out_sha256": "d769a46a5171f8a50078ea491adfbb32a465aec4f54d0aa23b81faab2a53b8f0",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

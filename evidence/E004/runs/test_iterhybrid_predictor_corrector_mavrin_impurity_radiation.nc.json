@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_mavrin_impurity_radiation",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_impurity_radiation.py",
+  "config_sha256": "4bc0244e963fa1008afc75ad5120e80c130d98debea2dc19f61c14a3986842a1",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 18,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.795,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_mavrin_impurity_radiation.nc",
+  "out_sha256": "39fbb3295452709f2f866339ff44c947a587f069e23416764f8d43f3d769f48a",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

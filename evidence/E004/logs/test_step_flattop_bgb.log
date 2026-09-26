@@ -1,0 +1,17 @@
+19:43:33 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:43:33,428 [    INFO] Parsing data dictionary version 4.0.0
+2026-09-25 19:43:33,897 [ WARNING] The IDS is missing the time quantity.
+2026-09-25 19:43:33,897 [ WARNING] The IDS is missing the global_quantities.v_loop quantity.
+2026-09-25 19:43:33,897 [ WARNING] The IDS is missing the global_quantities.ip quantity.
+2026-09-25 19:43:33,909 [ WARNING] The IDS is missing the time quantity.
+2026-09-25 19:43:33,911 [ WARNING] Z_eff is provided but impurity_mode is 'n_e_ratios'. Z_eff will be an emergent quantity and the input value will be ignored.
+2026-09-25 19:43:33,921 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+19:43:33 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:43:33,993 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:43:33 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:43:33,994 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:43:36,656 [    INFO] Precision is set at float64
+2026-09-25 19:43:36,656 [    INFO] Starting simulation.
+2026-09-25 19:43:47,924 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 9.39s of wall clock time.
+2026-09-25 19:43:47,952 [    INFO] Simulated 400.00s of physics in 1.88s of wall clock time.
+{"label": "test_step_flattop_bgb", "config": "upstream-torax-main/torax/tests/test_data/test_step_flattop_bgb.py", "config_sha256": "ce6e7e7e34c14ca61e7a5350cc55eaada591e1a848e83b14e118ad17dbea6c9d", "overrides": {}, "sim_error": "NO_ERROR", "n_times": 41, "t_final": 400.0, "wall_s_including_compile": 14.197, "out": "evidence/E004/runs/test_step_flattop_bgb.nc", "out_sha256": "83f100be083a7cf9509cb1184c0322369c9c5e6bac650784c72b70ef903c9cd1", "torax_version": "1.4.3", "jax_version": "0.11.2", "jax_x64": true, "devices": ["cpu:0"], "machine": "arm64", "platform": "macOS-27.0-arm64-arm-64bit"}

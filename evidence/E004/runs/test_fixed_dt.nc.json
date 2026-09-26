@@ -1,0 +1,20 @@
+{
+  "label": "test_fixed_dt",
+  "config": "upstream-torax-main/torax/tests/test_data/test_fixed_dt.py",
+  "config_sha256": "eeb9c206ee9a018cd8ad4537e9888b39dff5230e406e46849a93d9a8308569d0",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 101,
+  "t_final": 2.0,
+  "wall_s_including_compile": 6.878,
+  "out": "evidence/E004/runs/test_fixed_dt.nc",
+  "out_sha256": "4ef909a7da286ee9d817ceb3ce64470a31e906a76a8523d4dc98f26653d15282",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

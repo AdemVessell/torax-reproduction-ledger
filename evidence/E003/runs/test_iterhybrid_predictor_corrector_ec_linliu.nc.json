@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_ec_linliu",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_ec_linliu.py",
+  "config_sha256": "c8339f98f363c355923a8ac28da5585cf2ccd706d573ce996e0a54a5791bb938",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 34,
+  "t_final": 5.0,
+  "wall_s_including_compile": 9.451,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_ec_linliu.nc",
+  "out_sha256": "89a1d5c03455bc5ae487166d18ad0f37df960e7923710abae2a41bf2609f3400",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

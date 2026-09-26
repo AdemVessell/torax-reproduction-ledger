@@ -1,0 +1,20 @@
+{
+  "label": "test_particle_sources_cgm",
+  "config": "upstream-torax-main/torax/tests/test_data/test_particle_sources_cgm.py",
+  "config_sha256": "54907576e8240483224734969d86808e3582026572e7d9feeed2686ab0352f08",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 9,
+  "t_final": 2.0,
+  "wall_s_including_compile": 5.07,
+  "out": "evidence/E004/runs/test_particle_sources_cgm.nc",
+  "out_sha256": "30139f1262102fa11bbd19ce081824029c318018ea01ace950f8452f588a2c70",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

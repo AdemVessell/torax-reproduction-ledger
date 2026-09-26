@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector.py",
+  "config_sha256": "b2d8b4c6b9516150b23b5e8d2d253a427249b621e0df5374ded25973d8dd4cdc",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 32,
+  "t_final": 5.0,
+  "wall_s_including_compile": 11.467,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector.nc",
+  "out_sha256": "7386ea7349bfacef7d3e356d69377b31e0f3e25b7806d84d7f8bd507788ea1d8",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_Lmode_combined",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_Lmode_combined.py",
+  "config_sha256": "c196151050c16a6cbde82ff8de608cd412a831399639c9ef6e35b4020803afb4",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 69,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.953,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_Lmode_combined.nc",
+  "out_sha256": "5594819abf66e33bc3532ff6e6d31f8daab07a2826d0044db0671d21fd6ce25d",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

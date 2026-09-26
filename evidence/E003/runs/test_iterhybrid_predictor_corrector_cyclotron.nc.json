@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_cyclotron",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_cyclotron.py",
+  "config_sha256": "4d98b4ae6f6e63d99b16c39d431cc50c07e59bff0665973c9836e32f0cfc44c0",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 31,
+  "t_final": 5.0,
+  "wall_s_including_compile": 10.158,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_cyclotron.nc",
+  "out_sha256": "890727c766b80f391adf1d489d3cc4b0ef4bfcb9ccc9184eccdb05f71ebb8c53",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

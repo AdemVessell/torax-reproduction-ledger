@@ -1,0 +1,20 @@
+{
+  "label": "test_ne_qlknn_defromchie",
+  "config": "upstream-torax-main/torax/tests/test_data/test_ne_qlknn_defromchie.py",
+  "config_sha256": "9acf4331604b92184e9cf25a88ec99ccb03e9a9d29e5da3f101b2f40c4c22c30",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 7,
+  "t_final": 2.0,
+  "wall_s_including_compile": 8.224,
+  "out": "evidence/E004/runs/test_ne_qlknn_defromchie.nc",
+  "out_sha256": "af0a3391a37a850e469be6e67946e0568195a388c4827d80be41ff3a58f5ea87",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

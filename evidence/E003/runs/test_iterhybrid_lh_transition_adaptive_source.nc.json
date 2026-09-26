@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_lh_transition_adaptive_source",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_lh_transition_adaptive_source.py",
+  "config_sha256": "6238cc2a6ac0a8a8c267ff34ccb955be7f895d25941838a166c5b4f3ddab5277",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 63,
+  "t_final": 60.0,
+  "wall_s_including_compile": 16.375,
+  "out": "evidence/E003/runs/test_iterhybrid_lh_transition_adaptive_source.nc",
+  "out_sha256": "1536fa086d3504985adf82089cb7380d590efa79b1e24c838e360a95454439cc",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

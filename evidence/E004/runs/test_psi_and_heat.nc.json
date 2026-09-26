@@ -1,0 +1,20 @@
+{
+  "label": "test_psi_and_heat",
+  "config": "upstream-torax-main/torax/tests/test_data/test_psi_and_heat.py",
+  "config_sha256": "48dc388e0b46d2201d1dc36d489c289e9297765969c6dcf72e91eff3e9a5e24d",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 4,
+  "t_final": 2.0,
+  "wall_s_including_compile": 6.184,
+  "out": "evidence/E004/runs/test_psi_and_heat.nc",
+  "out_sha256": "a9f3f0095a87fee7cf77b4371ae1fedc3679df0bfe263683314feccec5d95d75",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

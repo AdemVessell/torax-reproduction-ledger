@@ -1,0 +1,20 @@
+{
+  "label": "N_test_psichease_prescribed_johm",
+  "config": "upstream-torax/torax/tests/test_data/test_psichease_prescribed_johm.py",
+  "config_sha256": "927cd5cf04239e4821e9fba0eca7a003b85a88d5091a73e15c5aff79a70430d8",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 18,
+  "t_final": 3.0,
+  "wall_s_including_compile": 3.98,
+  "out": "evidence/E001/runs/N_test_psichease_prescribed_johm.nc",
+  "out_sha256": "2b1570fd827c587bb283fb1c8d3101960daa0c8b473662d8610167f3a5cd7ec0",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

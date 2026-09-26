@@ -1,0 +1,14 @@
+19:29:59 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:29:59,233 [    INFO] Parsing data dictionary version 4.0.0
+2026-09-25 19:29:59,523 [ WARNING] The IDS is missing the global_quantities.v_loop quantity.
+2026-09-25 19:29:59,537 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+19:29:59 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:29:59,625 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:29:59 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:29:59,627 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:30:00,337 [    INFO] Loading QLKNNModel from .venv/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:30:02,100 [    INFO] Precision is set at float64
+2026-09-25 19:30:02,100 [    INFO] Starting simulation.
+2026-09-25 19:30:10,225 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 8.01s of wall clock time.
+2026-09-25 19:30:10,239 [    INFO] Simulated 5.00s of physics in 0.11s of wall clock time.
+{"label": "test_imas_profiles_and_geo", "config": "upstream-torax/torax/tests/test_data/test_imas_profiles_and_geo.py", "config_sha256": "30dd1c7a6e6a5ccdab2c2c51ebfa1225cb3ff6baa430b5fcfc0360afecaf8185", "overrides": {}, "sim_error": "NO_ERROR", "n_times": 20, "t_final": 5.0, "wall_s_including_compile": 10.704, "out": "evidence/E003/runs/test_imas_profiles_and_geo.nc", "out_sha256": "facc69d20f3b2b2271332e1f7ee1c8f80f6c1d3d6c5204a2aee9346dd595ad7c", "torax_version": "1.4.3", "jax_version": "0.11.2", "jax_x64": true, "devices": ["cpu:0"], "machine": "arm64", "platform": "macOS-27.0-arm64-arm-64bit"}

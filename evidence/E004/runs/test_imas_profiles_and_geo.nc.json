@@ -1,0 +1,20 @@
+{
+  "label": "test_imas_profiles_and_geo",
+  "config": "upstream-torax-main/torax/tests/test_data/test_imas_profiles_and_geo.py",
+  "config_sha256": "30dd1c7a6e6a5ccdab2c2c51ebfa1225cb3ff6baa430b5fcfc0360afecaf8185",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 20,
+  "t_final": 5.0,
+  "wall_s_including_compile": 9.415,
+  "out": "evidence/E004/runs/test_imas_profiles_and_geo.nc",
+  "out_sha256": "f8829987b16319c697c6905ec601a951ad7614e702caa614a747c71960ebd4c2",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

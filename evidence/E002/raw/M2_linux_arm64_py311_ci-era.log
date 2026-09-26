@@ -1,0 +1,380 @@
+aarch64
+Python 3.11.15
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using Python 3.11.15 environment at: /usr/local
+jax 0.10.2 numpy 2.4.6 [CpuDevice(id=0)]
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+rootdir: /work
+configfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)
+plugins: typeguard-2.13.3, shard-0.1.2, xdist-3.8.0, jaxtyping-0.3.11
+collected 64 items / 60 deselected / 4 selected
+Running 4 items in this shard
+
+torax/tests/sim_test.py .FF.                                             [100%]
+
+=================================== FAILURES ===================================
+____________________ SimTest.test_simulation_with_restart1 _____________________
+
+self = <sim_test.SimTest testMethod=test_simulation_with_restart1>
+test_config = 'test_psichease_prescribed_jtot'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+>     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = <function assert_allclose at 0xee4ccabab560>, kwargs = {}
+args = (<xarray.DataTree>
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -> DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -> Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+>               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+/usr/local/lib/python3.11/site-packages/xarray/core/datatree_mapping.py:117: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 06:36:36,083 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 06:36:38,115 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+2026-09-25 06:36:41,052 [    INFO] Precision is set at float64
+2026-09-25 06:36:41,052 [    INFO] Starting simulation.
+2026-09-25 06:36:46,882 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.77s of wall clock time.
+2026-09-25 06:36:46,882 [    INFO] Simulated 1.40s of physics in 0.05s of wall clock time.
+2026-09-25 06:36:48,058 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.77s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.05s of wall clock time.
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_jtot.nc
+____________________ SimTest.test_simulation_with_restart2 _____________________
+
+self = <sim_test.SimTest testMethod=test_simulation_with_restart2>
+test_config = 'test_psichease_prescribed_johm'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+>     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = <function assert_allclose at 0xee4ccabab560>, kwargs = {}
+args = (<xarray.DataTree>
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -> DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -> Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+>               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+/usr/local/lib/python3.11/site-packages/xarray/core/datatree_mapping.py:117: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 06:36:49,093 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 06:36:49,771 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+2026-09-25 06:36:52,720 [    INFO] Precision is set at float64
+2026-09-25 06:36:52,720 [    INFO] Starting simulation.
+2026-09-25 06:36:58,059 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.26s of wall clock time.
+2026-09-25 06:36:58,059 [    INFO] Simulated 1.40s of physics in 0.08s of wall clock time.
+2026-09-25 06:36:58,905 [    INFO] Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.26s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 1.40s of physics in 0.08s of wall clock time.
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psichease_prescribed_johm.nc
+=============================== warnings summary ===============================
+../usr/local/lib/python3.11/site-packages/jaxopt/__init__.py:59
+  /usr/local/lib/python3.11/site-packages/jaxopt/__init__.py:59: DeprecationWarning: JAXopt is no longer maintained. See https://docs.jax.dev/en/latest/ for alternatives.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+____________________ SimTest.test_simulation_with_restart0 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 06:36:16,482 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 06:36:16,498 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-09-25 06:36:17,558 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+2026-09-25 06:36:24,975 [    INFO] Precision is set at float64
+2026-09-25 06:36:24,975 [    INFO] Starting simulation.
+2026-09-25 06:36:33,779 [    INFO] Simulated 0.80s of physics in 8.80s of wall clock time.
+2026-09-25 06:36:34,958 [    INFO] Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     jax._src.xla_bridge:xla_bridge.py:849 Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:181 Simulated 0.80s of physics in 8.80s of wall clock time.
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_psi_heat_dens.nc
+____________________ SimTest.test_simulation_with_restart3 _____________________
+----------------------------- Captured stderr call -----------------------------
+2026-09-25 06:36:59,703 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 06:37:00,471 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+2026-09-25 06:37:02,310 [    INFO] Loading QLKNNModel from /usr/local/lib/python3.11/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 06:37:04,835 [    INFO] Precision is set at float64
+2026-09-25 06:37:04,835 [    INFO] Starting simulation.
+2026-09-25 06:37:31,323 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 25.43s of wall clock time.
+2026-09-25 06:37:31,323 [    INFO] Simulated 40.00s of physics in 1.06s of wall clock time.
+2026-09-25 06:37:32,801 [    INFO] Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+------------------------------ Captured log call -------------------------------
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+INFO     absl:qlknn_model.py:389 Loading QLKNNModel from /usr/local/lib/python3.11/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+INFO     absl:run_loop.py:82 Precision is set at float64
+INFO     absl:run_loop.py:86 Starting simulation.
+INFO     absl:run_loop.py:166 The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 25.43s of wall clock time.
+INFO     absl:run_loop.py:181 Simulated 40.00s of physics in 1.06s of wall clock time.
+INFO     absl:output.py:156 Loaded state file torax/tests/test_data/test_iterhybrid_rampup.nc
+-------- generated xml file: /out/M2_linux_arm64_py311_ci-era_junit.xml --------
+=========================== short test summary info ============================
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart0
+PASSED torax/tests/sim_test.py::SimTest::test_simulation_with_restart3
+FAILED torax/tests/sim_test.py::SimTest::test_simulation_with_restart1 - Asse...
+FAILED torax/tests/sim_test.py::SimTest::test_simulation_with_restart2 - Asse...
+======= 2 failed, 2 passed, 60 deselected, 1 warning in 77.57s (0:01:17) =======
+pytest_exit=1

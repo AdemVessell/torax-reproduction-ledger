@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_timedependent_isotopes",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_timedependent_isotopes.py",
+  "config_sha256": "9a64ffa355b899735ccca21684aed3316370fdb3dc2afc365b8e97269b85ddb6",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 24,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.376,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_timedependent_isotopes.nc",
+  "out_sha256": "7329b64d4fb9ddbaa1cd8ea9c1e5ef175444a93271e1c2ac4c46bd4cdcfc617b",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

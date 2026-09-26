@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="77.560" timestamp="2026-09-25T06:36:15.803493+00:00" hostname="e7aabd82958b"><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart0" time="19.709" /><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart1" time="12.924"><failure message="AssertionError: Left and right DatasetView objects are not close&#10;Differing data variables:&#10;L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10&#10;R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09&#10;R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09&#10;R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;Raised whilst mapping function over node(s) with path 'scalars'">self = &lt;sim_test.SimTest testMethod=test_simulation_with_restart1&gt;
+test_config = 'test_psichease_prescribed_jtot'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+&gt;     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = &lt;function assert_allclose at 0xee4ccabab560&gt;, kwargs = {}
+args = (&lt;xarray.DataTree&gt;
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -&gt; DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -&gt; Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+&gt;               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+/usr/local/lib/python3.11/site-packages/xarray/core/datatree_mapping.py:117: AssertionError</failure></testcase><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart2" time="10.404"><failure message="AssertionError: Left and right DatasetView objects are not close&#10;Differing data variables:&#10;L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10&#10;R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09&#10;R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09&#10;R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;Raised whilst mapping function over node(s) with path 'scalars'">self = &lt;sim_test.SimTest testMethod=test_simulation_with_restart2&gt;
+test_config = 'test_psichease_prescribed_johm'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+&gt;     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = &lt;function assert_allclose at 0xee4ccabab560&gt;, kwargs = {}
+args = (&lt;xarray.DataTree&gt;
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -&gt; DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -&gt; Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+&gt;               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+/usr/local/lib/python3.11/site-packages/xarray/core/datatree_mapping.py:117: AssertionError</failure></testcase><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart3" time="34.323" /></testsuite></testsuites>

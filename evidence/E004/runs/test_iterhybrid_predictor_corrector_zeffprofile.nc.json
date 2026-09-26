@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_zeffprofile",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_zeffprofile.py",
+  "config_sha256": "9f308e25670d5974db43c6bc5862ab3d1c7bdada11b714b34817ca09c58024c9",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 29,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.642,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_zeffprofile.nc",
+  "out_sha256": "3f89ce3cb7c34c6beda5b83723c17a76742e9575a7894de4325bf1991bc780f5",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_timedependence",
+  "config": "upstream-torax/torax/tests/test_data/test_timedependence.py",
+  "config_sha256": "068033bf61ce97f79b243f3f62f785e9c68de33a5afa24f32b513c0b5140f431",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 27,
+  "t_final": 10.0,
+  "wall_s_including_compile": 7.232,
+  "out": "evidence/E003/runs/test_timedependence.nc",
+  "out_sha256": "4b7391787bd4566d5dc437fe2fff8fef268dd59aea9d7d5ae98b2cf63dcbc6b4",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_prescribed_timedependent_ne",
+  "config": "upstream-torax-main/torax/tests/test_data/test_prescribed_timedependent_ne.py",
+  "config_sha256": "eb2495bf7fe7313bd5d5a241f5b7b90699f8b9db09da0377bf73df81c1c57824",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 25,
+  "t_final": 10.0,
+  "wall_s_including_compile": 6.317,
+  "out": "evidence/E004/runs/test_prescribed_timedependent_ne.nc",
+  "out_sha256": "36c5f19c904d4e963cd95f7dd0f0055a849bb1343918cea2e524b784947289c3",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

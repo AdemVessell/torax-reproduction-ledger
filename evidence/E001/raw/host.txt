@@ -1,0 +1,5 @@
+ProductName:		macOS
+ProductVersion:		27.0
+BuildVersion:		26A428
+Apple M1 Max
+68719476736

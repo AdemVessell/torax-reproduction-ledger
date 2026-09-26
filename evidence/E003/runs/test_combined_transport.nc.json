@@ -1,0 +1,20 @@
+{
+  "label": "test_combined_transport",
+  "config": "upstream-torax/torax/tests/test_data/test_combined_transport.py",
+  "config_sha256": "a177984fdb36e3a9f3acf811c20d5a8396bbdec7c2e1e23c2b6d2ce5a9f873b3",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 25,
+  "t_final": 2.0,
+  "wall_s_including_compile": 9.442,
+  "out": "evidence/E003/runs/test_combined_transport.nc",
+  "out_sha256": "02d7434a5c1f9a7b93f985dc06fd182bf057c7039dda66c4d46db009e84c8659",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

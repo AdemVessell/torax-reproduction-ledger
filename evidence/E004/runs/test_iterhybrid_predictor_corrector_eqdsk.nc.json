@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_eqdsk",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_eqdsk.py",
+  "config_sha256": "e5234f52e82f0a1ec3a5dd78ee3b6a090e57f85959a1881110223e0e1aa51edb",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 38,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.196,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_eqdsk.nc",
+  "out_sha256": "b28560cfc13fdce91e72b6f4fe5869d31eaa6a03043a287697bc255f808e1993",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

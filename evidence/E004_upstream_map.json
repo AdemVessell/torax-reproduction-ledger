@@ -1,0 +1,289 @@
+{
+ "cases": [
+  "test_all_transport_fusion_qlknn",
+  "test_bohmgyrobohm_all",
+  "test_bremsstrahlung_time_dependent_Zimp",
+  "test_changing_config_after",
+  "test_changing_config_before",
+  "test_chease",
+  "test_combined_transport",
+  "test_fixed_dt",
+  "test_imas_profiles_and_geo",
+  "test_implicit",
+  "test_implicit_short_optimizer",
+  "test_iterbaseline_mockup",
+  "test_iterhybrid_lh_transition",
+  "test_iterhybrid_lh_transition_internal_boundary_condition",
+  "test_iterhybrid_mockup",
+  "test_iterhybrid_predictor_corrector",
+  "test_iterhybrid_predictor_corrector_Lmode_combined",
+  "test_iterhybrid_predictor_corrector_clip_inputs",
+  "test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation",
+  "test_iterhybrid_predictor_corrector_cyclotron",
+  "test_iterhybrid_predictor_corrector_ec_linliu",
+  "test_iterhybrid_predictor_corrector_eqdsk",
+  "test_iterhybrid_predictor_corrector_imas",
+  "test_iterhybrid_predictor_corrector_mavrin_impurity_radiation",
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios",
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel",
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff",
+  "test_iterhybrid_predictor_corrector_neoclassical",
+  "test_iterhybrid_predictor_corrector_qualikiz",
+  "test_iterhybrid_predictor_corrector_qualikiz_rotation",
+  "test_iterhybrid_predictor_corrector_rotation",
+  "test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped",
+  "test_iterhybrid_predictor_corrector_tglfnn_ukaea",
+  "test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation",
+  "test_iterhybrid_predictor_corrector_timedependent_isotopes",
+  "test_iterhybrid_predictor_corrector_tungsten",
+  "test_iterhybrid_predictor_corrector_zeffprofile",
+  "test_iterhybrid_radiation_collapse",
+  "test_iterhybrid_rampup",
+  "test_iterhybrid_rampup_sawtooth",
+  "test_ne_qlknn_deff_veff",
+  "test_ne_qlknn_defromchie",
+  "test_particle_sources_cgm",
+  "test_prescribed_generic_current_source",
+  "test_prescribed_timedependent_ne",
+  "test_psi_and_heat",
+  "test_psi_heat_dens",
+  "test_psichease_ip_chease_vloop",
+  "test_psichease_ip_parameters_vloop_varying",
+  "test_psichease_prescribed_johm",
+  "test_psichease_prescribed_jtot",
+  "test_psichease_prescribed_jtot_vloop",
+  "test_semiimplicit_convection",
+  "test_step_flattop_bgb",
+  "test_timedependence"
+ ],
+ "upstream": {
+  "test_all_transport_fusion_qlknn": {
+   "test": "test_all_transport_fusion_qlknn",
+   "extra": []
+  },
+  "test_bohmgyrobohm_all": {
+   "test": "test_bohmgyrobohm_all",
+   "extra": []
+  },
+  "test_bremsstrahlung_time_dependent_Zimp": {
+   "test": "test_bremsstrahlung_time_dependent_Zimp",
+   "extra": []
+  },
+  "test_changing_config_after": {
+   "test": "test_changing_config_after",
+   "extra": []
+  },
+  "test_changing_config_before": {
+   "test": "test_changing_config_before",
+   "extra": []
+  },
+  "test_chease": {
+   "test": "test_chease",
+   "extra": []
+  },
+  "test_combined_transport": {
+   "test": "test_combined_transport",
+   "extra": []
+  },
+  "test_fixed_dt": {
+   "test": "test_fixed_dt",
+   "extra": []
+  },
+  "test_imas_profiles_and_geo": {
+   "test": "test_imas_profiles_and_geo",
+   "extra": []
+  },
+  "test_implicit": {
+   "test": "test_implicit",
+   "extra": []
+  },
+  "test_implicit_short_optimizer": {
+   "test": "test_implicit_short_optimizer",
+   "extra": []
+  },
+  "test_iterbaseline_mockup": {
+   "test": "test_iterbaseline_mockup",
+   "extra": []
+  },
+  "test_iterhybrid_lh_transition": null,
+  "test_iterhybrid_lh_transition_internal_boundary_condition": {
+   "test": "test_iterhybrid_lh_transition_internal_boundary_condition",
+   "extra": [
+    "_ALL_PROFILES",
+    "1e-06"
+   ]
+  },
+  "test_iterhybrid_mockup": {
+   "test": "test_iterhybrid_mockup",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector": {
+   "test": "test_iterhybrid_predictor_corrector",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_Lmode_combined": {
+   "test": "test_iterhybrid_predictor_corrector_Lmode_combined",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_clip_inputs": {
+   "test": "test_iterhybrid_predictor_corrector_clip_inputs",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation": {
+   "test": "test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_cyclotron": {
+   "test": "test_iterhybrid_predictor_corrector_cyclotron",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_ec_linliu": {
+   "test": "test_iterhybrid_predictor_corrector_ec_linliu",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_eqdsk": {
+   "test": "test_iterhybrid_predictor_corrector_eqdsk",
+   "extra": [
+    "_ALL_PROFILES",
+    "1e-06",
+    "0",
+    "'test_iterhybrid_predictor_corrector_eqdsk.nc'"
+   ]
+  },
+  "test_iterhybrid_predictor_corrector_imas": {
+   "test": "test_iterhybrid_predictor_corrector_imas",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_mavrin_impurity_radiation": {
+   "test": "test_iterhybrid_predictor_corrector_mavrin_impurity_radiation",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios": {
+   "test": "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel": {
+   "test": "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel",
+   "extra": [
+    "_ALL_PROFILES",
+    "1e-08"
+   ]
+  },
+  "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff": {
+   "test": "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_neoclassical": {
+   "test": "test_iterhybrid_predictor_corrector_neoclassical",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_qualikiz": null,
+  "test_iterhybrid_predictor_corrector_qualikiz_rotation": null,
+  "test_iterhybrid_predictor_corrector_rotation": {
+   "test": "test_iterhybrid_predictor_corrector_rotation",
+   "extra": [
+    "_ALL_PROFILES",
+    "5e-06"
+   ]
+  },
+  "test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped": {
+   "test": "test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_tglfnn_ukaea": {
+   "test": "test_iterhybrid_predictor_corrector_tglfnn_ukaea",
+   "extra": [
+    "_ALL_PROFILES",
+    "5e-06"
+   ]
+  },
+  "test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation": {
+   "test": "test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation",
+   "extra": [
+    "_ALL_PROFILES",
+    "5e-06"
+   ]
+  },
+  "test_iterhybrid_predictor_corrector_timedependent_isotopes": {
+   "test": "test_iterhybrid_predictor_corrector_timedependent_isotopes",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_tungsten": {
+   "test": "test_iterhybrid_predictor_corrector_tungsten",
+   "extra": []
+  },
+  "test_iterhybrid_predictor_corrector_zeffprofile": {
+   "test": "test_iterhybrid_predictor_corrector_zeffprofile",
+   "extra": []
+  },
+  "test_iterhybrid_radiation_collapse": null,
+  "test_iterhybrid_rampup": {
+   "test": "test_iterhybrid_rampup",
+   "extra": []
+  },
+  "test_iterhybrid_rampup_sawtooth": {
+   "test": "test_iterhybrid_rampup_sawtooth",
+   "extra": []
+  },
+  "test_ne_qlknn_deff_veff": {
+   "test": "test_ne_qlknn_deff_veff",
+   "extra": []
+  },
+  "test_ne_qlknn_defromchie": {
+   "test": "test_ne_qlknn_defromchie",
+   "extra": []
+  },
+  "test_particle_sources_cgm": {
+   "test": "test_particle_sources_cgm",
+   "extra": []
+  },
+  "test_prescribed_generic_current_source": {
+   "test": "test_prescribed_generic_current_source",
+   "extra": []
+  },
+  "test_prescribed_timedependent_ne": {
+   "test": "test_prescribed_timedependent_ne",
+   "extra": []
+  },
+  "test_psi_and_heat": {
+   "test": "test_psi_and_heat",
+   "extra": []
+  },
+  "test_psi_heat_dens": {
+   "test": "test_psi_heat_dens",
+   "extra": []
+  },
+  "test_psichease_ip_chease_vloop": {
+   "test": "test_psichease_ip_chease_vloop",
+   "extra": []
+  },
+  "test_psichease_ip_parameters_vloop_varying": {
+   "test": "test_psichease_ip_parameters_vloop_varying",
+   "extra": []
+  },
+  "test_psichease_prescribed_johm": {
+   "test": "test_psichease_prescribed_johm",
+   "extra": []
+  },
+  "test_psichease_prescribed_jtot": {
+   "test": "test_psichease_prescribed_jtot",
+   "extra": []
+  },
+  "test_psichease_prescribed_jtot_vloop": {
+   "test": "test_psichease_prescribed_jtot_vloop",
+   "extra": []
+  },
+  "test_semiimplicit_convection": {
+   "test": "test_semiimplicit_convection",
+   "extra": []
+  },
+  "test_step_flattop_bgb": {
+   "test": "test_step_flattop_bgb",
+   "extra": []
+  },
+  "test_timedependence": {
+   "test": "test_timedependence",
+   "extra": []
+  }
+ }
+}

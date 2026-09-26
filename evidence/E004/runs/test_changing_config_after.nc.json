@@ -1,0 +1,20 @@
+{
+  "label": "test_changing_config_after",
+  "config": "upstream-torax-main/torax/tests/test_data/test_changing_config_after.py",
+  "config_sha256": "cea5ecee1c73397a2d61327b7fab49865077cdd64008d6a558a4923e8656aae7",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 10,
+  "t_final": 3.0,
+  "wall_s_including_compile": 9.15,
+  "out": "evidence/E004/runs/test_changing_config_after.nc",
+  "out_sha256": "c6505a472b3de881a93e2ba119e371d77ba2ad70b6241d33cdeae631c2cebe67",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

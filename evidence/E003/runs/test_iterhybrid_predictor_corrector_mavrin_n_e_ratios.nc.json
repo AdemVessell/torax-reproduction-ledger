@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_mavrin_n_e_ratios",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios.py",
+  "config_sha256": "b877f8fd4e2438867855f28eb5dc3a94ec09c4f8fa6592e0bd25d4763c595a24",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 28,
+  "t_final": 5.0,
+  "wall_s_including_compile": 10.423,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_mavrin_n_e_ratios.nc",
+  "out_sha256": "ea173c55d2d9eef177de9022ea00fab75e6e0e88105c45a22a0835894f198116",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

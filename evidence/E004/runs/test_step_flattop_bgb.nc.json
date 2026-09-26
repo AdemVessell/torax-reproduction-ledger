@@ -1,0 +1,20 @@
+{
+  "label": "test_step_flattop_bgb",
+  "config": "upstream-torax-main/torax/tests/test_data/test_step_flattop_bgb.py",
+  "config_sha256": "ce6e7e7e34c14ca61e7a5350cc55eaada591e1a848e83b14e118ad17dbea6c9d",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 41,
+  "t_final": 400.0,
+  "wall_s_including_compile": 14.197,
+  "out": "evidence/E004/runs/test_step_flattop_bgb.nc",
+  "out_sha256": "83f100be083a7cf9509cb1184c0322369c9c5e6bac650784c72b70ef903c9cd1",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

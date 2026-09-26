@@ -1,0 +1,20 @@
+{
+  "label": "test_implicit_short_optimizer",
+  "config": "upstream-torax-main/torax/tests/test_data/test_implicit_short_optimizer.py",
+  "config_sha256": "220af6348cc6134422061d13264f0a913dc5e50b9da21b4d0c63f921ff30c5b5",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 2,
+  "t_final": 0.1,
+  "wall_s_including_compile": 11.007,
+  "out": "evidence/E004/runs/test_implicit_short_optimizer.nc",
+  "out_sha256": "9ac55708efcabb0d83d594654fec664579cdd1d337c2a2269097edc5a1ea95c6",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

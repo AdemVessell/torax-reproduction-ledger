@@ -1,0 +1,20 @@
+{
+  "label": "test_implicit",
+  "config": "upstream-torax-main/torax/tests/test_data/test_implicit.py",
+  "config_sha256": "0f033e0ac40e318020616c18bb3f5d8ea385426c75b7738606a873e89ce2db60",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 25,
+  "t_final": 1.0,
+  "wall_s_including_compile": 5.024,
+  "out": "evidence/E004/runs/test_implicit.nc",
+  "out_sha256": "737977ce6f557a44c6cc2c9bad8659a5523f3ffab250765be8d7f0d15e6e3bef",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

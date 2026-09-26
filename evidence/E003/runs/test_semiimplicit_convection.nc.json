@@ -1,0 +1,20 @@
+{
+  "label": "test_semiimplicit_convection",
+  "config": "upstream-torax/torax/tests/test_data/test_semiimplicit_convection.py",
+  "config_sha256": "d4342e9e73095f48003828d21fe6fee4433d6125ddae125241e68d1fe234f5d1",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 19,
+  "t_final": 0.5,
+  "wall_s_including_compile": 5.521,
+  "out": "evidence/E003/runs/test_semiimplicit_convection.nc",
+  "out_sha256": "d5dc9f81f7bbe548bc42ec1c47479760ded57238ed7bfd5b6fa0720ee4a1659c",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_rampup_sawtooth",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_rampup_sawtooth.py",
+  "config_sha256": "d94701feb812a7447c3bb862b7507fffb3a68491047cf6a18d263c30f0501c1c",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 178,
+  "t_final": 80.0,
+  "wall_s_including_compile": 13.55,
+  "out": "evidence/E003/runs/test_iterhybrid_rampup_sawtooth.nc",
+  "out_sha256": "641b8363a16c48a0713f15788a545ce6686255ebb4daeeba161e3906f5456db9",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

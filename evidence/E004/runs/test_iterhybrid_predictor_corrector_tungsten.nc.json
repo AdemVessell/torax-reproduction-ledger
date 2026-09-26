@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_tungsten",
+  "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_tungsten.py",
+  "config_sha256": "42bd091250785e780b10657c1d171ed2cfe5defe9511612da12129f3b4d8648d",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 31,
+  "t_final": 5.0,
+  "wall_s_including_compile": 8.135,
+  "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_tungsten.nc",
+  "out_sha256": "6a9ed080ea0bdd339c1ef3582347f08f765d85660e07565708b96df3159db169",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

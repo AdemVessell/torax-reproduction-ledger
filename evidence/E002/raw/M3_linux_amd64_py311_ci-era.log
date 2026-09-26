@@ -1,0 +1,39 @@
+x86_64
+Python 3.11.15
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+<jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+<jemalloc>: (This is the expected behaviour if you are running under QEMU)
+<jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+<jemalloc>: (This is the expected behaviour if you are running under QEMU)
+Using Python 3.11.15 environment at: /usr/local
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/local/lib/python3.11/site-packages/jax/__init__.py", line 25, in <module>
+    from jax._src.cloud_tpu_init import cloud_tpu_init as _cloud_tpu_init
+  File "/usr/local/lib/python3.11/site-packages/jax/_src/cloud_tpu_init.py", line 20, in <module>
+    from jax._src import config
+  File "/usr/local/lib/python3.11/site-packages/jax/_src/config.py", line 28, in <module>
+    from jax._src import logging_config
+  File "/usr/local/lib/python3.11/site-packages/jax/_src/logging_config.py", line 17, in <module>
+    from jax._src.lib import utils
+  File "/usr/local/lib/python3.11/site-packages/jax/_src/lib/__init__.py", line 88, in <module>
+    cpu_feature_guard.check_cpu_features()
+RuntimeError: This version of jaxlib was built using AVX instructions, which your CPU and/or operating system do not support. You may be able work around this issue by building jaxlib from source.
+ImportError while loading conftest '/work/torax/conftest.py'.
+torax/__init__.py:21: in <module>
+    import jax
+/usr/local/lib/python3.11/site-packages/jax/__init__.py:25: in <module>
+    from jax._src.cloud_tpu_init import cloud_tpu_init as _cloud_tpu_init
+/usr/local/lib/python3.11/site-packages/jax/_src/cloud_tpu_init.py:20: in <module>
+    from jax._src import config
+/usr/local/lib/python3.11/site-packages/jax/_src/config.py:28: in <module>
+    from jax._src import logging_config
+/usr/local/lib/python3.11/site-packages/jax/_src/logging_config.py:17: in <module>
+    from jax._src.lib import utils
+/usr/local/lib/python3.11/site-packages/jax/_src/lib/__init__.py:88: in <module>
+    cpu_feature_guard.check_cpu_features()
+E   RuntimeError: This version of jaxlib was built using AVX instructions, which your CPU and/or operating system do not support. You may be able work around this issue by building jaxlib from source.
+pytest_exit=4

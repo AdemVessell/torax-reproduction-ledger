@@ -1,0 +1,20 @@
+{
+  "label": "test_prescribed_transport",
+  "config": "upstream-torax/torax/tests/test_data/test_prescribed_transport.py",
+  "config_sha256": "2c8e3e5e548ebc61e6a6fee75aeb13ba6a9bdb1707e8ae184a3f7e29b9a24297",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 33,
+  "t_final": 5.0,
+  "wall_s_including_compile": 6.658,
+  "out": "evidence/E003/runs/test_prescribed_transport.nc",
+  "out_sha256": "b2761124f04a360e99cb36649ab7395e89888b34a7d133ec8b263cefa5f6510f",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

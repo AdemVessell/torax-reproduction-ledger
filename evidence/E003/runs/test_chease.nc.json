@@ -1,0 +1,20 @@
+{
+  "label": "test_chease",
+  "config": "upstream-torax/torax/tests/test_data/test_chease.py",
+  "config_sha256": "eec84c2b3bc957d094a528d4e8396948a5ec6f1c92674978fdc640adfdf45432",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 7,
+  "t_final": 1.0,
+  "wall_s_including_compile": 5.522,
+  "out": "evidence/E003/runs/test_chease.nc",
+  "out_sha256": "d93e07b4e82543ff74fe1932be8220577d150971eb0c7d6cf7b4f904527c5526",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation.py",
+  "config_sha256": "65a2628d9080325a1bf1dc2cd526ac1c562b0627d29dc095d79785ae464232c8",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 50,
+  "t_final": 5.0,
+  "wall_s_including_compile": 14.472,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation.nc",
+  "out_sha256": "5ec908a4d6098677870c89756932d4eda44fade0c3f582b4587fa3a9e26139b3",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

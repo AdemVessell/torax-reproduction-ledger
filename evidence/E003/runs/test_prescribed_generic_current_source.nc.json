@@ -1,0 +1,20 @@
+{
+  "label": "test_prescribed_generic_current_source",
+  "config": "upstream-torax/torax/tests/test_data/test_prescribed_generic_current_source.py",
+  "config_sha256": "92064d6c1fa23cabc51d952b2ab2b1414e9c362ae2d18bdbda0e01c99b3031e9",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 22,
+  "t_final": 5.0,
+  "wall_s_including_compile": 6.438,
+  "out": "evidence/E003/runs/test_prescribed_generic_current_source.nc",
+  "out_sha256": "2707121fed217cd4e1c4fd25bf9912d45a05d9cde3c0488e74419e5ff5cb836c",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

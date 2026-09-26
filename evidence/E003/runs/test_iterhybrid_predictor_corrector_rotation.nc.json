@@ -1,0 +1,20 @@
+{
+  "label": "test_iterhybrid_predictor_corrector_rotation",
+  "config": "upstream-torax/torax/tests/test_data/test_iterhybrid_predictor_corrector_rotation.py",
+  "config_sha256": "8817cdeba4d77a990e31f96d83cf91b624f6d1fbe83abe0a73c085f84ace8473",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 19,
+  "t_final": 5.0,
+  "wall_s_including_compile": 10.068,
+  "out": "evidence/E003/runs/test_iterhybrid_predictor_corrector_rotation.nc",
+  "out_sha256": "a8408caffbd8f81de448abea1548d26861ee665ca8b8e0b28474031504e16f4b",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

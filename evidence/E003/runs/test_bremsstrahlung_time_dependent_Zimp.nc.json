@@ -1,0 +1,20 @@
+{
+  "label": "test_bremsstrahlung_time_dependent_Zimp",
+  "config": "upstream-torax/torax/tests/test_data/test_bremsstrahlung_time_dependent_Zimp.py",
+  "config_sha256": "729cd4f506fccd03015e1afc49a69daff893965e08abe4ce7b6f7f8e3510aa70",
+  "overrides": {},
+  "sim_error": "NO_ERROR",
+  "n_times": 4,
+  "t_final": 1.0,
+  "wall_s_including_compile": 6.779,
+  "out": "evidence/E003/runs/test_bremsstrahlung_time_dependent_Zimp.nc",
+  "out_sha256": "d355d80da4692703e04abcc93e32d537f29414b0f124c0802b92442c255faba3",
+  "torax_version": "1.4.3",
+  "jax_version": "0.11.2",
+  "jax_x64": true,
+  "devices": [
+    "cpu:0"
+  ],
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

@@ -1,0 +1,14 @@
+2026-09-25 19:42:01,160 [    INFO] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '~/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+19:42:01 INFO     Parsing data dictionary version 4.0.0 [90m@dd_zip.py:89[0m
+2026-09-25 19:42:01,227 [    INFO] Parsing data dictionary version 4.0.0
+19:42:01 INFO     Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0. [90m@ids_convert.py:588[0m
+2026-09-25 19:42:01,556 [    INFO] Starting conversion of IDS equilibrium from version 4.0.0 to version 4.0.0.
+19:42:01 INFO     Conversion of IDS equilibrium finished. [90m@ids_convert.py:626[0m
+2026-09-25 19:42:01,558 [    INFO] Conversion of IDS equilibrium finished.
+2026-09-25 19:42:02,129 [ WARNING] Falling back to legacy behavior as `profile_conditions.psi` is None. Future versions of TORAX will require `psi` to be provided if `initial_psi_mode` is PROFILE_CONDITIONS. Use `initial_psi_mode` to initialize psi from `j` or `geometry` and avoid this warning.
+2026-09-25 19:42:02,222 [    INFO] Loading QLKNNModel from .venv-main/lib/python3.12/site-packages/fusion_surrogates/qlknn/models/qlknn_7_11.qlknn
+2026-09-25 19:42:03,566 [    INFO] Precision is set at float64
+2026-09-25 19:42:03,567 [    INFO] Starting simulation.
+2026-09-25 19:42:09,015 [    INFO] The first step took more than 2.0 std devs longer than other steps. It likely was tracing and compiling the step_fn. It took 5.30s of wall clock time.
+2026-09-25 19:42:09,028 [    INFO] Simulated 5.00s of physics in 0.14s of wall clock time.
+{"label": "test_iterhybrid_predictor_corrector_imas", "config": "upstream-torax-main/torax/tests/test_data/test_iterhybrid_predictor_corrector_imas.py", "config_sha256": "e23bd52eaea7c7650fd09a42f0b9509f69ba5a0ec6f2a81a7ab575aca0b85e61", "overrides": {}, "sim_error": "NO_ERROR", "n_times": 30, "t_final": 5.0, "wall_s_including_compile": 7.616, "out": "evidence/E004/runs/test_iterhybrid_predictor_corrector_imas.nc", "out_sha256": "7c788eca30e42ec060567064b03222bead045e8edfc0b8f4627e7a016a54914c", "torax_version": "1.4.3", "jax_version": "0.11.2", "jax_x64": true, "devices": ["cpu:0"], "machine": "arm64", "platform": "macOS-27.0-arm64-arm-64bit"}

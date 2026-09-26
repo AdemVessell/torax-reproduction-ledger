@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="8109" time="233.471" timestamp="2026-09-25T14:27:03.588258+08:00" hostname="<host>.local"><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_changing_config_after" time="16.685" /><testcase classname="torax.tests.sim_test.SimTest" name="test_prescribed_psidot" time="25.779" /><testcase classname="torax.tests.sim_test.SimTest" name="test_nans_trigger_error" time="16.873" /><testcase classname="torax.tests.sim_test.SimTest" name="test_ip_bc_v_loop_bc_equivalence" time="24.514" /><testcase classname="torax.tests.sim_test.SimTest" name="test_fail" time="0.001" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_bohmgyrobohm_all" time="12.891" /><testcase classname="torax.tests.sim_test.SimTest" name="test_full_output_matches_reference" time="27.613" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_bremsstrahlung_time_dependent_Zimp" time="12.856" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_changing_config_before" time="16.627" /><testcase classname="torax.tests.sim_test.SimTest" name="test_no_op" time="7.868" /><testcase classname="torax.tests.sim_test.SimTest" name="test_low_temperature_error" time="19.977" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_lh_transition_adaptive_source" time="23.603" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_fixed_dt" time="18.090" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_all_transport_fusion_qlknn" time="19.577" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_chease" time="8.494" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_implicit_short_optimizer" time="27.600" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_combined_transport" time="13.998" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_imas_profiles_and_geo" time="26.560" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector" time="16.233" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_clip_inputs" time="24.146" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_mockup" time="13.148" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_crank_nicolson" time="10.145" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_eqdsk" time="16.597" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_Lmode_combined" time="19.240" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterbaseline_mockup" time="19.877" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_cyclotron" time="19.166" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_constant_fraction_impurity_radiation" time="20.347" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_implicit" time="13.023" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_imas" time="21.636" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_impurity_radiation" time="14.225" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_ec_linliu" time="13.244" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios" time="22.577" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_z_eff" time="21.540" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_mavrin_n_e_ratios_lengyel" time="34.626" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_set_pped_tpedratio_nped" time="15.814" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_rotation" time="16.742" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_neoclassical" time="24.448" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea" time="26.413" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_tglfnn_ukaea_rotation" time="30.626" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_tungsten" time="20.501" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_zeffprofile" time="19.755" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_rampup" time="6.204" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_predictor_corrector_timedependent_isotopes" time="20.650" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_prescribed_generic_current_source" time="13.749" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_iterhybrid_rampup_sawtooth" time="35.273" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_ne_qlknn_defromchie" time="21.625" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_particle_sources_cgm" time="17.287" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_ne_qlknn_deff_veff" time="22.486" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_prescribed_transport" time="20.340" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_prescribed_timedependent_ne" time="24.304" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psichease_ip_chease_vloop" time="15.833" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psi_heat_dens" time="20.842" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psichease_ip_parameters_vloop_varying" time="13.686" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psichease_prescribed_johm" time="14.993" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psichease_prescribed_jtot_vloop" time="14.401" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psi_and_heat" time="24.419" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_psichease_prescribed_jtot" time="10.864" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_step_flattop_bgb" time="38.215" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_semiimplicit_convection" time="17.978" /><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart0" time="21.277" /><testcase classname="torax.tests.sim_test.SimTest" name="test_run_simulation_test_timedependence" time="19.062" /><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart2" time="20.462"><failure message="AssertionError: Left and right DatasetView objects are not close&#10;Differing data variables:&#10;L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09&#10;R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10&#10;R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09&#10;R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;Raised whilst mapping function over node(s) with path 'scalars'">self = &lt;sim_test.SimTest testMethod=test_simulation_with_restart2&gt;
+test_config = 'test_psichease_prescribed_johm'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+&gt;     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = &lt;function assert_allclose at 0x11381c860&gt;, kwargs = {}
+args = (&lt;xarray.DataTree&gt;
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -&gt; DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -&gt; Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+&gt;               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+../.venv/lib/python3.12/site-packages/xarray/core/datatree_mapping.py:117: AssertionError</failure></testcase><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart1" time="12.231"><failure message="AssertionError: Left and right DatasetView objects are not close&#10;Differing data variables:&#10;L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10&#10;R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09&#10;R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09&#10;R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0&#10;Raised whilst mapping function over node(s) with path 'scalars'">self = &lt;sim_test.SimTest testMethod=test_simulation_with_restart1&gt;
+test_config = 'test_psichease_prescribed_jtot'
+
+    @parameterized.parameters(
+        'test_psi_heat_dens',
+        'test_psichease_prescribed_jtot',
+        'test_psichease_prescribed_johm',
+        'test_iterhybrid_rampup',
+    )
+    def test_simulation_with_restart(self, test_config: str):
+      ref_name = test_config + '.nc'
+      output_file = os.path.join(paths.test_data_dir(), ref_name)
+      gt_output_xr = output.load_state_file(output_file)
+      profiles_dataset = gt_output_xr.children[output.PROFILES].dataset
+      ref_time = profiles_dataset[output.TIME].to_numpy()
+      index = len(ref_time) // 2
+      loading_time = ref_time[index]
+    
+      # Override the config to restart from the halfway point of the reference.
+      torax_config = self._get_torax_config(test_config + '.py')
+      torax_config.update_fields({'numerics.t_initial': loading_time})
+      file_restart = file_restart_pydantic.FileRestart.from_dict(
+          dict(
+              filename=output_file,
+              time=loading_time,
+              do_restart=True,
+              stitch=True,
+          )
+      )
+      torax_config.update_fields({'restart': file_restart})
+    
+      output_xr, _ = run_simulation.run_simulation(
+          torax_config, progress_bar=False
+      )
+&gt;     xr.map_over_datasets(xr.testing.assert_allclose, output_xr, gt_output_xr)
+
+torax/tests/sim_test.py:487: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = &lt;function assert_allclose at 0x113478860&gt;, kwargs = {}
+args = (&lt;xarray.DataTree&gt;
+Group: /
+│   Dimensions:        (time: 18, rho_face_norm: 26, rho_cell_norm: 25, rho_norm: 27)
+│   ...                float64 8B 0.04
+            rho_b                      (time) float64 144B 2.747 2.747 ... 2.747 2.747)
+
+    def map_over_datasets(
+        func: Callable[..., Dataset | None | tuple[Dataset | None, ...]],
+        *args: Any,
+        kwargs: Mapping[str, Any] | None = None,
+    ) -&gt; DataTree | tuple[DataTree, ...]:
+        """
+        Applies a function to every dataset in one or more DataTree objects with
+        the same structure (ie.., that are isomorphic), returning new trees which
+        store the results.
+    
+        The function will be applied to any dataset stored in any of the nodes in
+        the trees. The returned trees will have the same structure as the supplied
+        trees.
+    
+        ``func`` needs to return a Dataset, tuple of Dataset objects or None in order
+        to be able to rebuild the subtrees after mapping, as each result will be
+        assigned to its respective node of a new tree via `DataTree.from_dict`. Any
+        returned value that is one of these types will be stacked into a separate
+        tree before returning all of them.
+    
+        ``map_over_datasets`` is essentially syntactic sugar for the combination of
+        ``group_subtrees`` and ``DataTree.from_dict``. For example, in the case of
+        a two argument function that return one result, it is equivalent to::
+    
+            results = {}
+            for path, (left, right) in group_subtrees(left_tree, right_tree):
+                results[path] = func(left.dataset, right.dataset)
+            return DataTree.from_dict(results)
+    
+        Parameters
+        ----------
+        func : callable
+            Function to apply to datasets with signature:
+    
+            `func(*args: Dataset, **kwargs) -&gt; Union[Dataset, tuple[Dataset, ...]]`.
+    
+            (i.e. func must accept at least one Dataset and return at least one Dataset.)
+        *args : tuple, optional
+            Positional arguments passed on to `func`. Any DataTree arguments will be
+            converted to Dataset objects via `.dataset`.
+        kwargs : dict, optional
+            Optional keyword arguments passed directly to ``func``.
+    
+        Returns
+        -------
+        Result of applying `func` to each node in the provided trees, packed back
+        into DataTree objects via `DataTree.from_dict`.
+    
+        See Also
+        --------
+        DataTree.map_over_datasets
+        group_subtrees
+        DataTree.from_dict
+        """
+        # TODO examples in the docstring
+        # TODO inspect function to work out immediately if the wrong number of arguments were passed for it?
+    
+        from xarray.core.datatree import DataTree
+    
+        if kwargs is None:
+            kwargs = {}
+    
+        # Walk all trees simultaneously, applying func to all nodes that lie in same position in different trees
+        # We don't know which arguments are DataTrees so we zip all arguments together as iterables
+        # Store tuples of results in a dict because we don't yet know how many trees we need to rebuild to return
+        out_data_objects: dict[str, Dataset | tuple[Dataset | None, ...] | None] = {}
+    
+        tree_args = [arg for arg in args if isinstance(arg, DataTree)]
+        name = result_name(tree_args)
+    
+        for path, node_tree_args in group_subtrees(*tree_args):
+            node_dataset_args = [arg.dataset for arg in node_tree_args]
+            for i, arg in enumerate(args):
+                if not isinstance(arg, DataTree):
+                    node_dataset_args.insert(i, arg)
+            with add_path_context_to_errors(path):
+&gt;               results = func(*node_dataset_args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: Left and right DatasetView objects are not close
+E               Differing data variables:
+E               L   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               R   dW_thermal_dt              (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 ... -6.378e-10
+E               R   dW_thermal_e_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 ... -1.276e-09
+E               R   dW_thermal_i_dt_smoothed   (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               L   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 ... -1.913e-09
+E               R   dW_thermal_dt_smoothed     (time) float64 144B 0.0 0.0 0.0 ... 0.0 0.0 0.0
+E               Raised whilst mapping function over node(s) with path 'scalars'
+
+../.venv/lib/python3.12/site-packages/xarray/core/datatree_mapping.py:117: AssertionError</failure></testcase><testcase classname="torax.tests.sim_test.SimTest" name="test_simulation_with_restart3" time="16.299" /></testsuite></testsuites>
